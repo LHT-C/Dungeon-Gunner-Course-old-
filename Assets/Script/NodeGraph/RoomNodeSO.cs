@@ -18,6 +18,8 @@ public class RoomNodeSO : ScriptableObject
 #if UNITY_EDITOR
 
     [HideInInspector] public Rect rect;
+    [HideInInspector] public bool isLeftClickDragging = false;
+    [HideInInspector] public bool isSelected = false;
 
     public void Initialise(Rect rect, RoomNodeGraphSO nodeGraph, RoomNodeTypeSO roomNodeType)//房间创建时，输入一个节点图和一个房间类型
     {
@@ -68,6 +70,118 @@ public class RoomNodeSO : ScriptableObject
             }
         }
         return roomArray;
+    }
+
+    /// <summary>
+    /// Process events for the node
+    /// </summary>
+    public void ProcessEvents(Event currentEvent)
+    {
+        switch (currentEvent.type)//确定编辑器中发生了什么类型的交互（按下、松开、拖动）
+        {
+            // Process Mouse Down Events
+            case EventType.MouseDown:
+                ProcessMouseDownEvent(currentEvent);
+                break;
+
+            // Process Mouse Up Events
+            case EventType.MouseUp:
+                ProcessMouseUpEvent(currentEvent);
+                break;
+
+            // Process Mouse Drag Events
+            case EventType.MouseDrag:
+                ProcessMouseDragEvent(currentEvent);
+                break;
+
+            default:
+                break;
+        }
+    }
+
+    /// <summary>
+    /// Process mouse down events
+    /// </summary>
+    private void ProcessMouseDownEvent(Event currentEvent)//鼠标按下事件
+    {
+        // left click down
+        if (currentEvent.button == 0)
+        {
+            ProcessLeftClickDownEvent();//检测鼠标按下（是否为左键0）
+        }
+    }
+
+    /// <summary>
+    /// Process left click down event
+    /// </summary>
+    private void ProcessLeftClickDownEvent()
+    {
+        //Selection.activeObject = this;
+
+        // Toggle node selection
+        if (isSelected == true)//切换是否选择
+        {
+            isSelected = false;
+        }
+        else
+        {
+            isSelected = true;
+        }
+    }
+
+    /// <summary>
+    /// Process mouse up events
+    /// </summary>
+    private void ProcessMouseUpEvent(Event currentEvent)//鼠标抬起事件
+    {
+        // left click up
+        if (currentEvent.button == 0)
+        {
+            ProcessLeftClickUpEvent();//检测鼠标抬起（是否为左键0）
+        }
+    }
+
+    /// <summary>
+    /// Process left click up event
+    /// </summary>
+    private void ProcessLeftClickUpEvent()
+    {
+        if (isLeftClickDragging)//释放拖动状态
+        {
+            isLeftClickDragging = false;
+        }
+    }
+
+    /// <summary>
+    /// Process mouse up events
+    /// </summary>
+    private void ProcessMouseDragEvent(Event currentEvent)//鼠标拖动事件
+    {
+        // left click up
+        if (currentEvent.button == 0)
+        {
+            ProcessLeftMouseDragEvent(currentEvent);//检测鼠标拖动（是否为左键0）
+        }
+    }
+
+    /// <summary>
+    /// Process left Mouse Drag event
+    /// </summary>
+    private void ProcessLeftMouseDragEvent(Event currentEvent)
+    {
+        isLeftClickDragging = true;//设置拖动事件为true
+
+        DragNode(currentEvent.delta);//传入当前鼠标位置
+        GUI.changed = true;
+    }
+
+    /// <summary>
+    /// Drag node
+    /// </summary>
+    public void DragNode(Vector2 delta)//控制节点位置
+    {
+        rect.position += delta;
+        EditorUtility.SetDirty(this);
     }
 
 #endif

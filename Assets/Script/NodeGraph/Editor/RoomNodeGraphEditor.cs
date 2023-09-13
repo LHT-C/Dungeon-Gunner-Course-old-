@@ -8,6 +8,7 @@ public class RoomNodeGraphEditor : EditorWindow
 {
     private GUIStyle roomNodeStyle;
     private static RoomNodeGraphSO currentRoomNodeGraph;
+    private RoomNodeSO currentRoomNode = null;
     private RoomNodeTypeListSO roomNodeTypeList;
 
     //Node layout values（节点布局数值）
@@ -84,7 +85,38 @@ public class RoomNodeGraphEditor : EditorWindow
 
     private void ProcessEvents(Event currentEvent)
     {
-        ProcessRoomNodeGraphEvents(currentEvent);
+        // Get room node that mouse is over if it's null or not currently being dragged
+        if (currentRoomNode == null || currentRoomNode.isLeftClickDragging == false)//检测鼠标是否在房间节点上按下拖动
+        {
+            currentRoomNode = IsMouseOverRoomNode(currentEvent);//事件，返回当前房间节点
+        }
+
+        // if mouse isn't over a room node
+        if (currentRoomNode == null)
+        {
+            ProcessRoomNodeGraphEvents(currentEvent);//处理房间节点图的事件
+        }
+        // else process room node events
+        else
+        {
+            // process room node events
+            currentRoomNode.ProcessEvents(currentEvent);
+        }
+    }
+
+    /// <summary>
+    /// Check to see to mouse is over a room node - if so then return the room node else return null
+    /// </summary>
+    private RoomNodeSO IsMouseOverRoomNode(Event currentEvent)
+    {
+        for (int i = currentRoomNodeGraph.roomNodeList.Count - 1; i >= 0; i--)//列表循环、确定当前节点
+        {
+            if (currentRoomNodeGraph.roomNodeList[i].rect.Contains(currentEvent.mousePosition))
+            {
+                return currentRoomNodeGraph.roomNodeList[i];
+            }
+        }
+        return null;
     }
 
     /// <summary>
