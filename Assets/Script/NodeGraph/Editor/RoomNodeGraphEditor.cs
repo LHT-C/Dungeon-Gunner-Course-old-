@@ -3,6 +3,8 @@ using UnityEngine;
 using UnityEditor;
 using System;
 using System.Diagnostics;
+using static UnityEditor.Graphs.Styles;
+using Color = UnityEngine.Color;
 
 public class RoomNodeGraphEditor : EditorWindow
 {
@@ -16,6 +18,10 @@ public class RoomNodeGraphEditor : EditorWindow
     private const float nodeHeight = 75f;
     private const int nodePadding = 75;
     private const int nodeBorder = 12;
+
+    // connecting line values
+    private const float connectingLineWidth = 3f;
+    private const float connectingLineArrowSize = 6f;
 
     [MenuItem("Room Node Graph Editor",menuItem ="Window/Dungon Editor/Room Node Graph Editor")]//菜单项属性，使编辑器窗口出现在Unity编辑器的菜单上
     private static void OpenWindow()
@@ -70,11 +76,18 @@ public class RoomNodeGraphEditor : EditorWindow
         //EditorGUILayout.LabelField("Node 2");//标签字段
         //GUILayout.EndArea();//结束布局区域
         #endregion
+
         // If a scriptable object of typeRoomNodeGraphS0 has been selected then process
         if (currentRoomNodeGraph != null)
         {
+            // Draw line if being dragged
+            DrawDraggedLine();
+
             // Process Events
             ProcessEvents(Event.current);
+
+            // Draw Connections Between Room nodes
+            DrawRoomConnections();
 
             // Draw Room Nodes
             DrawRoomNodes();
@@ -82,6 +95,17 @@ public class RoomNodeGraphEditor : EditorWindow
         if (GUI.changed) 
             Repaint();
     }
+
+    private void DrawDraggedLine()
+    {
+        if(currentRoomNodeGraph.linePosition != Vector2.zero)
+        {
+            //Draw line from node to line position
+            Handles.DrawBezier(currentRoomNodeGraph.roomNodeToDrawLinefrom.rect.center, currentRoomNodeGraph.linePosition,
+                currentRoomNodeGraph.roomNodeToDrawLinefrom.rect.center, currentRoomNodeGraph.linePosition, Color.white, null, connectingLineWidth);//实际绘制线的方法，并设置了线的宽度和颜色等属性，七点和终点的位置从RoomNodeGraphSO获取
+        }
+    }
+
 
     private void ProcessEvents(Event currentEvent)
     {
@@ -91,8 +115,8 @@ public class RoomNodeGraphEditor : EditorWindow
             currentRoomNode = IsMouseOverRoomNode(currentEvent);//事件，返回当前房间节点
         }
 
-        // if mouse isn't over a room node
-        if (currentRoomNode == null)
+        // if mouse isn't over a room node or we are currently drapzing a line from the room node then process praph events
+        if (currentRoomNode == null || currentRoomNodeGraph.roomNodeToDrawLinefrom!= null)//检测鼠标是否右键拖动
         {
             ProcessRoomNodeGraphEvents(currentEvent);//处理房间节点图的事件
         }
@@ -129,6 +153,16 @@ public class RoomNodeGraphEditor : EditorWindow
             // Process Mouse Down Events
             case EventType.MouseDown:
                 ProcessMouseDownEvent(currentEvent);//鼠标按下时触发事件
+                break;
+
+            // Process Mouse Up Events
+            case EventType.MouseUp:
+                ProcessMouseUpEvent(currentEvent);//鼠标抬起时触发事件
+                break;
+
+            // Process Mouse Drag Events
+            case EventType.MouseDrag:
+                ProcessMouseDragEvent(currentEvent);//鼠标拖拽时触发事件
                 break;
 
             default: 
@@ -168,6 +202,9 @@ public class RoomNodeGraphEditor : EditorWindow
         CreateRoomNode(mousePositionObject, roomNodeTypeList.list.Find(x => x.isNone));//谓词，寻找鼠标选择的房间节点类型，传给下面的重载函数
     }
 
+    /// <summary>
+    /// Create a room node at the mouse position - overloaded to also pass in RoomNodeType
+    /// </summary>
     private void CreateRoomNode(object mousePositionObject, RoomNodeTypeSO roomNodeType)
     {
         Vector2 mousePosition = (Vector2)mousePositionObject;
@@ -185,6 +222,134 @@ public class RoomNodeGraphEditor : EditorWindow
         AssetDatabase.AddObjectToAsset(roomNode, currentRoomNodeGraph);//将创建的房间节点和当前的房间节点图添加到资产
 
         AssetDatabase.SaveAssets();//保存资产
+
+        // Reflesh graph node dictonary
+        currentRoomNodeGraph.OnValidate();
+    }
+
+    /// <summary>
+    /// Process right mouse up event 
+    /// </summary>
+    private void ProcessMouseUpEvent(Event currentEvent)
+    {
+        // if releasing the right mouse button and currently dragging a line
+        if (currentEvent.button == 1 && currentRoomNodeGraph.roomNodeToDrawLinefrom != null)
+        {
+            // check if over a room node
+            RoomNodeSO roomNode = IsMouseOverRoomNode(currentEvent);
+
+            if (roomNode != null)//链接线两端的房间节点，建立父子节点关系（向父子列表传入id）
+            {
+                // if so set it as a child of the parent room node if it can be added
+                if (currentRoomNodeGraph.roomNodeToDrawLinefrom.AddChildRoomNodeIDToRoomNode(roomNode.id))
+                {
+                    // Set parent ID in child room node
+                    roomNode.AddParentRoomNodeIDToRoomNode(currentRoomNodeGraph.roomNodeToDrawLinefrom.id);
+                }
+            }
+
+            ClearLineDrag();//清除无效拖动线
+        }
+    }
+
+    /// <summary>
+    /// Process mouse drag event
+    /// </summary>
+    private void ProcessMouseDragEvent(Event currentEvent)
+    {
+        // process right click drag event - draw line
+        if (currentEvent.button == 1)//检测
+        {
+            ProcessRightMouseDragEvent(currentEvent);
+        }
+    }
+
+    /// <summary>
+    /// Process right mouse drag event - draw line
+    /// </summary>
+    private void ProcessRightMouseDragEvent(Event currentEvent)
+    {
+        if (currentRoomNodeGraph.roomNodeToDrawLinefrom != null)//执行划线方法，gui状态改为改变
+        {
+            DragConnectingLine(currentEvent.delta);
+            GUI.changed = true;
+        }
+    }
+
+    /// <summary>
+    /// Drag connecting line from node
+    /// </summary>
+    public void DragConnectingLine(Vector2 delta)
+    {
+        currentRoomNodeGraph.linePosition += delta;//根据鼠标位置改变线位置
+    }
+
+    /// <summary>
+    /// Clear line drag from a room node
+    /// </summary>
+    private void ClearLineDrag()
+    {
+        currentRoomNodeGraph.roomNodeToDrawLinefrom = null;
+        currentRoomNodeGraph.linePosition = Vector2.zero;
+        GUI.changed = true;
+    }
+
+    /// <summary>
+    /// Draw connections in the graph window between room nodes
+    /// </summary>
+    private void DrawRoomConnections()
+    {
+        // Loop through all room nodes
+        foreach (RoomNodeSO roomNode in currentRoomNodeGraph.roomNodeList)//循环所有房间节点，利用key从字典中获取所有子房间节点的信息，确实为子房间节点则画出连接线
+        {
+            if (roomNode.childRoomNodeIDList.Count > 0)
+            {
+                // Loop through child room nodes
+                foreach (string childRoomNodeID in roomNode.childRoomNodeIDList)
+                {
+                    // get child room node from dictionary
+                    if (currentRoomNodeGraph.roomNodeDictionary.ContainsKey(childRoomNodeID))
+                    {
+                        DrawConnectionLine(roomNode, currentRoomNodeGraph.roomNodeDictionary[childRoomNodeID]);
+
+                        GUI.changed = true;
+                    }
+
+                }
+            }
+        }
+    }
+
+    /// <summary>
+    /// Draw connection line between the parent room node and child room node
+    /// </summary>
+    private void DrawConnectionLine(RoomNodeSO parentRoomNode, RoomNodeSO childRoomNode)//实际在父子节点之间绘制节点间连接线的方法
+    {
+        // get line start and end position
+        Vector2 startPosition = parentRoomNode.rect.center;
+        Vector2 endPosition = childRoomNode.rect.center;
+
+        // Calulate midway point
+        Vector2 midPosition = (endPosition + startPosition) / 2f;
+
+        // vector from start to end position of line
+        Vector2 direction = endPosition - startPosition;
+
+        // Calulate normalisedperpendicular positions from the mid point
+        Vector2 arrowTailPoint1 = midPosition - new Vector2(-direction.y, direction.x).normalized * connectingLineArrowSize;
+        Vector2 arrowTailPoint2 = midPosition + new Vector2(-direction.y, direction.x).normalized * connectingLineArrowSize;
+
+        // Calculate mid point offset position for arrow head
+        Vector2 arrowHeadPoint = midPosition + direction.normalized * connectingLineArrowSize;
+
+        // Draw Arrow
+        Handles.DrawBezier(arrowHeadPoint, arrowTailPoint1, arrowHeadPoint, arrowTailPoint1, Color.white, null, connectingLineWidth);
+        Handles.DrawBezier(arrowHeadPoint, arrowTailPoint2, arrowHeadPoint, arrowTailPoint2, Color.white, null, connectingLineWidth);
+
+        // Draw line
+        Handles.DrawBezier(startPosition, endPosition, startPosition, endPosition, Color.white, null, connectingLineWidth);
+
+            GUI.changed = true;
     }
 
     /// <summary>

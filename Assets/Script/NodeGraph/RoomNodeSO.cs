@@ -6,8 +6,8 @@ using UnityEngine;
 public class RoomNodeSO : ScriptableObject
 {
     [HideInInspector] public string id;//房间节点id，由GUID生成
-    [HideInInspector] public List<RoomNodeSO> parebtRoomNodeIDList = new List<RoomNodeSO>();
-    [HideInInspector] public List<RoomNodeSO> childRoomNodeIDList = new List<RoomNodeSO>();
+    [HideInInspector] public List<string> parentRoomNodeIDList = new List<string>();
+    [HideInInspector] public List<string> childRoomNodeIDList = new List<string>();
     [HideInInspector] public RoomNodeGraphSO roomNodeGraph;
     public RoomNodeTypeSO roomNodeType;
     [HideInInspector] public RoomNodeTypeListSO roomNodeTypeList;
@@ -109,6 +109,10 @@ public class RoomNodeSO : ScriptableObject
         {
             ProcessLeftClickDownEvent();//检测鼠标按下（是否为左键0）
         }
+        else if(currentEvent.button == 1)
+        {
+            ProcessRightClickDownEvent(currentEvent);//检测鼠标按下（是否为右键1）
+        }
     }
 
     /// <summary>
@@ -127,6 +131,14 @@ public class RoomNodeSO : ScriptableObject
         {
             isSelected = true;
         }
+    }
+
+    /// <summary>
+    /// Process right click down event
+    /// </summary>
+    private void ProcessRightClickDownEvent(Event currentEvent)//右键按下事件
+    {
+        roomNodeGraph.SetNodeToDrawConnectionLinefrom(this, currentEvent.mousePosition);//在鼠标位置画线
     }
 
     /// <summary>
@@ -182,6 +194,24 @@ public class RoomNodeSO : ScriptableObject
     {
         rect.position += delta;
         EditorUtility.SetDirty(this);
+    }
+
+    /// <summary>
+    /// Add childID to the node (returns true if the node has been added, false otherwise)
+    /// </summary>
+    public bool AddChildRoomNodeIDToRoomNode(string childID)
+    {
+        childRoomNodeIDList.Add(childID);
+        return true;
+    }
+
+    /// <summary>
+    /// Add parentID to the node (returns true if the node has been added, false otherwise)
+    /// </summary>
+    public bool AddParentRoomNodeIDToRoomNode(string parentID)
+    {
+        parentRoomNodeIDList.Add(parentID);
+        return true;
     }
 
 #endif
