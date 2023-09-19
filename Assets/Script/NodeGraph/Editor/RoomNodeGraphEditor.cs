@@ -9,6 +9,7 @@ using Color = UnityEngine.Color;
 public class RoomNodeGraphEditor : EditorWindow
 {
     private GUIStyle roomNodeStyle;
+    private GUIStyle roomNodeSelectedStyle;
     private static RoomNodeGraphSO currentRoomNodeGraph;
     private RoomNodeSO currentRoomNode = null;
     private RoomNodeTypeListSO roomNodeTypeList;
@@ -29,17 +30,33 @@ public class RoomNodeGraphEditor : EditorWindow
         GetWindow<RoomNodeGraphEditor>("Room Node Graph Editor");//获取窗口，传入想要打开的编辑器窗口类型（类名）
     }
 
-    private void OnEnable()//定义节点布局的风格
+    private void OnEnable()
     {
+        // Subscribe to the inspector selection changed event
+        Selection.selectionChanged += InspectorSelectionChanged;//订阅选择类改变时的事件
+
         //Define node layout style
-        roomNodeStyle = new GUIStyle();
+        roomNodeStyle = new GUIStyle();//定义节点布局的风格
         roomNodeStyle.normal.background = EditorGUIUtility.Load("node1") as Texture2D;//加载预定义的资产（节点1），与unity编辑器配合使用，作为纹理输入
         roomNodeStyle.normal.textColor = Color.white;//文本颜色
         roomNodeStyle.padding = new RectOffset(nodePadding, nodePadding, nodePadding, nodePadding);
         roomNodeStyle.padding = new RectOffset(nodeBorder, nodeBorder, nodeBorder, nodeBorder);
 
+        //Define selected node style
+        roomNodeSelectedStyle = new GUIStyle();//定义被选中后的节点布局的风格
+        roomNodeSelectedStyle.normal.background = EditorGUIUtility.Load("node1 on") as Texture2D;
+        roomNodeSelectedStyle.normal.textColor = Color.white;
+        roomNodeSelectedStyle.padding = new RectOffset(nodePadding, nodePadding, nodePadding, nodePadding);
+        roomNodeSelectedStyle.padding = new RectOffset(nodeBorder, nodeBorder, nodeBorder, nodeBorder);
+
         //Load Room node types
         roomNodeTypeList = GameResources.Instance.roomNodeTypeList;
+    }
+
+    private void OnDisable()
+    {
+        // Unsubscribe to the inspector selection changed event
+        Selection.selectionChanged -= InspectorSelectionChanged;
     }
 
     /// <summary>
@@ -180,6 +197,12 @@ public class RoomNodeGraphEditor : EditorWindow
         {
             ShowContextMenu(currentEvent.mousePosition);//显示上下文菜单
         }
+        // Process left mouse down on graph event
+        else if (currentEvent.button == 0)//0是鼠标左键
+        {
+            ClearLineDrag();
+            ClearAllSelectedRoomNodes();
+        }
     }
 
     /// <summary>
@@ -199,6 +222,12 @@ public class RoomNodeGraphEditor : EditorWindow
     /// </summary>
     private void CreateRoomNode(object mousePositionObject)
     {
+        // if current node graph empty then add entrance room node first
+        if (currentRoomNodeGraph.roomNodeList.Count == 0 )
+        {
+            CreateRoomNode(new Vector2(200f, 200f), roomNodeTypeList.list.Find(x => x.isEntrance));//创建第一个节点时，额外创建一个入口节点
+        }
+
         CreateRoomNode(mousePositionObject, roomNodeTypeList.list.Find(x => x.isNone));//谓词，寻找鼠标选择的房间节点类型，传给下面的重载函数
     }
 
@@ -225,6 +254,22 @@ public class RoomNodeGraphEditor : EditorWindow
 
         // Reflesh graph node dictonary
         currentRoomNodeGraph.OnValidate();
+    }
+
+    /// <summary>
+    /// Clear selection from all room nodes
+    /// </summary>
+    private void ClearAllSelectedRoomNodes()
+    {
+        foreach (RoomNodeSO roomNode in currentRoomNodeGraph.roomNodeList)//点击其他位置时，取消选中节点
+        {
+            if (roomNode.isSelected)
+            {
+                roomNode.isSelected = false;
+
+                GUI.changed = true;
+            }
+        }
     }
 
     /// <summary>
@@ -360,8 +405,29 @@ public class RoomNodeGraphEditor : EditorWindow
         // Loop through all room nodes and draw them
         foreach (RoomNodeSO roomNode in currentRoomNodeGraph.roomNodeList)//循环浏览所有房间节点，添加到节点图中
         {
-            roomNode.Draw(roomNodeStyle);//绘制房间节点
+            if (roomNode.isSelected)
+            {
+                roomNode.Draw(roomNodeSelectedStyle);
+            }
+            else
+            {
+                roomNode.Draw(roomNodeStyle);//绘制房间节点
+            }
         }
         GUI.changed = true;
+    }
+
+    /// <summary>
+    /// Selection changed in the inspector
+    /// </summary>
+    private void InspectorSelectionChanged()//选择的节点图改变时，更改编辑器中的显示内容
+    {
+        RoomNodeGraphSO roomNodeGraph = Selection.activeObject as RoomNodeGraphSO;
+
+        if (roomNodeGraph != null)
+        {
+            currentRoomNodeGraph = roomNodeGraph;
+            GUI.changed = true;
+        }
     }
 }

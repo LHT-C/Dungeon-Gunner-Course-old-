@@ -41,14 +41,20 @@ public class RoomNodeSO : ScriptableObject
         // Start Region To Detect Popup Selection Changes
         EditorGUI.BeginChangeCheck();//检查变化
 
-        // Display a popup using the Roomlodetype name values that can be selected from (default to the currently set roomilodetype)
+        //if the room node has a parent or is of type entrance then display a label else display a popup
+        if (parentRoomNodeIDList.Count > 0 || roomNodeType.isEntrance)
+        {
+            // Display a label that can't be changed
+            EditorGUILayout.LabelField(roomNodeType.roomNodeTypeName);//当节点连线后，不能再更改节点房间类型
+        }
 
-        int selected = roomNodeTypeList.list.FindIndex(x => x == roomNodeType);//如果选择了（发生变化），则使用谓词指定房间节点类型（列表索引与房间节点类型相同的）
-
-        int selection = EditorGUILayout.Popup("", selected, GetRoomNodeTypesToDisplay());//创建一个弹出窗口，显示房间节点类型的字符串数组，按选择的房间节点类型填入索引
-
-        roomNodeType = roomNodeTypeList.list[selection];//利用索引返回所选的房间类型
-
+        else
+        {
+            // Display a popup using the Roomlodetype name values that can be selected from (default to the currently set roomilodetype)
+            int selected = roomNodeTypeList.list.FindIndex(x => x == roomNodeType);//如果选择了（发生变化），则使用谓词指定房间节点类型（列表索引与房间节点类型相同的）
+            int selection = EditorGUILayout.Popup("", selected, GetRoomNodeTypesToDisplay());//创建一个弹出窗口，显示房间节点类型的字符串数组，按选择的房间节点类型填入索引
+            roomNodeType = roomNodeTypeList.list[selection];//利用索引返回所选的房间类型
+        }
         if (EditorGUI.EndChangeCheck())
             EditorUtility.SetDirty(this);//变化检查如果有变化，则SetDirty，保存所作的变化
 
