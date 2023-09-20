@@ -207,7 +207,72 @@ public class RoomNodeSO : ScriptableObject
     /// </summary>
     public bool AddChildRoomNodeIDToRoomNode(string childID)
     {
-        childRoomNodeIDList.Add(childID);
+        // Check child node can be added validly to parent
+        if (IsChildRoomValid(childID))//检查子节点id是否有效
+        {
+            childRoomNodeIDList.Add(childID);
+            return true;
+        }
+        return false;
+    }
+
+    /// <summary>
+    /// Check the child node can be validly added to the parent node - return true if it can otherwise return false
+    /// </summary>
+    public bool IsChildRoomValid(string childID)
+    {
+        bool isConnectedBossNodeAlready = false;//检查boss房是否已被连接
+        // Check if there is there already a connected boss room in the node graph
+        foreach (RoomNodeSO roomNode in roomNodeGraph.roomNodeList)
+        {
+            if (roomNode.roomNodeType.isBossRoom && roomNode.parentRoomNodeIDList.Count > 0)//每层只需要一个boss房间
+                isConnectedBossNodeAlready = true;
+        }
+
+        // if the child node has a type of boss room and there is already a connected boss room node then return false
+        if (roomNodeGraph.GetRoomNode(childID).roomNodeType.isBossRoom && isConnectedBossNodeAlready)//如果子节点是boss房，则让其不能再被连接
+            return false;
+
+        // If the child node has a type of none then return false
+        if (roomNodeGraph.GetRoomNode(childID).roomNodeType.isNone)//确认子节点是否为空
+           return false;
+
+        // If the node already has a child with this child ID return false
+        if (childRoomNodeIDList.Contains(childID))//确保该子节点不会被重复连接
+            return false;
+
+        // If this node ID and the child ID are the same return false
+        if (id == childID)//子节点不能自我连接
+            return false;
+
+        // If the node already has a child with this parent ID return false
+        if (parentRoomNodeIDList.Contains(childID))//确保该子节点并未已作为父节点
+            return false;
+
+        // If the child node already has a parent return false
+        if (roomNodeGraph.GetRoomNode(childID).parentRoomNodeIDList.Count > 0)//确保子节点只有一个父节点
+            return false;
+
+        // If child is a corridor and this node is a corridor return false
+        if (roomNodeGraph.GetRoomNode(childID).roomNodeType.isCorridor && roomNodeType.isCorridor)//走廊与走廊不能连接
+            return false;
+
+        // If child is not a corridor and this node is not a corridor return false
+        if (!roomNodeGraph.GetRoomNode(childID).roomNodeType.isCorridor && !roomNodeType.isCorridor)//房间与房间不能直接连接
+            return false;
+
+        // If adding a corridor check that this node has < the maximum permitted child corridors
+        if (roomNodeGraph.GetRoomNode(childID).roomNodeType.isCorridor && childRoomNodeIDList.Count >= Settings.maxChildCorridors)//确保走廊数在约束范围内
+            return false;
+
+        // if the child room is an entrance return false - the entrance must always be the top level parent node
+        if (roomNodeGraph.GetRoomNode(childID).roomNodeType.isEntrance)//入口房间不能作为子节点
+            return false;
+
+        // If adding a room to a corridor check that this corridor node doesn't already have a room added
+        if (!roomNodeGraph.GetRoomNode(childID).roomNodeType.isCorridor && childRoomNodeIDList.Count > 0)//确保走廊后只连接一个房间
+            return false;
+
         return true;
     }
 
