@@ -54,6 +54,32 @@ public class RoomNodeSO : ScriptableObject
             int selected = roomNodeTypeList.list.FindIndex(x => x == roomNodeType);//如果选择了（发生变化），则使用谓词指定房间节点类型（列表索引与房间节点类型相同的）
             int selection = EditorGUILayout.Popup("", selected, GetRoomNodeTypesToDisplay());//创建一个弹出窗口，显示房间节点类型的字符串数组，按选择的房间节点类型填入索引
             roomNodeType = roomNodeTypeList.list[selection];//利用索引返回所选的房间类型
+
+            // If the room type selection has changed making child connections potentially invalid
+            if (roomNodeTypeList.list[selected].isCorridor && !roomNodeTypeList.list[selection].isCorridor 
+                || !roomNodeTypeList.list[selected].isCorridor && roomNodeTypeList.list[selection].isCorridor 
+                || !roomNodeTypeList.list[selected].isBossRoom && roomNodeTypeList.list[selection].isBossRoom)//选择的房间发生变化后，进行约束
+            {
+                // if a room node type has been chanped and it already has children then delete the parent child links since we need to revalidate any
+                if (childRoomNodeIDList.Count > 0)//子节点的父节点被删除后，对该节点进行限制
+                {
+                    for (int i = childRoomNodeIDList.Count - 1; i >= 0; i--)
+                    {
+                        // Get child room node
+                        RoomNodeSO childRoomNode = roomNodeGraph.GetRoomNode(childRoomNodeIDList[i]);
+
+                        // If the child room node is not null
+                        if (childRoomNode!= null)
+                        {
+                            // Remove childID from parent room node
+                            RemoveChildRoomNodeIDFromRoomNode(childRoomNode.id);
+
+                            // Remove parentiD from child room node
+                            childRoomNode.RemoveParentRoomNodeIDFromRoomNode(id);
+                        }
+                    }
+                }
+            }
         }
         if (EditorGUI.EndChangeCheck())
             EditorUtility.SetDirty(this);//变化检查如果有变化，则SetDirty，保存所作的变化
@@ -283,6 +309,34 @@ public class RoomNodeSO : ScriptableObject
     {
         parentRoomNodeIDList.Add(parentID);
         return true;
+    }
+
+    /// <summary>
+    /// Remove childID from the node (returns true if the node has been removed, false otherwise)
+    /// </summary>
+    public bool RemoveChildRoomNodeIDFromRoomNode(string childID)//删除子节点id
+    {
+        // if the node contains the child ID then remove it
+        if (childRoomNodeIDList.Contains(childID))
+        {
+            childRoomNodeIDList.Remove(childID);
+            return true;
+        }
+        return false;
+    }
+
+    /// <summary>
+    /// Remove parentID from the node (returns true if the node has been remove, false otherwise
+    /// </summary>
+    public bool RemoveParentRoomNodeIDFromRoomNode(string parentID)//删除父节点id
+    {
+        // if the node contains the parent ID then remove it
+        if (parentRoomNodeIDList.Contains(parentID))
+        {
+            parentRoomNodeIDList.Remove(parentID);
+            return true;
+        }
+        return false;
     }
 
 #endif

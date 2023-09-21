@@ -5,6 +5,7 @@ using System;
 using System.Diagnostics;
 using static UnityEditor.Graphs.Styles;
 using Color = UnityEngine.Color;
+using System.Collections.Generic;
 
 public class RoomNodeGraphEditor : EditorWindow
 {
@@ -213,6 +214,11 @@ public class RoomNodeGraphEditor : EditorWindow
         GenericMenu menu = new GenericMenu();//创建一个新的菜单
 
         menu.AddItem(new GUIContent("Create Room Node"), false, CreateRoomNode, mousePosition);//往菜单里传入函数、激活状态，菜单位置为鼠标位置
+        menu.AddSeparator("");
+        menu.AddItem(new GUIContent("Select All Room Nodes"), false, SelectAllRoomNodes);//右键菜单中全选房间节点
+        menu.AddSeparator("");
+        menu.AddItem(new GUIContent("Delete Selected Room Node Links"), false, DeleteSelectedRoomNodeLinks);//删除节点的连接
+        menu.AddItem(new GUIContent("Delete Selected Room Nodes"), false, DeleteSelectedRoomNodes);//删除选中的节点
 
         menu.ShowAsContext();
     }
@@ -257,6 +263,99 @@ public class RoomNodeGraphEditor : EditorWindow
     }
 
     /// <summary>
+    /// Delete the links between the selected room nodes
+    /// </summary>
+    private void DeleteSelectedRoomNodeLinks()
+    {
+        // Iterate through all room nodes
+        foreach (RoomNodeSO roomNode in currentRoomNodeGraph.roomNodeList)
+        {
+            if (roomNode.isSelected && roomNode.childRoomNodeIDList.Count > 0)
+            {
+                for (int i = roomNode.childRoomNodeIDList.Count - 1; i > 0; i--)
+                {
+                    // Get child room node
+                    RoomNodeSO childRoomNode = currentRoomNodeGraph.GetRoomNode(roomNode.childRoomNodeIDList[i]);
+
+                    // If the child room node is selected
+                    if (childRoomNode != null && childRoomNode.isSelected)
+                    {
+                        // Remove childID from parent room node
+                        roomNode.RemoveChildRoomNodeIDFromRoomNode(childRoomNode.id);
+
+                        // Remove parentID from child room node
+                        childRoomNode.RemoveParentRoomNodeIDFromRoomNode(roomNode.id);
+                    }
+                }
+            }
+        }
+        // Clear all selected room nodes
+        ClearAllSelectedRoomNodes();
+    }
+
+    /// <summary>
+    /// Delete selected room nodes
+    /// </summary>
+    private void DeleteSelectedRoomNodes()
+    {
+        Queue<RoomNodeSO> roomNodeDeletionQueue = new Queue<RoomNodeSO>();//将需要删除的节点存入队列（后进先出）
+        
+        // Loop through all nodes
+        foreach (RoomNodeSO roomNode in currentRoomNodeGraph.roomNodeList)
+        {
+            if (roomNode.isSelected && !roomNode.roomNodeType.isEntrance)
+            {
+                roomNodeDeletionQueue.Enqueue(roomNode);//将非入口的选中节点加入队列
+
+                // iterate through child room nodes ids
+                foreach (string childRoomNodeID in roomNode.childRoomNodeIDList)
+                {
+                    // Retrieve child room node
+                    RoomNodeSO childRoomNode = currentRoomNodeGraph.GetRoomNode(childRoomNodeID);
+
+                    if (childRoomNode != null)
+                    {
+                        // Remove parentID from child room node
+                        childRoomNode.RemoveParentRoomNodeIDFromRoomNode(roomNode.id);//根据子节点删除父节点列表中的选中节点
+                    }
+                }
+
+                // Iterate through parent room node ids
+                foreach (string parentRoomNodeID in roomNode.parentRoomNodeIDList)
+                {
+                    // Retrieve parent node
+                    RoomNodeSO parentRoomNode = currentRoomNodeGraph.GetRoomNode(parentRoomNodeID);
+
+                    if (parentRoomNode != null)
+                    {
+                        // Remove childID from parent node
+                        parentRoomNode.RemoveChildRoomNodeIDFromRoomNode(roomNode.id);//根据父节点删除子节点列表中的选中节点
+                    }
+                }
+            }
+        }
+
+        // Delete queued room nodes
+        while (roomNodeDeletionQueue.Count > 0)//根据队列删除节点（正式删除）
+        {
+            // Get room node from queue
+            RoomNodeSO roomNodeToDelete = roomNodeDeletionQueue.Dequeue();
+
+            // Remove node from dictionary
+            currentRoomNodeGraph.roomNodeDictionary.Remove(roomNodeToDelete.id);
+
+            // Remove node from list
+            currentRoomNodeGraph.roomNodeList.Remove(roomNodeToDelete);
+
+            // Remove node from Asset database
+            DestroyImmediate(roomNodeToDelete, true);
+
+            // Save asset database
+            AssetDatabase.SaveAssets();
+        }
+    }
+
+    /// <summary>
     /// Clear selection from all room nodes
     /// </summary>
     private void ClearAllSelectedRoomNodes()
@@ -270,6 +369,19 @@ public class RoomNodeGraphEditor : EditorWindow
                 GUI.changed = true;
             }
         }
+    }
+
+    /// <summary>
+    ///  Select all room nodes
+    /// </summary>
+    private void SelectAllRoomNodes()//全选房间
+    {
+        foreach (RoomNodeSO roomNode in currentRoomNodeGraph.roomNodeList)
+        {
+            roomNode.isSelected = true;
+
+        }
+        GUI.changed = true;
     }
 
     /// <summary>
