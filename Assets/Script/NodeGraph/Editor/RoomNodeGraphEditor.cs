@@ -12,6 +12,10 @@ public class RoomNodeGraphEditor : EditorWindow
     private GUIStyle roomNodeStyle;
     private GUIStyle roomNodeSelectedStyle;
     private static RoomNodeGraphSO currentRoomNodeGraph;
+
+    private Vector2 graphOffset;
+    private Vector2 graphDrag;
+
     private RoomNodeSO currentRoomNode = null;
     private RoomNodeTypeListSO roomNodeTypeList;
 
@@ -24,6 +28,10 @@ public class RoomNodeGraphEditor : EditorWindow
     // connecting line values
     private const float connectingLineWidth = 3f;
     private const float connectingLineArrowSize = 6f;
+
+    // Grid Spacing（背景网格相关尺寸设置）
+    private const float gridLarge = 100f;
+    private const float gridSmall = 25f;
 
     [MenuItem("Room Node Graph Editor",menuItem ="Window/Dungon Editor/Room Node Graph Editor")]//菜单项属性，使编辑器窗口出现在Unity编辑器的菜单上
     private static void OpenWindow()
@@ -86,6 +94,7 @@ public class RoomNodeGraphEditor : EditorWindow
     private void OnGUI()
     {
         #region
+        //测试房间节点
         //GUILayout.BeginArea(new Rect(new Vector2(100f, 100f), new Vector2(nodeWidth, nodeHeight)), roomNodeStyle);//开始布局区域
         //EditorGUILayout.LabelField("Node 1");//标签字段
         //GUILayout.EndArea();//结束布局区域
@@ -98,6 +107,10 @@ public class RoomNodeGraphEditor : EditorWindow
         // If a scriptable object of typeRoomNodeGraphS0 has been selected then process
         if (currentRoomNodeGraph != null)
         {
+            // Draw Grid
+            DrawBackgroundGrid(gridSmall, 0.2f, Color.gray);
+            DrawBackgroundGrid(gridLarge, 0.2f, Color.gray);
+
             // Draw line if being dragged
             DrawDraggedLine();
 
@@ -114,6 +127,30 @@ public class RoomNodeGraphEditor : EditorWindow
             Repaint();
     }
 
+    private void DrawBackgroundGrid(float gridSize, float gridOpacity, Color gridColor)
+    {
+        int verticalLineCount = Mathf.CeilToInt((position.width + gridSize) / gridSize);
+        int horizontallineCount = Mathf.CeilToInt((position.height + gridSize) / gridSize);//计算网格中横竖线的数量
+
+        Handles.color = new Color(gridColor.r, gridColor.g, gridColor.b, gridOpacity);//声明网格颜色变量
+
+        graphOffset += graphDrag * 0.5f;//拖动时的画面偏移量
+
+        Vector3 gridOffset = new Vector3(graphOffset.x % gridSize, graphOffset.y % gridSize, 0);//网格的偏移
+
+        for (int i = 0; i < verticalLineCount; i++)
+        {
+            Handles.DrawLine(new Vector3(gridSize * i, -gridSize, 0) + gridOffset, new Vector3(gridSize * i, position.height + gridSize, 0f) + gridOffset);
+        }
+
+        for (int j = 0; j < verticalLineCount; j++)
+        {
+            Handles.DrawLine(new Vector3(-gridSize * j, -gridSize, 0) + gridOffset, new Vector3(position.width + gridSize,gridSize * j,  0f) + gridOffset);
+        }
+
+        Handles.color = Color.white;//设置网格颜色
+    }
+
     private void DrawDraggedLine()
     {
         if(currentRoomNodeGraph.linePosition != Vector2.zero)
@@ -127,6 +164,9 @@ public class RoomNodeGraphEditor : EditorWindow
 
     private void ProcessEvents(Event currentEvent)
     {
+        // Reset graph drag
+        graphDrag = Vector2.zero;//背景拖动事件
+
         // Get room node that mouse is over if it's null or not currently being dragged
         if (currentRoomNode == null || currentRoomNode.isLeftClickDragging == false)//检测鼠标是否在房间节点上按下拖动
         {
@@ -415,9 +455,14 @@ public class RoomNodeGraphEditor : EditorWindow
     private void ProcessMouseDragEvent(Event currentEvent)
     {
         // process right click drag event - draw line
-        if (currentEvent.button == 1)//检测
+        if (currentEvent.button == 1)
         {
-            ProcessRightMouseDragEvent(currentEvent);
+            ProcessRightMouseDragEvent(currentEvent);//右键拉线事件
+        }
+        // process left click drag event - drag node graph
+        else if(currentEvent.button == 0)
+        {
+            ProcessLeftMouseDragEvent(currentEvent.delta);//左键拖动节点图事件
         }
     }
 
@@ -431,6 +476,20 @@ public class RoomNodeGraphEditor : EditorWindow
             DragConnectingLine(currentEvent.delta);
             GUI.changed = true;
         }
+    }
+
+    /// <summary>
+    /// Process left mouse drag event - drag room node graph
+    /// </summary>
+    private void ProcessLeftMouseDragEvent(Vector2 dragDelta)
+    {
+        graphDrag = dragDelta;
+
+        for (int i = 0; i < currentRoomNodeGraph.roomNodeList.Count; i++)
+        {
+            currentRoomNodeGraph.roomNodeList[i].DragNode(dragDelta);//拖动时，调整所有已经创建的节点的位置
+        }
+        GUI.changed = true;
     }
 
     /// <summary>
