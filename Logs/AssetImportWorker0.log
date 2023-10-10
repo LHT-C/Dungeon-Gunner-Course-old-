@@ -15,11 +15,11 @@ C:/Unity Projects/projects/Dungeon Gunner Course
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-61788
+62175
 Successfully changed project path to: C:/Unity Projects/projects/Dungeon Gunner Course
 C:/Unity Projects/projects/Dungeon Gunner Course
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 110.61 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 97.48 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.1.7f1 (d91830b65d9b)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.1.7f1-x86_64/Editor/Data/Resources/UnitySubsystems
@@ -36,84 +36,210 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.1.7f1-x86_64/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.1.7f1-x86_64/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.1.7f1-x86_64/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56468
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56892
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.1.7f1-x86_64/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.001430 seconds.
+Registered in 0.001128 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 80.51 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 94.47 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.765 seconds
+- Completed reload, in  0.882 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.001602 seconds.
+Registered in 0.001282 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 78.67 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 97.52 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.002 seconds
+- Completed reload, in  1.027 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.07 seconds
-Refreshing native plugins compatible for Editor in 1.07 ms, found 0 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
+Refreshing native plugins compatible for Editor in 1.85 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 2236 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 117.8 MB.
 System memory in use after: 117.9 MB.
 
 Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 2693.
-Total: 1.343200 ms (FindLiveObjects: 0.124500 ms CreateObjectMapping: 0.024400 ms MarkObjects: 1.136400 ms  DeleteObjects: 0.057100 ms)
+Total: 2.055500 ms (FindLiveObjects: 0.200800 ms CreateObjectMapping: 0.059300 ms MarkObjects: 1.725500 ms  DeleteObjects: 0.069100 ms)
 
 ========================================================================
 Received Import Request.
-  path: Assets/Prefabs/Dungeon/Rooms/RoomTemplate 1.prefab
-  artifactKey: Guid(74ca431d864dbb54ba6312d91948e677) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Dungeon/Rooms/RoomTemplate 1.prefab using Guid(74ca431d864dbb54ba6312d91948e677) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'efb64b07f59d546d070eca7f30a30a53') in 0.037775 seconds 
+  path: Assets/Script/Enums
+  artifactKey: Guid(ae091b65f6b654145b725e2a63d09882) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Script/Enums using Guid(ae091b65f6b654145b725e2a63d09882) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0d218fdb39b2a07f77b101c5318ab2ed') in 0.005482 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 5.091963 seconds.
-  path: Assets/Prefabs/Dungeon/Rooms/CorridorNS_MyRooms_1.prefab
-  artifactKey: Guid(74ca431d864dbb54ba6312d91948e677) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Dungeon/Rooms/CorridorNS_MyRooms_1.prefab using Guid(74ca431d864dbb54ba6312d91948e677) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '562fea416bde911525dac375076479c4') in 0.003447 seconds 
+  Time since last request: 2.396657 seconds.
+  path: Assets/Script/Enums/Enums.cs
+  artifactKey: Guid(106016fce30305642b81195966186ace) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Script/Enums/Enums.cs using Guid(106016fce30305642b81195966186ace) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '86dbc14a61eed78bb1e5852fe2a949bb') in 0.029090 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002357 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.32 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.541 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 2.52 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2110 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 109.1 MB.
+System memory in use after: 109.2 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 2696.
+Total: 5.722200 ms (FindLiveObjects: 0.958200 ms CreateObjectMapping: 0.092700 ms MarkObjects: 4.636400 ms  DeleteObjects: 0.029500 ms)
+
 ========================================================================
 Received Import Request.
-  Time since last request: 3970.687262 seconds.
-  path: Assets/Prefabs/Dungeon/Rooms/MyRooms/MediumRoom_MyRooms_1.prefab
-  artifactKey: Guid(5990206e86d8e454bb66a6dc9cbaa263) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Dungeon/Rooms/MyRooms/MediumRoom_MyRooms_1.prefab using Guid(5990206e86d8e454bb66a6dc9cbaa263) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'de91ef48493b0a334b51441a81e6da17') in 0.009732 seconds 
+  Time since last request: 134.048977 seconds.
+  path: Assets/Script/Enums/Enums.cs
+  artifactKey: Guid(106016fce30305642b81195966186ace) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Script/Enums/Enums.cs using Guid(106016fce30305642b81195966186ace) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a7e72271615c4cccec10617ccb26709d') in 0.003322 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001352 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.99 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.884 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.09 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2110 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 109.1 MB.
+System memory in use after: 109.2 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 2698.
+Total: 1.845900 ms (FindLiveObjects: 0.199000 ms CreateObjectMapping: 0.065500 ms MarkObjects: 1.564000 ms  DeleteObjects: 0.016400 ms)
+
 ========================================================================
 Received Import Request.
-  Time since last request: 41.852982 seconds.
-  path: Assets/Prefabs/Dungeon/Rooms/MyRooms/CorridorNS_MyRooms_1.prefab
-  artifactKey: Guid(74ca431d864dbb54ba6312d91948e677) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Dungeon/Rooms/MyRooms/CorridorNS_MyRooms_1.prefab using Guid(74ca431d864dbb54ba6312d91948e677) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00d2fc913694f2994dbe0e178dddc6be') in 0.004363 seconds 
+  Time since last request: 51.376764 seconds.
+  path: Assets/Script/Dungeon
+  artifactKey: Guid(fee254cc0ea815f47890a4c5139e360f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Script/Dungeon using Guid(fee254cc0ea815f47890a4c5139e360f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0cc9612f74696d5e96892693d88f335d') in 0.003400 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 502.491588 seconds.
-  path: Assets/Prefabs/Dungeon/Rooms/MyRooms/MediumRoom_MyRooms_1.prefab
-  artifactKey: Guid(5990206e86d8e454bb66a6dc9cbaa263) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Dungeon/Rooms/MyRooms/MediumRoom_MyRooms_1.prefab using Guid(5990206e86d8e454bb66a6dc9cbaa263) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '03d4a8bef60081666bc7ddd439248e10') in 0.008709 seconds 
+  Time since last request: 8.685566 seconds.
+  path: Assets/Script/Dungeon/Doorway.cs
+  artifactKey: Guid(513fcbb3dfe2fe24e8d9fc2c184d9d14) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Script/Dungeon/Doorway.cs using Guid(513fcbb3dfe2fe24e8d9fc2c184d9d14) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3f93fd81ce18875aa47c482e2b59f1b1') in 0.002166 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001339 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.07 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.842 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.01 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2111 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 109.3 MB.
+System memory in use after: 109.4 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 2701.
+Total: 2.745100 ms (FindLiveObjects: 0.182800 ms CreateObjectMapping: 0.044100 ms MarkObjects: 2.479900 ms  DeleteObjects: 0.036800 ms)
+
 ========================================================================
 Received Import Request.
-  Time since last request: 11.153695 seconds.
-  path: Assets/Prefabs/Dungeon/Rooms/RoomTemplate 1.prefab
-  artifactKey: Guid(4a6485a234b3ad44ab4ef8b68daf799f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Dungeon/Rooms/RoomTemplate 1.prefab using Guid(4a6485a234b3ad44ab4ef8b68daf799f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a619f275d203031de6952b349f6887ca') in 0.002729 seconds 
+  Time since last request: 381.644913 seconds.
+  path: Assets/Script/Dungeon/Doorway.cs
+  artifactKey: Guid(513fcbb3dfe2fe24e8d9fc2c184d9d14) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Script/Dungeon/Doorway.cs using Guid(513fcbb3dfe2fe24e8d9fc2c184d9d14) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1b007e99dda508a09b185a8fe965df23') in 0.006481 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001465 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.13 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.865 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.29 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2111 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 109.3 MB.
+System memory in use after: 109.4 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 2703.
+Total: 1.940600 ms (FindLiveObjects: 0.196100 ms CreateObjectMapping: 0.047300 ms MarkObjects: 1.679800 ms  DeleteObjects: 0.016500 ms)
+
 ========================================================================
 Received Import Request.
-  Time since last request: 6.945411 seconds.
-  path: Assets/Prefabs/Dungeon/Rooms/CorridorEW_MyRooms_1.prefab
-  artifactKey: Guid(4a6485a234b3ad44ab4ef8b68daf799f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Dungeon/Rooms/CorridorEW_MyRooms_1.prefab using Guid(4a6485a234b3ad44ab4ef8b68daf799f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '95f8c37cc17f64965fb4549c69b608e0') in 0.004220 seconds 
+  Time since last request: 38.546589 seconds.
+  path: Assets/Script/Dungeon/RoomTemplateSO.cs
+  artifactKey: Guid(fcabbfd3c7f0c1d4bb0bd535d11c93bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Script/Dungeon/RoomTemplateSO.cs using Guid(fcabbfd3c7f0c1d4bb0bd535d11c93bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c5de98816c9c1104cfe9f5cefab36187') in 0.003921 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001695 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.04 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.943 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.05 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2112 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 109.3 MB.
+System memory in use after: 109.4 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 2706.
+Total: 1.861400 ms (FindLiveObjects: 0.182300 ms CreateObjectMapping: 0.047900 ms MarkObjects: 1.617600 ms  DeleteObjects: 0.012900 ms)
+
 ========================================================================
 Received Import Request.
-  Time since last request: 702.078064 seconds.
-  path: Assets/Prefabs/Dungeon/Rooms/MyRooms/CorridorEW_MyRooms_1.prefab
-  artifactKey: Guid(4a6485a234b3ad44ab4ef8b68daf799f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Dungeon/Rooms/MyRooms/CorridorEW_MyRooms_1.prefab using Guid(4a6485a234b3ad44ab4ef8b68daf799f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2ae9ac2b4b33aae61f7a65c3cdc19f74') in 0.004131 seconds 
+  Time since last request: 1473.952357 seconds.
+  path: Assets/Script/Dungeon/RoomTemplateSO.cs
+  artifactKey: Guid(fcabbfd3c7f0c1d4bb0bd535d11c93bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Script/Dungeon/RoomTemplateSO.cs using Guid(fcabbfd3c7f0c1d4bb0bd535d11c93bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0c7d6926cfbfb4865a602b631b38eda5') in 0.005719 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001595 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.40 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.898 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.67 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2112 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 109.3 MB.
+System memory in use after: 109.4 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 2708.
+Total: 2.201700 ms (FindLiveObjects: 0.186000 ms CreateObjectMapping: 0.062100 ms MarkObjects: 1.930900 ms  DeleteObjects: 0.018500 ms)
+
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file
