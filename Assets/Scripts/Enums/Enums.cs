@@ -1,6 +1,10 @@
+<<<<<<< Updated upstream
 
 
 public enum Orientation
+=======
+﻿public enum Orientation
+>>>>>>> Stashed changes
 {
     north,
     east,
@@ -8,3 +12,7 @@ public enum Orientation
     west,
     none
 }
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes

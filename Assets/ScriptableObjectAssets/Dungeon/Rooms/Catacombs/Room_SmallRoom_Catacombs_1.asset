@@ -14,11 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   guid: 8ba8b1e9041f82547836c4edaa027f39
   prefab: {fileID: 4327421925113694216, guid: def26589b9327484ebd1f5a375e4c08a, type: 3}
+<<<<<<< Updated upstream
   previousPrefab: {fileID: 4327421925113694216, guid: def26589b9327484ebd1f5a375e4c08a,
     type: 3}
   battleMusic: {fileID: 11400000, guid: a4e1f8d956378ae4a8ec12db302cc572, type: 2}
   ambientMusic: {fileID: 11400000, guid: 60270dd8cf10b14498c49c54a55e505e, type: 2}
   roomNodeType: {fileID: 11400000, guid: 1ea30f900a849004598824ab1a972be8, type: 2}
+=======
+  previousPrefab: {fileID: 4327421925113694216, guid: def26589b9327484ebd1f5a375e4c08a, type: 3}
+  roomNodeType: {fileID: 0}
+>>>>>>> Stashed changes
   lowerBounds: {x: -2, y: -2}
   upperBounds: {x: 29, y: 28}
   doorwayList:
@@ -42,7 +47,11 @@ MonoBehaviour:
     orientation: 1
     doorPrefab: {fileID: 0}
     doorwayStartCopyPosition: {x: 26, y: 19}
+<<<<<<< Updated upstream
     doorwayCopyTileWidth: 5
+=======
+    doorwayCopyTileWidth: 4
+>>>>>>> Stashed changes
     doorwayCopyTileHeight: 8
     isConnected: 0
     isUnavailable: 0
@@ -59,6 +68,7 @@ MonoBehaviour:
   - {x: 23, y: 17}
   - {x: 5, y: 6}
   - {x: 21, y: 6}
+<<<<<<< Updated upstream
   enemiesByLevelList:
   - dungeonLevel: {fileID: 11400000, guid: 912d2cb7daf41134ca2b690f1e62c62f, type: 2}
     spawnableObjectRatioList:
@@ -112,3 +122,5 @@ MonoBehaviour:
     maxConcurrentEnemies: 5
     minSpawnInterval: 3
     maxSpawnInterval: 5
+=======
+>>>>>>> Stashed changes

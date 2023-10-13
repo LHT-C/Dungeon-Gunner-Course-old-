@@ -14,12 +14,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   guid: 46204f012075f9044bf5e6f069f9c46c
   prefab: {fileID: 4327421925113694216, guid: e2546f369d303f74da21f4b860db53c0, type: 3}
+<<<<<<< Updated upstream
   previousPrefab: {fileID: 4327421925113694216, guid: e2546f369d303f74da21f4b860db53c0,
     type: 3}
   battleMusic: {fileID: 11400000, guid: a4e1f8d956378ae4a8ec12db302cc572, type: 2}
   ambientMusic: {fileID: 11400000, guid: 60270dd8cf10b14498c49c54a55e505e, type: 2}
   roomNodeType: {fileID: 11400000, guid: 116b0f4f64b9da84eafd28d4be7dd56d, type: 2}
   lowerBounds: {x: -22, y: -6}
+=======
+  previousPrefab: {fileID: 4327421925113694216, guid: e2546f369d303f74da21f4b860db53c0, type: 3}
+  roomNodeType: {fileID: 0}
+  lowerBounds: {x: -21, y: -6}
+>>>>>>> Stashed changes
   upperBounds: {x: 66, y: 79}
   doorwayList:
   - position: {x: 23, y: 79}
@@ -72,6 +78,7 @@ MonoBehaviour:
   - {x: 52, y: 16}
   - {x: 34, y: 4}
   - {x: 54, y: 3}
+<<<<<<< Updated upstream
   enemiesByLevelList:
   - dungeonLevel: {fileID: 11400000, guid: 912d2cb7daf41134ca2b690f1e62c62f, type: 2}
     spawnableObjectRatioList:
@@ -140,3 +147,5 @@ MonoBehaviour:
     maxConcurrentEnemies: 4
     minSpawnInterval: 3
     maxSpawnInterval: 5
+=======
+>>>>>>> Stashed changes
