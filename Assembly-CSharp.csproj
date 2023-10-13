@@ -57,26 +57,16 @@
     <Analyzer Include="C:\software\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-<<<<<<< Updated upstream
-    <Compile Include="Assets\Scripts\Dungeon\Doorway.cs" />
-    <Compile Include="Assets\Scripts\NodeGraph\RoomNodeGraphSO.cs" />
-    <Compile Include="Assets\Scripts\NodeGraph\RoomNodeTypeSO.cs" />
-    <Compile Include="Assets\Scripts\Enums\Enums.cs" />
-=======
-    <Compile Include="Assets\Scripts\NodeGraph\RoomNodeGraphSO.cs" />
-    <Compile Include="Assets\Scripts\NodeGraph\RoomNodeTypeSO.cs" />
->>>>>>> Stashed changes
-    <Compile Include="Assets\Scripts\GameManager\GameResources.cs" />
-    <Compile Include="Assets\Scripts\NodeGraph\RoomNodeTypeListSO.cs" />
-    <Compile Include="Assets\Scripts\NodeGraph\RoomNodeSO.cs" />
-    <Compile Include="Assets\Scripts\Dungeon\RoomTemplateSO.cs" />
-    <Compile Include="Assets\Scripts\Utilities\HelperUtilities.cs" />
-    <Compile Include="Assets\Scripts\Misc\Settings.cs" />
-<<<<<<< Updated upstream
-=======
-    <Compile Include="Assets\Scripts\Enums\Enums.cs" />
-    <Compile Include="Assets\Scripts\Dungeon\Doorway.cs" />
->>>>>>> Stashed changes
+    <Compile Include="Assets\Script\NodeGraph\RoomNodeGraphSO.cs" />
+    <Compile Include="Assets\Script\NodeGraph\RoomNodeTypeSO.cs" />
+    <Compile Include="Assets\Script\GameManager\GameResources.cs" />
+    <Compile Include="Assets\Script\NodeGraph\RoomNodeTypeListSO.cs" />
+    <Compile Include="Assets\Script\NodeGraph\RoomNodeSO.cs" />
+    <Compile Include="Assets\Script\Utilities\HelperUtilities.cs" />
+    <Compile Include="Assets\Script\Misc\Settings.cs" />
+    <Compile Include="Assets\Script\Enums\Enums.cs" />
+    <Compile Include="Assets\Script\Dungeon\Doorway.cs" />
+    <Compile Include="Assets\Script\Dungeon\RoomTemplateSO.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
