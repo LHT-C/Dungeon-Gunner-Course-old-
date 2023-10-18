@@ -1,9 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor;
 using UnityEngine;
 
-[CreateAssetMenu(fileName ="RoomNodeGraph", menuName = "Scriptable Objects/Dungeon/Room Node Graph")]//右键创建资产选项中菜单中添加子菜单：脚本对象房间节点图
+[CreateAssetMenu(fileName = "RoomNodeGraph", menuName = "Scriptable Objects/Dungeon/Room Node Graph")]//右键创建资产选项中菜单中添加子菜单：脚本对象房间节点图
 public class RoomNodeGraphSO : ScriptableObject
 {
     [HideInInspector] public RoomNodeTypeListSO roomNodeTypeList;
@@ -13,6 +12,7 @@ public class RoomNodeGraphSO : ScriptableObject
     private void Awake()
     {
         LoadRoomNodeDictionary();
+
     }
 
     /// <summary>
@@ -29,6 +29,23 @@ public class RoomNodeGraphSO : ScriptableObject
         }
     }
 
+
+    /// <summary>
+    /// Get room node by roomNodeType
+    /// </summary>
+    public RoomNodeSO GetRoomNode(RoomNodeTypeSO roomNodeType)
+    {
+        foreach (RoomNodeSO node in roomNodeList)
+        {
+            if (node.roomNodeType == roomNodeType)
+            {
+                return node;
+            }
+        }
+        return null;
+    }
+
+
     /// <summary>
     /// Get room node by room nodeID
     /// </summary>
@@ -41,12 +58,24 @@ public class RoomNodeGraphSO : ScriptableObject
         return null;
     }
 
+    /// <summary>
+    /// Get child room nodes for supplied parent room node
+    /// </summary>
+    public IEnumerable<RoomNodeSO> GetChildRoomNodes(RoomNodeSO parentRoomNode)
+    {
+        foreach (string childNodeID in parentRoomNode.childRoomNodeIDList)
+        {
+            yield return GetRoomNode(childNodeID);
+        }
+    }
+
+
     #region Editor Code
 
     // The following code should only run in the Unity Editor
 #if UNITY_EDITOR
 
-    [HideInInspector] public RoomNodeSO roomNodeToDrawLinefrom = null;
+    [HideInInspector] public RoomNodeSO roomNodeToDrawLineFrom = null;
     [HideInInspector] public Vector2 linePosition;
 
     // Repopulate node dictionary every time a change is made in the editor
@@ -55,13 +84,14 @@ public class RoomNodeGraphSO : ScriptableObject
         LoadRoomNodeDictionary();
     }
 
-    public void SetNodeToDrawConnectionLinefrom(RoomNodeSO node, Vector2 position)//传入节点位置和鼠标位置作为判断依据和起点终点
+    public void SetNodeToDrawConnectionLineFrom(RoomNodeSO node, Vector2 position)//传入节点位置和鼠标位置作为判断依据和起点终点
     {
-        roomNodeToDrawLinefrom = node;
+        roomNodeToDrawLineFrom = node;
         linePosition = position;
     }
 
 #endif
 
     #endregion Editor Code
+
 }

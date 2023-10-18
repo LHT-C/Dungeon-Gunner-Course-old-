@@ -26,6 +26,12 @@ public static class HelperUtilities
         bool error = false;
         int count = 0;
 
+        if(enumerableObjectToCheck==null)
+        {
+            Debug.Log(fieldName + " is null in object " + thisObject.name.ToString());
+            return false;
+        }
+
         foreach (var item in enumerableObjectToCheck)
         {
             if (item == null)
