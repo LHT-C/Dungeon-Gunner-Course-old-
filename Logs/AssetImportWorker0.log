@@ -4,7 +4,7 @@ OS: 'Windows 10 Pro; OS build 19045.3208; Version 2009; 64bit' Language: 'zh' Ph
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
 
  COMMAND LINE ARGUMENTS:
-C:\Program Files\Unity\Hub\Editor\2021.1.7f1-x86_64\Editor\Unity.exe
+C:\Program Files\Unity\Hub\Editor\2021.1.7f1\Editor\Unity.exe
 -adb2
 -batchMode
 -noUpm
@@ -15,14 +15,16 @@ C:/Unity Projects/projects/Dungeon Gunner Course
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-56088
+60469
 Successfully changed project path to: C:/Unity Projects/projects/Dungeon Gunner Course
 C:/Unity Projects/projects/Dungeon Gunner Course
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 103.19 ms, found 0 plugins.
+Unable to join player connection multicast group.
+
+Refreshing native plugins compatible for Editor in 55.30 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.1.7f1 (d91830b65d9b)
-[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.1.7f1-x86_64/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.1.7f1/Editor/Data/Resources/UnitySubsystems
 [Subsystems] Discovering subsystems at path C:/Unity Projects/projects/Dungeon Gunner Course/Assets
 GfxDevice: creating device client; threaded=0; jobified=0
 Direct3D:
@@ -33,81 +35,273 @@ Direct3D:
     Driver:   31.0.15.2852
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
 Initialize mono
-Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.1.7f1-x86_64/Editor/Data/Managed'
-Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.1.7f1-x86_64/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
-Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.1.7f1-x86_64/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56448
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.1.7f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.1.7f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.1.7f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56836
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
-Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.1.7f1-x86_64/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.001716 seconds.
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.1.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.000904 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 133.81 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 104.79 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.194 seconds
+- Completed reload, in  0.791 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.002081 seconds.
+Registered in 0.001769 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 95.02 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 80.28 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.907 seconds
+- Completed reload, in  0.847 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.09 seconds
-Refreshing native plugins compatible for Editor in 1.08 ms, found 0 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
+Refreshing native plugins compatible for Editor in 0.99 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2244 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 117.8 MB.
-System memory in use after: 117.9 MB.
+Unloading 2247 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 119.2 MB.
+System memory in use after: 83.8 MB.
 
-Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 2701.
-Total: 2.453900 ms (FindLiveObjects: 0.240000 ms CreateObjectMapping: 0.053100 ms MarkObjects: 2.076000 ms  DeleteObjects: 0.083600 ms)
+Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 2705.
+Total: 2.331500 ms (FindLiveObjects: 0.136000 ms CreateObjectMapping: 0.030500 ms MarkObjects: 2.100800 ms  DeleteObjects: 0.063500 ms)
 
 ========================================================================
 Received Import Request.
-  path: Assets/CourseAssets
-  artifactKey: Guid(26124588896f3804da1e87dd6d404eac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CourseAssets using Guid(26124588896f3804da1e87dd6d404eac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '834ae94d3f05e4b53b8ca55b51dbe810') in 0.006165 seconds 
+  path: Assets/Scripts/NodeGraph/RoomNodeSO.cs
+  artifactKey: Guid(e0dadaf6f9efabf4b8598620a39f07af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/NodeGraph/RoomNodeSO.cs using Guid(e0dadaf6f9efabf4b8598620a39f07af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c2754f08d4f9c6bd119735675b489195') in 0.015031 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 8.335980 seconds.
-  path: Assets/CourseAssets/Shaders
-  artifactKey: Guid(2e692c4da4d4ed449b47692524e9b5ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CourseAssets/Shaders using Guid(2e692c4da4d4ed449b47692524e9b5ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '410585de95e440cc34ab27024ebb0ef0') in 0.004124 seconds 
+  Time since last request: 185.783665 seconds.
+  path: Assets/Scripts/NodeGraph/RoomNodeGraphSO.cs
+  artifactKey: Guid(52b13048f812a8846a0c528313e89fc4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/NodeGraph/RoomNodeGraphSO.cs using Guid(52b13048f812a8846a0c528313e89fc4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bd0a7a8b884b0a981c2a0c6c84a232f4') in 0.002080 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001395 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.99 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.848 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.13 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2117 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 110.3 MB.
+System memory in use after: 110.4 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 2707.
+Total: 3.913300 ms (FindLiveObjects: 0.294000 ms CreateObjectMapping: 0.110300 ms MarkObjects: 3.474300 ms  DeleteObjects: 0.032700 ms)
+
 ========================================================================
 Received Import Request.
-  Time since last request: 14.514983 seconds.
-  path: Assets/CourseAssets/Shaders/DungeonLightShader_Variable.shadergraph
-  artifactKey: Guid(304a236819d488f409a1dfccdc33ea46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CourseAssets/Shaders/DungeonLightShader_Variable.shadergraph using Guid(304a236819d488f409a1dfccdc33ea46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '11f61ef23cbfad0323b206b889038bb8') in 0.045758 seconds 
+  Time since last request: 60.251623 seconds.
+  path: Assets/Scripts/Misc/Settings.cs
+  artifactKey: Guid(78a2903402dddae46b43ab7359af74d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Misc/Settings.cs using Guid(78a2903402dddae46b43ab7359af74d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b9e2da74cbc9faf6b7543a21222855ce') in 0.011040 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 3156.735608 seconds.
-  path: Assets/CourseAssets/Shaders/Old_DungeonLightShader_Variable.shadergraph
-  artifactKey: Guid(304a236819d488f409a1dfccdc33ea46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CourseAssets/Shaders/Old_DungeonLightShader_Variable.shadergraph using Guid(304a236819d488f409a1dfccdc33ea46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '03ead83464af61f736f3af53c6173e6e') in 0.023233 seconds 
+  Time since last request: 71.605469 seconds.
+  path: Assets/Scripts/Misc/Settings.cs
+  artifactKey: Guid(78a2903402dddae46b43ab7359af74d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Misc/Settings.cs using Guid(78a2903402dddae46b43ab7359af74d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5b82724836d0d0dde199e5bde9789943') in 0.002819 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001282 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.09 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.880 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.06 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2117 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 110.3 MB.
+System memory in use after: 110.4 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 2709.
+Total: 2.485300 ms (FindLiveObjects: 0.196100 ms CreateObjectMapping: 0.042400 ms MarkObjects: 2.228100 ms  DeleteObjects: 0.017700 ms)
+
 ========================================================================
 Received Import Request.
-  Time since last request: 2.332973 seconds.
-  path: Assets/CourseAssets/Shaders/FlameShader.shadergraph
-  artifactKey: Guid(f15d3b3ce6fc5884d9aadef7d8573074) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CourseAssets/Shaders/FlameShader.shadergraph using Guid(f15d3b3ce6fc5884d9aadef7d8573074) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '10ac9e4188271bc15f024ea905065fc8') in 0.004655 seconds 
+  Time since last request: 132.614700 seconds.
+  path: Assets/Scripts/GameManager/GameResources.cs
+  artifactKey: Guid(53193745c1337b54b9f7c43c68221d08) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GameManager/GameResources.cs using Guid(53193745c1337b54b9f7c43c68221d08) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ded4b9661812c0b993055ea2d3566dca') in 0.006149 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002043 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.01 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.922 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.29 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2117 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 110.3 MB.
+System memory in use after: 110.5 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 2711.
+Total: 1.889600 ms (FindLiveObjects: 0.207600 ms CreateObjectMapping: 0.042100 ms MarkObjects: 1.615200 ms  DeleteObjects: 0.023700 ms)
+
 ========================================================================
 Received Import Request.
-  Time since last request: 15.199139 seconds.
-  path: Assets/CourseAssets/Shaders/DungeonLightShader_Variable.shadergraph
-  artifactKey: Guid(fbd567a3b9e5c864dab4a4e97918408f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CourseAssets/Shaders/DungeonLightShader_Variable.shadergraph using Guid(fbd567a3b9e5c864dab4a4e97918408f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7cad4563759a5ddd470bc7e4f5a8bdc3') in 0.003579 seconds 
+  Time since last request: 19.612941 seconds.
+  path: Assets/Scripts/Dungeon/DungeonBulider.cs
+  artifactKey: Guid(bf01da23df5522746aaf953e9112a4b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Dungeon/DungeonBulider.cs using Guid(bf01da23df5522746aaf953e9112a4b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '299437e2cfc6292ff6316df4dc189d11') in 0.006163 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000908 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.80 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.609 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.55 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2118 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 110.4 MB.
+System memory in use after: 110.5 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 2714.
+Total: 1.318700 ms (FindLiveObjects: 0.103700 ms CreateObjectMapping: 0.025800 ms MarkObjects: 1.164300 ms  DeleteObjects: 0.024200 ms)
+
 ========================================================================
 Received Import Request.
-  Time since last request: 4529.964906 seconds.
-  path: Assets/CourseAssets/Shaders/DungeonLightShader_Variable.shadergraph
-  artifactKey: Guid(fbd567a3b9e5c864dab4a4e97918408f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CourseAssets/Shaders/DungeonLightShader_Variable.shadergraph using Guid(fbd567a3b9e5c864dab4a4e97918408f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7bcf8800888fd0c61f66beb81869bf78') in 0.004989 seconds 
+  Time since last request: 4531.236046 seconds.
+  path: Assets/Scripts/Dungeon/DungeonBulider.cs
+  artifactKey: Guid(bf01da23df5522746aaf953e9112a4b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Dungeon/DungeonBulider.cs using Guid(bf01da23df5522746aaf953e9112a4b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '55e91dda78032df39147cdf158afb9dc') in 0.059267 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001580 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.10 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.855 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.37 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2118 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 110.3 MB.
+System memory in use after: 110.4 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 2716.
+Total: 2.288500 ms (FindLiveObjects: 0.233500 ms CreateObjectMapping: 0.046500 ms MarkObjects: 1.987500 ms  DeleteObjects: 0.019800 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 1049.439249 seconds.
+  path: Assets/Scripts/GameManager/GameManager.cs
+  artifactKey: Guid(27d71844ca9a6134495fb4d9f45ca023) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GameManager/GameManager.cs using Guid(27d71844ca9a6134495fb4d9f45ca023) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c0d8b3475ade2ac5d29f046d8c4efe5d') in 0.006746 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001369 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.05 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.895 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.04 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2118 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 110.4 MB.
+System memory in use after: 110.5 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 2718.
+Total: 2.931800 ms (FindLiveObjects: 0.346500 ms CreateObjectMapping: 0.140000 ms MarkObjects: 2.415100 ms  DeleteObjects: 0.028400 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 245.497085 seconds.
+  path: Assets/Scripts/Dungeon/DungeonBulider.cs
+  artifactKey: Guid(bf01da23df5522746aaf953e9112a4b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Dungeon/DungeonBulider.cs using Guid(bf01da23df5522746aaf953e9112a4b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a383e9a5823f759455ac473916d8ac7f') in 0.005963 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 27.044048 seconds.
+  path: Assets/Scripts/Dungeon/DungeonBulider.cs
+  artifactKey: Guid(bf01da23df5522746aaf953e9112a4b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Dungeon/DungeonBulider.cs using Guid(bf01da23df5522746aaf953e9112a4b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '52710906ae5c3fcdf93b0763e5b91235') in 0.001951 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001718 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.11 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.877 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.04 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2118 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 110.4 MB.
+System memory in use after: 110.5 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 2720.
+Total: 2.798700 ms (FindLiveObjects: 0.347900 ms CreateObjectMapping: 0.107200 ms MarkObjects: 2.305800 ms  DeleteObjects: 0.030000 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 615.977106 seconds.
+  path: Assets/Scripts/Dungeon/DungeonBuilder.cs
+  artifactKey: Guid(bf01da23df5522746aaf953e9112a4b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Dungeon/DungeonBuilder.cs using Guid(bf01da23df5522746aaf953e9112a4b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '433b3f2fbf49cf9b357e4fe6cbb9c8e6') in 0.005999 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001724 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.58 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.857 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.02 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2118 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 110.4 MB.
+System memory in use after: 110.5 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 2722.
+Total: 3.169000 ms (FindLiveObjects: 0.250100 ms CreateObjectMapping: 0.064400 ms MarkObjects: 2.819900 ms  DeleteObjects: 0.032800 ms)
+
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file

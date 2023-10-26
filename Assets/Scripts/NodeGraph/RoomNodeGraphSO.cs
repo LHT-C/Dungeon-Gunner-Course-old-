@@ -29,11 +29,10 @@ public class RoomNodeGraphSO : ScriptableObject
         }
     }
 
-
     /// <summary>
     /// Get room node by roomNodeType
     /// </summary>
-    public RoomNodeSO GetRoomNode(RoomNodeTypeSO roomNodeType)
+    public RoomNodeSO GetRoomNode(RoomNodeTypeSO roomNodeType)//通过传入房间节点类型来寻找房间（比如入口房间）
     {
         foreach (RoomNodeSO node in roomNodeList)
         {
@@ -44,7 +43,6 @@ public class RoomNodeGraphSO : ScriptableObject
         }
         return null;
     }
-
 
     /// <summary>
     /// Get room node by room nodeID
@@ -61,14 +59,13 @@ public class RoomNodeGraphSO : ScriptableObject
     /// <summary>
     /// Get child room nodes for supplied parent room node
     /// </summary>
-    public IEnumerable<RoomNodeSO> GetChildRoomNodes(RoomNodeSO parentRoomNode)
+    public IEnumerable<RoomNodeSO> GetChildRoomNodes(RoomNodeSO parentRoomNode)//通过父房间节点来寻找子房间
     {
         foreach (string childNodeID in parentRoomNode.childRoomNodeIDList)
         {
             yield return GetRoomNode(childNodeID);
         }
     }
-
 
     #region Editor Code
 
