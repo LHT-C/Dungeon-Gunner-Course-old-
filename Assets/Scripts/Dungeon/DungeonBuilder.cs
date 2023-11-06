@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 [DisallowMultipleComponent]
 public class DungeonBuilder : SingletonMonobehaviour<DungeonBuilder>
@@ -19,9 +20,12 @@ public class DungeonBuilder : SingletonMonobehaviour<DungeonBuilder>
         LoadRoomNodeTypeList();
 
         // Set dimmed material to fully visible
-        GameResources.Instance.dimmedMaterial.SetFloat("Alpha_Slider", 1f);//设置着色器为完全可见
+        GameResources.Instance.dimmedMaterial.SetFloat("Alpha_Slider", 1f);
     }
 
+    /// <summary>
+    /// Load the room node type list
+    /// </summary>
     private void LoadRoomNodeTypeList()
     {
         roomNodeTypeList = GameResources.Instance.roomNodeTypeList;
@@ -40,7 +44,7 @@ public class DungeonBuilder : SingletonMonobehaviour<DungeonBuilder>
         dungeonBuildSuccessful = false;
         int dungeonBuildAttempts = 0;
 
-        while (!dungeonBuildSuccessful && dungeonBuildAttempts < Settings.maxDungeonBuildAttempts)//重复尝试生成地牢
+        while (!dungeonBuildSuccessful && dungeonBuildAttempts < Settings.maxDungeonBuildAttempts)
         {
             dungeonBuildAttempts++;
 
@@ -51,7 +55,7 @@ public class DungeonBuilder : SingletonMonobehaviour<DungeonBuilder>
             dungeonBuildSuccessful = false;
 
             // Loop until dungeon successfully built or more than max attempts for node graph
-            while (!dungeonBuildSuccessful && dungeonRebuildAttemptsForNodeGraph <= Settings.maxDungeonRebuildAttemptsForRoomGraph)//节点生成失败时，清空地牢中的节点
+            while (!dungeonBuildSuccessful && dungeonRebuildAttemptsForNodeGraph <= Settings.maxDungeonRebuildAttemptsForRoomGraph)
             {
                 // Clear dungeon room gameobjects and dungeon room dictionary
                 ClearDungeon();
@@ -59,7 +63,7 @@ public class DungeonBuilder : SingletonMonobehaviour<DungeonBuilder>
                 dungeonRebuildAttemptsForNodeGraph++;
 
                 // Attempt To Build A Random Dungeon For The Selected room node graph
-                dungeonBuildSuccessful = AttemptToBuildRandomDungeon(roomNodeGraph);//尝试重建地牢房间节点
+                dungeonBuildSuccessful = AttemptToBuildRandomDungeon(roomNodeGraph);
             }
 
 
@@ -69,6 +73,7 @@ public class DungeonBuilder : SingletonMonobehaviour<DungeonBuilder>
                 InstantiateRoomGameobjects();
             }
         }
+
         return dungeonBuildSuccessful;
     }
 
@@ -81,7 +86,7 @@ public class DungeonBuilder : SingletonMonobehaviour<DungeonBuilder>
         roomTemplateDictionary.Clear();
 
         // Load room template list into dictionary
-        foreach (RoomTemplateSO roomTemplate in roomTemplateList)//将所有房间模板加入字典，如果重复则用控制台提示
+        foreach (RoomTemplateSO roomTemplate in roomTemplateList)
         {
             if (!roomTemplateDictionary.ContainsKey(roomTemplate.guid))
             {
@@ -98,7 +103,6 @@ public class DungeonBuilder : SingletonMonobehaviour<DungeonBuilder>
     /// Attempt to randomly build the dungeon for the specified room nodeGraph. Returns true if a
     /// successful random layout was generated, else returns false if a problem was encoutered and
     /// another attempt is required.
-    /// 假设能够正常生成节点（没有重叠）的情况下，开始建立房间节点，并记录重叠次数，进行判定
     /// </summary>
     private bool AttemptToBuildRandomDungeon(RoomNodeGraphSO roomNodeGraph)
     {
@@ -122,6 +126,7 @@ public class DungeonBuilder : SingletonMonobehaviour<DungeonBuilder>
         // Start with no room overlaps
         bool noRoomOverlaps = true;
 
+
         // Process open room nodes queue
         noRoomOverlaps = ProcessRoomsInOpenRoomNodeQueue(roomNodeGraph, openRoomNodeQueue, noRoomOverlaps);
 
@@ -134,14 +139,15 @@ public class DungeonBuilder : SingletonMonobehaviour<DungeonBuilder>
         {
             return false;
         }
+
     }
 
     /// <summary>
     /// Process rooms in the open room node queue, returning true if there are no room overlaps
-    /// 生成房间，循环遍历子节点，根据节点类型进行处理
     /// </summary>
     private bool ProcessRoomsInOpenRoomNodeQueue(RoomNodeGraphSO roomNodeGraph, Queue<RoomNodeSO> openRoomNodeQueue, bool noRoomOverlaps)
     {
+
         // While room nodes in open room node queue & no room overlaps detected.
         while (openRoomNodeQueue.Count > 0 && noRoomOverlaps == true)
         {
@@ -176,14 +182,18 @@ public class DungeonBuilder : SingletonMonobehaviour<DungeonBuilder>
                 // See if room can be placed without overlaps
                 noRoomOverlaps = CanPlaceRoomWithNoOverlaps(roomNode, parentRoom);
             }
+
         }
+
         return noRoomOverlaps;
+
     }
+
 
     /// <summary>
     /// Attempt to place the room node in the dungeon - if room can be placed return the room, else return null
     /// </summary>
-    private bool CanPlaceRoomWithNoOverlaps(RoomNodeSO roomNode, Room parentRoom)//处理房间出现重叠的情况
+    private bool CanPlaceRoomWithNoOverlaps(RoomNodeSO roomNode, Room parentRoom)
     {
 
         // initialise and assume overlap until proven otherwise.
@@ -202,7 +212,7 @@ public class DungeonBuilder : SingletonMonobehaviour<DungeonBuilder>
                 return false; // room overlaps
             }
 
-            Doorway doorwayParent = unconnectedAvailableParentDoorways[UnityEngine.Random.Range(0, unconnectedAvailableParentDoorways.Count)];//将两个未连接的门洞随机进行合理连接（通过房间类型和父子节点关系判断）
+            Doorway doorwayParent = unconnectedAvailableParentDoorways[UnityEngine.Random.Range(0, unconnectedAvailableParentDoorways.Count)];
 
             // Get a random room template for room node that is consistent with the parent door orientation
             RoomTemplateSO roomtemplate = GetRandomTemplateForRoomConsistentWithParent(roomNode, doorwayParent);
@@ -221,13 +231,17 @@ public class DungeonBuilder : SingletonMonobehaviour<DungeonBuilder>
 
                 // Add room to dictionary
                 dungeonBuilderRoomDictionary.Add(room.id, room);
+
             }
             else
             {
                 roomOverlaps = true;
             }
+
         }
+
         return true;  // no room overlaps
+
     }
 
     /// <summary>
@@ -267,13 +281,16 @@ public class DungeonBuilder : SingletonMonobehaviour<DungeonBuilder>
         {
             roomtemplate = GetRandomRoomTemplate(roomNode.roomNodeType);
         }
+
+
         return roomtemplate;
     }
+
 
     /// <summary>
     /// Place the room - returns true if the room doesn't overlap, false otherwise
     /// </summary>
-    private bool PlaceTheRoom(Room parentRoom, Doorway doorwayParent, Room room)//实际根据位置放置房间的方法
+    private bool PlaceTheRoom(Room parentRoom, Doorway doorwayParent, Room room)
     {
 
         // Get current room doorway position
@@ -320,7 +337,7 @@ public class DungeonBuilder : SingletonMonobehaviour<DungeonBuilder>
                 break;
         }
 
-        // Calculate room lower bounds and upper bounds based on positioning to align with parent doorway 通过计算坐标来对齐连接
+        // Calculate room lower bounds and upper bounds based on positioning to align with parent doorway
         room.lowerBounds = parentDoorwayPosition + adjustment + room.templateLowerBounds - doorway.position;
         room.upperBounds = room.lowerBounds + room.templateUpperBounds - room.templateLowerBounds;
 
@@ -345,13 +362,16 @@ public class DungeonBuilder : SingletonMonobehaviour<DungeonBuilder>
 
             return false;
         }
+
     }
+
 
     /// <summary>
     /// Get the doorway from the doorway list that has the opposite orientation to doorway
     /// </summary>
-    private Doorway GetOppositeDoorway(Doorway parentDoorway, List<Doorway> doorwayList)//检查门洞方向方法
+    private Doorway GetOppositeDoorway(Doorway parentDoorway, List<Doorway> doorwayList)
     {
+
         foreach (Doorway doorwayToCheck in doorwayList)
         {
             if (parentDoorway.orientation == Orientation.east && doorwayToCheck.orientation == Orientation.west)
@@ -371,8 +391,11 @@ public class DungeonBuilder : SingletonMonobehaviour<DungeonBuilder>
                 return doorwayToCheck;
             }
         }
+
         return null;
+
     }
+
 
     /// <summary>
     /// Check for rooms that overlap the upper and lower bounds parameters, and if there are overlapping rooms then return room else return null
@@ -394,8 +417,13 @@ public class DungeonBuilder : SingletonMonobehaviour<DungeonBuilder>
                 return room;
             }
         }
+
+
+        // Return
         return null;
+
     }
+
 
     /// <summary>
     /// Check if 2 rooms overlap each other - return true if they overlap or false if they don't overlap
@@ -414,7 +442,9 @@ public class DungeonBuilder : SingletonMonobehaviour<DungeonBuilder>
         {
             return false;
         }
+
     }
+
 
     /// <summary>
     /// Check if interval 1 overlaps interval 2 - this method is used by the IsOverlappingRoom method
@@ -431,6 +461,7 @@ public class DungeonBuilder : SingletonMonobehaviour<DungeonBuilder>
         }
     }
 
+
     /// <summary>
     /// Get a random room template from the roomtemplatelist that matches the roomType and return it
     /// (return null if no matching room templates found).
@@ -440,7 +471,7 @@ public class DungeonBuilder : SingletonMonobehaviour<DungeonBuilder>
         List<RoomTemplateSO> matchingRoomTemplateList = new List<RoomTemplateSO>();
 
         // Loop through room template list
-        foreach (RoomTemplateSO roomTemplate in roomTemplateList)//将模板添加到列表
+        foreach (RoomTemplateSO roomTemplate in roomTemplateList)
         {
             // Add matching room templates
             if (roomTemplate.roomNodeType == roomNodeType)
@@ -454,8 +485,10 @@ public class DungeonBuilder : SingletonMonobehaviour<DungeonBuilder>
             return null;
 
         // Select random room template from list and return
-        return matchingRoomTemplateList[UnityEngine.Random.Range(0, matchingRoomTemplateList.Count)];//从列表中随机获得房间模板
+        return matchingRoomTemplateList[UnityEngine.Random.Range(0, matchingRoomTemplateList.Count)];
+
     }
+
 
     /// <summary>
     /// Get unconnected doorways
@@ -470,10 +503,11 @@ public class DungeonBuilder : SingletonMonobehaviour<DungeonBuilder>
         }
     }
 
+
     /// <summary>
     /// Create room based on roomTemplate and layoutNode, and return the created room
     /// </summary>
-    private Room CreateRoomFromRoomTemplate(RoomTemplateSO roomTemplate, RoomNodeSO roomNode)//根据房间模板创建房间
+    private Room CreateRoomFromRoomTemplate(RoomTemplateSO roomTemplate, RoomNodeSO roomNode)
     {
         // Initialise room from template
         Room room = new Room();
@@ -498,10 +532,13 @@ public class DungeonBuilder : SingletonMonobehaviour<DungeonBuilder>
         }
         else
         {
-            room.parentRoomID = roomNode.parentRoomNodeIDList[0];//非入口节点的情况下，重新设置父节点
+            room.parentRoomID = roomNode.parentRoomNodeIDList[0];
         }
+
         return room;
+
     }
+
 
     /// <summary>
     /// Select a random room node graph from the list of room node graphs
@@ -510,7 +547,7 @@ public class DungeonBuilder : SingletonMonobehaviour<DungeonBuilder>
     {
         if (roomNodeGraphList.Count > 0)
         {
-            return roomNodeGraphList[UnityEngine.Random.Range(0, roomNodeGraphList.Count)];//从房间节点列表中随机选择房间节点
+            return roomNodeGraphList[UnityEngine.Random.Range(0, roomNodeGraphList.Count)];
         }
         else
         {
@@ -519,10 +556,11 @@ public class DungeonBuilder : SingletonMonobehaviour<DungeonBuilder>
         }
     }
 
+
     /// <summary>
     /// Create deep copy of doorway list
     /// </summary>
-    private List<Doorway> CopyDoorwayList(List<Doorway> oldDoorwayList)//重新添加子节点时，将门洞同时深度复制
+    private List<Doorway> CopyDoorwayList(List<Doorway> oldDoorwayList)
     {
         List<Doorway> newDoorwayList = new List<Doorway>();
 
@@ -541,13 +579,15 @@ public class DungeonBuilder : SingletonMonobehaviour<DungeonBuilder>
 
             newDoorwayList.Add(newDoorway);
         }
+
         return newDoorwayList;
     }
+
 
     /// <summary>
     /// Create deep copy of string list
     /// </summary>
-    private List<string> CopyStringList(List<string> oldStringList)//通过深度复制字符串来重新添加子节点
+    private List<string> CopyStringList(List<string> oldStringList)
     {
         List<string> newStringList = new List<string>();
 
@@ -562,15 +602,37 @@ public class DungeonBuilder : SingletonMonobehaviour<DungeonBuilder>
     /// <summary>
     /// Instantiate the dungeon room gameobjects from the prefabs
     /// </summary>
-    private void InstantiateRoomGameobjects()//最终实际实例化房间资源的方法
+    private void InstantiateRoomGameobjects()
     {
+        // Iterate through all dungeon rooms.
+        foreach (KeyValuePair<string, Room> keyvaluepair in dungeonBuilderRoomDictionary)
+        {
+            Room room = keyvaluepair.Value;
 
+            // Calculate room position (remember the room instantiatation position needs to be adjusted by the room template lower bounds)
+            Vector3 roomPosition = new Vector3(room.lowerBounds.x - room.templateLowerBounds.x, room.lowerBounds.y - room.templateLowerBounds.y, 0f);
+
+            // Instantiate room
+            GameObject roomGameobject = Instantiate(room.prefab, roomPosition, Quaternion.identity, transform);
+
+            // Get instantiated room component from instantiated prefab.
+            InstantiatedRoom instantiatedRoom = roomGameobject.GetComponentInChildren<InstantiatedRoom>();
+
+            instantiatedRoom.room = room;
+
+            // Initialise The Instantiated Room
+            instantiatedRoom.Initialise(roomGameobject);
+
+            // Save gameobject reference.
+            room.instantiatedRoom = instantiatedRoom;
+        }
     }
+
 
     /// <summary>
     /// Get a room template by room template ID, returns null if ID doesn't exist
     /// </summary>
-    public RoomTemplateSO GetRoomTemplate(string roomTemplateID)//获取房间模板的辅助方法
+    public RoomTemplateSO GetRoomTemplate(string roomTemplateID)
     {
         if (roomTemplateDictionary.TryGetValue(roomTemplateID, out RoomTemplateSO roomTemplate))
         {
@@ -585,7 +647,7 @@ public class DungeonBuilder : SingletonMonobehaviour<DungeonBuilder>
     /// <summary>
     /// Get room by roomID, if no room exists with that ID return null
     /// </summary>
-    public Room GetRoomByRoomID(string roomID)//通过房间id获取房间的辅助方法
+    public Room GetRoomByRoomID(string roomID)
     {
         if (dungeonBuilderRoomDictionary.TryGetValue(roomID, out Room room))
         {
@@ -597,10 +659,11 @@ public class DungeonBuilder : SingletonMonobehaviour<DungeonBuilder>
         }
     }
 
+
     /// <summary>
     /// Clear dungeon room gameobjects and dungeon room dictionary
     /// </summary>
-    private void ClearDungeon()//清空地牢方法
+    private void ClearDungeon()
     {
         // Destroy instantiated dungeon gameobjects and clear dungeon manager room dictionary
         if (dungeonBuilderRoomDictionary.Count > 0)

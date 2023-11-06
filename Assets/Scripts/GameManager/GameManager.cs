@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[DisallowMultipleComponent]//防止多次添加同一组件
+[DisallowMultipleComponent]
 public class GameManager : SingletonMonobehaviour<GameManager>
 {
     #region Header DUNGEON LEVELS
@@ -30,8 +30,9 @@ public class GameManager : SingletonMonobehaviour<GameManager>
 
     [HideInInspector] public GameState gameState;
 
+
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         gameState = GameState.gameStarted;
     }
@@ -41,17 +42,18 @@ public class GameManager : SingletonMonobehaviour<GameManager>
     {
         HandleGameState();
 
-        // For Testing
-        if(Input.GetKeyDown(KeyCode.R))//按下R键重开游戏
+        // For testing
+        if (Input.GetKeyDown(KeyCode.R))
         {
             gameState = GameState.gameStarted;
         }
+
     }
 
     /// <summary>
     /// Handle game state
     /// </summary>
-    private void HandleGameState()//游戏状态设置
+    private void HandleGameState()
     {
         // Handle game state
         switch (gameState)
@@ -64,20 +66,25 @@ public class GameManager : SingletonMonobehaviour<GameManager>
                 gameState = GameState.playingLevel;
 
                 break;
+
         }
 
     }
 
+
     private void PlayDungeonLevel(int dungeonLevelListIndex)
     {
         // Build dungeon for level
-        bool dungeonBuiltSucessfully = DungeonBuilder.Instance.GenerateDungeon(dungeonLevelList[dungeonLevelListIndex]);//调用DungeonBuilder来生成地牢
+        bool dungeonBuiltSucessfully = DungeonBuilder.Instance.GenerateDungeon(dungeonLevelList[dungeonLevelListIndex]);
 
         if (!dungeonBuiltSucessfully)
         {
             Debug.LogError("Couldn't build dungeon from specified rooms and node graphs");
         }
+
+
     }
+
 
     #region Validation
 
@@ -91,4 +98,6 @@ public class GameManager : SingletonMonobehaviour<GameManager>
 #endif
 
     #endregion Validation
+
 }
+

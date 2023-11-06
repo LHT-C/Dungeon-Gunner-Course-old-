@@ -5,18 +5,18 @@ public abstract class SingletonMonobehaviour<T> : MonoBehaviour where T : MonoBe
     private static T instance;
 
     public static T Instance
-    { 
-        get 
+    {
+        get
         {
-            return instance; 
+            return instance;
         }
     }
 
     protected virtual void Awake()
     {
-        if (instance == null) 
+        if (instance == null)
         {
-            instance = this as T;        
+            instance = this as T;
         }
         else
         {

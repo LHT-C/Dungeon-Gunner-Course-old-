@@ -6,13 +6,13 @@ public class GameResources : MonoBehaviour
 {
     private static GameResources instance;
 
-    public static GameResources Instance//在实例中添加方法
+    public static GameResources Instance
     {
         get
         {
-            if (instance == null)//检验是否为空
+            if (instance == null)
             {
-                instance = Resources.Load<GameResources>("GameResources");//将预制件从GameResources->Resources文件夹中加载到游戏资源类型对象
+                instance = Resources.Load<GameResources>("GameResources");
             }
             return instance;
         }
@@ -23,7 +23,7 @@ public class GameResources : MonoBehaviour
     [Header("DUNGEON")]
     #endregion
     #region Tooltip
-    [Tooltip("Populated with dungeon RoomNodeTypeS0")]//工具提示属性
+    [Tooltip("Populate with the dungeon RoomNodeTypeListSO")]
     #endregion
 
     public RoomNodeTypeListSO roomNodeTypeList;
@@ -35,5 +35,6 @@ public class GameResources : MonoBehaviour
     #region Tooltip
     [Tooltip("Dimmed Material")]
     #endregion
-    public Material dimmedMaterial;//用于引用着色器
+    public Material dimmedMaterial;
+
 }

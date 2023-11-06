@@ -5,21 +5,21 @@ using UnityEngine;
 
 public class RoomNodeSO : ScriptableObject
 {
-    public string id;//房间节点id，由GUID生成
-    public List<string> parentRoomNodeIDList = new List<string>();
-    public List<string> childRoomNodeIDList = new List<string>();
-    public RoomNodeGraphSO roomNodeGraph;
+    [HideInInspector] public string id;
+    [HideInInspector] public List<string> parentRoomNodeIDList = new List<string>();
+    [HideInInspector] public List<string> childRoomNodeIDList = new List<string>();
+    [HideInInspector] public RoomNodeGraphSO roomNodeGraph;
     public RoomNodeTypeSO roomNodeType;
-    public RoomNodeTypeListSO roomNodeTypeList;
+    [HideInInspector] public RoomNodeTypeListSO roomNodeTypeList;
 
     #region Editor Code
 
     // the following code should only be run in the Unity Editor
 #if UNITY_EDITOR
 
-    public Rect rect;
-    public bool isLeftClickDragging = false;
-    public bool isSelected = false;
+    [HideInInspector] public Rect rect;
+    [HideInInspector] public bool isLeftClickDragging = false;
+    [HideInInspector] public bool isSelected = false;
 
     /// <summary>
     /// Initialise node
@@ -27,46 +27,46 @@ public class RoomNodeSO : ScriptableObject
     public void Initialise(Rect rect, RoomNodeGraphSO nodeGraph, RoomNodeTypeSO roomNodeType)
     {
         this.rect = rect;
-        this.id = Guid.NewGuid().ToString();//设置一个唯一的GUID
+        this.id = Guid.NewGuid().ToString();
         this.name = "RoomNode";
         this.roomNodeGraph = nodeGraph;
         this.roomNodeType = roomNodeType;
 
         // Load room node type list
-        roomNodeTypeList = GameResources.Instance.roomNodeTypeList;//使用游戏资源来加载房间节点类型列表到成员变量中
+        roomNodeTypeList = GameResources.Instance.roomNodeTypeList;
     }
 
     /// <summary>
     /// Draw node with the nodestyle
     /// </summary>
-    public void Draw(GUIStyle nodeStyle)//绘制方法
+    public void Draw(GUIStyle nodeStyle)
     {
         //  Draw Node Box Using Begin Area
-        GUILayout.BeginArea(rect, nodeStyle);//绘制节点框
+        GUILayout.BeginArea(rect, nodeStyle);
 
         // Start Region To Detect Popup Selection Changes
-        EditorGUI.BeginChangeCheck();//检查变化
+        EditorGUI.BeginChangeCheck();
 
         // if the room node has a parent or is of type entrance then display a label else display a popup
         if (parentRoomNodeIDList.Count > 0 || roomNodeType.isEntrance)
         {
             // Display a label that can't be changed
-            EditorGUILayout.LabelField(roomNodeType.roomNodeTypeName);//当节点连线后，不能再更改节点房间类型
+            EditorGUILayout.LabelField(roomNodeType.roomNodeTypeName);
         }
         else
         {
             // Display a popup using the RoomNodeType name values that can be selected from (default to the currently set roomNodeType)
-            int selected = roomNodeTypeList.list.FindIndex(x => x == roomNodeType);//如果选择了（发生变化），则使用谓词指定房间节点类型（列表索引与房间节点类型相同的）
+            int selected = roomNodeTypeList.list.FindIndex(x => x == roomNodeType);
 
-            int selection = EditorGUILayout.Popup("", selected, GetRoomNodeTypesToDisplay());//创建一个弹出窗口，显示房间节点类型的字符串数组，按选择的房间节点类型填入索引
+            int selection = EditorGUILayout.Popup("", selected, GetRoomNodeTypesToDisplay());
 
-            roomNodeType = roomNodeTypeList.list[selection];//利用索引返回所选的房间类型
+            roomNodeType = roomNodeTypeList.list[selection];
 
             // If the room type selection has changed making child connections potentially invalid
-            if (roomNodeTypeList.list[selected].isCorridor && !roomNodeTypeList.list[selection].isCorridor || !roomNodeTypeList.list[selected].isCorridor && roomNodeTypeList.list[selection].isCorridor || !roomNodeTypeList.list[selected].isBossRoom && roomNodeTypeList.list[selection].isBossRoom)//选择的房间发生变化后，进行约束
+            if (roomNodeTypeList.list[selected].isCorridor && !roomNodeTypeList.list[selection].isCorridor || !roomNodeTypeList.list[selected].isCorridor && roomNodeTypeList.list[selection].isCorridor || !roomNodeTypeList.list[selected].isBossRoom && roomNodeTypeList.list[selection].isBossRoom)
             {
                 // If a room node type has been changed and it already has children then delete the parent child links since we need to revalidate any
-                if (childRoomNodeIDList.Count > 0)//子节点的父节点被删除后，对该节点进行限制
+                if (childRoomNodeIDList.Count > 0)
                 {
                     for (int i = childRoomNodeIDList.Count - 1; i >= 0; i--)
                     {
@@ -88,7 +88,7 @@ public class RoomNodeSO : ScriptableObject
         }
 
         if (EditorGUI.EndChangeCheck())
-            EditorUtility.SetDirty(this);//变化检查如果有变化，则SetDirty，保存所作的变化
+            EditorUtility.SetDirty(this);
 
         GUILayout.EndArea();
     }
@@ -98,9 +98,9 @@ public class RoomNodeSO : ScriptableObject
     /// </summary>
     public string[] GetRoomNodeTypesToDisplay()
     {
-        string[] roomArray = new string[roomNodeTypeList.list.Count];//创建长度为节点类型长度一致的空数组
+        string[] roomArray = new string[roomNodeTypeList.list.Count];
 
-        for (int i = 0; i < roomNodeTypeList.list.Count; i++)//循环，将节点类型加入数组
+        for (int i = 0; i < roomNodeTypeList.list.Count; i++)
         {
             if (roomNodeTypeList.list[i].displayInNodeGraphEditor)
             {
@@ -116,7 +116,7 @@ public class RoomNodeSO : ScriptableObject
     /// </summary>
     public void ProcessEvents(Event currentEvent)
     {
-        switch (currentEvent.type)//确定编辑器中发生了什么类型的交互（按下、松开、拖动）
+        switch (currentEvent.type)
         {
             // Process Mouse Down Events
             case EventType.MouseDown:
@@ -140,17 +140,17 @@ public class RoomNodeSO : ScriptableObject
 
     /// Process mouse down events
     /// </summary>
-    private void ProcessMouseDownEvent(Event currentEvent)//鼠标按下事件
+    private void ProcessMouseDownEvent(Event currentEvent)
     {
         // left click down
         if (currentEvent.button == 0)
         {
-            ProcessLeftClickDownEvent();//检测鼠标按下（是否为左键0）
+            ProcessLeftClickDownEvent();
         }
         // right click down
         else if (currentEvent.button == 1)
         {
-            ProcessRightClickDownEvent(currentEvent);//检测鼠标按下（是否为右键1）
+            ProcessRightClickDownEvent(currentEvent);
         }
     }
 
@@ -162,7 +162,7 @@ public class RoomNodeSO : ScriptableObject
         Selection.activeObject = this;
 
         // Toggle node selection
-        if (isSelected == true)//切换是否选择
+        if (isSelected == true)
         {
             isSelected = false;
         }
@@ -175,18 +175,18 @@ public class RoomNodeSO : ScriptableObject
     /// <summary>
     /// Process right click down
     ///
-    private void ProcessRightClickDownEvent(Event currentEvent)//右键按下事件
+    private void ProcessRightClickDownEvent(Event currentEvent)
     {
-        roomNodeGraph.SetNodeToDrawConnectionLineFrom(this, currentEvent.mousePosition);//在鼠标位置画线
+        roomNodeGraph.SetNodeToDrawConnectionLineFrom(this, currentEvent.mousePosition);
     }
 
     /// <summary>
     /// Process mouse up event
     /// </summary>
-    private void ProcessMouseUpEvent(Event currentEvent)//鼠标抬起事件
+    private void ProcessMouseUpEvent(Event currentEvent)
     {
         // If left click up
-        if (currentEvent.button == 0)//检测鼠标抬起（是否为左键0）
+        if (currentEvent.button == 0)
         {
             ProcessLeftClickUpEvent();
         }
@@ -197,7 +197,7 @@ public class RoomNodeSO : ScriptableObject
     /// </summary>
     private void ProcessLeftClickUpEvent()
     {
-        if (isLeftClickDragging)//释放拖动状态
+        if (isLeftClickDragging)
         {
             isLeftClickDragging = false;
         }
@@ -206,12 +206,12 @@ public class RoomNodeSO : ScriptableObject
     /// <summary>
     /// Process mouse drag event
     /// </summary>
-    private void ProcessMouseDragEvent(Event currentEvent)//鼠标拖动事件
+    private void ProcessMouseDragEvent(Event currentEvent)
     {
         // process left click drag event
         if (currentEvent.button == 0)
         {
-            ProcessLeftMouseDragEvent(currentEvent);//检测鼠标拖动（是否为左键0）
+            ProcessLeftMouseDragEvent(currentEvent);
         }
     }
 
@@ -220,16 +220,16 @@ public class RoomNodeSO : ScriptableObject
     /// </summary>
     private void ProcessLeftMouseDragEvent(Event currentEvent)
     {
-        isLeftClickDragging = true;//设置拖动事件为true
+        isLeftClickDragging = true;
 
-        DragNode(currentEvent.delta);//传入当前鼠标位置
+        DragNode(currentEvent.delta);
         GUI.changed = true;
     }
 
     /// <summary>
     /// Drag node
     /// </summary>
-    public void DragNode(Vector2 delta)//控制节点位置
+    public void DragNode(Vector2 delta)
     {
         rect.position += delta;
         EditorUtility.SetDirty(this);
@@ -241,7 +241,7 @@ public class RoomNodeSO : ScriptableObject
     public bool AddChildRoomNodeIDToRoomNode(string childID)
     {
         // Check child node can be added validly to parent
-        if (IsChildRoomValid(childID))//检查子节点id是否有效
+        if (IsChildRoomValid(childID))
         {
             childRoomNodeIDList.Add(childID);
             return true;
@@ -255,56 +255,56 @@ public class RoomNodeSO : ScriptableObject
     /// </summary>
     public bool IsChildRoomValid(string childID)
     {
-        bool isConnectedBossNodeAlready = false;//检查boss房是否已被连接
+        bool isConnectedBossNodeAlready = false;
         // Check if there is there already a connected boss room in the node graph
         foreach (RoomNodeSO roomNode in roomNodeGraph.roomNodeList)
         {
-            if (roomNode.roomNodeType.isBossRoom && roomNode.parentRoomNodeIDList.Count > 0)//每层只需要一个boss房间
+            if (roomNode.roomNodeType.isBossRoom && roomNode.parentRoomNodeIDList.Count > 0)
                 isConnectedBossNodeAlready = true;
         }
 
         // if the child node has a type of boss room and there is already a connected boss room node then return false
-        if (roomNodeGraph.GetRoomNode(childID).roomNodeType.isBossRoom && isConnectedBossNodeAlready)//如果子节点是boss房，则让其不能再被连接
+        if (roomNodeGraph.GetRoomNode(childID).roomNodeType.isBossRoom && isConnectedBossNodeAlready)
             return false;
 
         // If the child node has a type of none then return false
-        if (roomNodeGraph.GetRoomNode(childID).roomNodeType.isNone)//确认子节点是否为空
+        if (roomNodeGraph.GetRoomNode(childID).roomNodeType.isNone)
             return false;
 
         // If the node already has a child with this child ID return false
-        if (childRoomNodeIDList.Contains(childID))//确保该子节点不会被重复连接
+        if (childRoomNodeIDList.Contains(childID))
             return false;
 
         // If this node ID and the child ID are the same return false
-        if (id == childID)//子节点不能自我连接
+        if (id == childID)
             return false;
 
         // If this childID is already in the parentID list return false
-        if (parentRoomNodeIDList.Contains(childID))//确保该子节点并未已作为父节点
+        if (parentRoomNodeIDList.Contains(childID))
             return false;
 
         // If the child node already has a parent return false
-        if (roomNodeGraph.GetRoomNode(childID).parentRoomNodeIDList.Count > 0)//确保子节点只有一个父节点
+        if (roomNodeGraph.GetRoomNode(childID).parentRoomNodeIDList.Count > 0)
             return false;
 
         // If child is a corridor and this node is a corridor return false
-        if (roomNodeGraph.GetRoomNode(childID).roomNodeType.isCorridor && roomNodeType.isCorridor)//走廊与走廊不能连接
+        if (roomNodeGraph.GetRoomNode(childID).roomNodeType.isCorridor && roomNodeType.isCorridor)
             return false;
 
         // If child is not a corridor and this node is not a corridor return false
-        if (!roomNodeGraph.GetRoomNode(childID).roomNodeType.isCorridor && !roomNodeType.isCorridor)//房间与房间不能直接连接
+        if (!roomNodeGraph.GetRoomNode(childID).roomNodeType.isCorridor && !roomNodeType.isCorridor)
             return false;
 
         // If adding a corridor check that this node has < the maximum permitted child corridors
-        if (roomNodeGraph.GetRoomNode(childID).roomNodeType.isCorridor && childRoomNodeIDList.Count >= Settings.maxChildCorridors)//确保走廊数在约束范围内
+        if (roomNodeGraph.GetRoomNode(childID).roomNodeType.isCorridor && childRoomNodeIDList.Count >= Settings.maxChildCorridors)
             return false;
 
         // if the child room is an entrance return false - the entrance must always be the top level parent node
-        if (roomNodeGraph.GetRoomNode(childID).roomNodeType.isEntrance)//入口房间不能作为子节点
+        if (roomNodeGraph.GetRoomNode(childID).roomNodeType.isEntrance)
             return false;
 
         // If adding a room to a corridor check that this corridor node doesn't already have a room added
-        if (!roomNodeGraph.GetRoomNode(childID).roomNodeType.isCorridor && childRoomNodeIDList.Count > 0)//确保走廊后只连接一个房间
+        if (!roomNodeGraph.GetRoomNode(childID).roomNodeType.isCorridor && childRoomNodeIDList.Count > 0)
             return false;
 
         return true;
@@ -322,7 +322,7 @@ public class RoomNodeSO : ScriptableObject
     /// <summary>
     /// Remove childID from the node (returns true if the node has been removed, false otherwise)
     /// </summary>
-    public bool RemoveChildRoomNodeIDFromRoomNode(string childID)//删除子节点id
+    public bool RemoveChildRoomNodeIDFromRoomNode(string childID)
     {
         // if the node contains the child ID then remove it
         if (childRoomNodeIDList.Contains(childID))
@@ -336,7 +336,7 @@ public class RoomNodeSO : ScriptableObject
     /// <summary>
     /// Remove parentID from the node (returns true if the node has been remove, false otherwise)
     /// </summary>
-    public bool RemoveParentRoomNodeIDFromRoomNode(string parentID)//删除父节点id
+    public bool RemoveParentRoomNodeIDFromRoomNode(string parentID)
     {
         // if the node contains the parent ID then remove it
         if (parentRoomNodeIDList.Contains(parentID))

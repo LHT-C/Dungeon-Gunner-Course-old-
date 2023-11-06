@@ -27,4 +27,5 @@ public class Room
         childRoomIDList = new List<string>();
         doorWayList = new List<Doorway>();
     }
+
 }

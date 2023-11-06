@@ -150,6 +150,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fd193ca0c9070747b633840b9710fda, type: 3}
   m_Name: RoomNodeGraph_Level1_2
   m_EditorClassIdentifier: 
+  roomNodeTypeList: {fileID: 0}
+  roomNodeList:
+  - {fileID: 8125020624322144493}
+  - {fileID: 8220109942900418597}
+  - {fileID: -4802666966985852172}
+  - {fileID: 2350144144349588851}
+  - {fileID: 1049544577163205777}
+  - {fileID: -3768494427877938214}
+  - {fileID: 6238123054707442518}
+  - {fileID: 2625287303429102095}
+  - {fileID: 1635519302758143848}
+  - {fileID: 4693915725128154124}
+  - {fileID: 7995788092889542739}
+  - {fileID: -8715758115475479553}
+  - {fileID: -3205566208311860781}
+  - {fileID: 1772828734072030404}
+  - {fileID: -6587482327284984112}
+  roomNodeToDrawLineFrom: {fileID: 0}
+  linePosition: {x: 0, y: 0}
 --- !u!114 &1049544577163205777
 MonoBehaviour:
   m_ObjectHideFlags: 0

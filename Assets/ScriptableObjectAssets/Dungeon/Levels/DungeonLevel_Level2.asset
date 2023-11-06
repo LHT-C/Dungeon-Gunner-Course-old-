@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 26c9e0c682c363543bdf665e0f3814cb, type: 3}
+  m_Script: {fileID: 11500000, guid: 574055aba7953414f879974262b78e0c, type: 3}
   m_Name: DungeonLevel_Level2
   m_EditorClassIdentifier: 
   levelName: The Shadow Crypt
@@ -35,4 +35,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: ca3ebf2399132f74589db4539c90168f, type: 2}
   - {fileID: 11400000, guid: b497cf51860cc124088acdf3dfcc4bdc, type: 2}
   - {fileID: 11400000, guid: aeaa238dda2b934409291731e7646e39, type: 2}
-  roomNodeGraphList: []
+  roomNodeGraphList:
+  - {fileID: 11400000, guid: 7cb3cfbaec4e3fe4aa424c32df87086d, type: 2}
+  - {fileID: 11400000, guid: a0f91df64bba0194b98766e3d7deeb67, type: 2}
+  - {fileID: 11400000, guid: 9eb3c3dd50e3e5c428584aa5c112b663, type: 2}
+  - {fileID: 11400000, guid: 3d8c9cc1e1beeae4389174924fc94d6b, type: 2}
+  - {fileID: 11400000, guid: 00350a76e03e73e4384acbabb20c17de, type: 2}

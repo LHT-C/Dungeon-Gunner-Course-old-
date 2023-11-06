@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "RoomNodeGraph", menuName = "Scriptable Objects/Dungeon/Room Node Graph")]//右键创建资产选项中菜单中添加子菜单：脚本对象房间节点图
+[CreateAssetMenu(fileName = "RoomNodeGraph", menuName = "Scriptable Objects/Dungeon/Room Node Graph")]
 public class RoomNodeGraphSO : ScriptableObject
 {
     [HideInInspector] public RoomNodeTypeListSO roomNodeTypeList;
@@ -18,7 +18,7 @@ public class RoomNodeGraphSO : ScriptableObject
     /// <summary>
     /// Load the room node dictionary from the room node list.
     /// </summary>
-    private void LoadRoomNodeDictionary()//将所有房间节点加入到字典中
+    private void LoadRoomNodeDictionary()
     {
         roomNodeDictionary.Clear();
 
@@ -29,10 +29,11 @@ public class RoomNodeGraphSO : ScriptableObject
         }
     }
 
+
     /// <summary>
     /// Get room node by roomNodeType
     /// </summary>
-    public RoomNodeSO GetRoomNode(RoomNodeTypeSO roomNodeType)//通过传入房间节点类型来寻找房间（比如入口房间）
+    public RoomNodeSO GetRoomNode(RoomNodeTypeSO roomNodeType)
     {
         foreach (RoomNodeSO node in roomNodeList)
         {
@@ -44,12 +45,13 @@ public class RoomNodeGraphSO : ScriptableObject
         return null;
     }
 
+
     /// <summary>
     /// Get room node by room nodeID
     /// </summary>
     public RoomNodeSO GetRoomNode(string roomNodeID)
     {
-        if (roomNodeDictionary.TryGetValue(roomNodeID, out RoomNodeSO roomNode))//用节点id从字典中查找房间节点
+        if (roomNodeDictionary.TryGetValue(roomNodeID, out RoomNodeSO roomNode))
         {
             return roomNode;
         }
@@ -59,13 +61,14 @@ public class RoomNodeGraphSO : ScriptableObject
     /// <summary>
     /// Get child room nodes for supplied parent room node
     /// </summary>
-    public IEnumerable<RoomNodeSO> GetChildRoomNodes(RoomNodeSO parentRoomNode)//通过父房间节点来寻找子房间
+    public IEnumerable<RoomNodeSO> GetChildRoomNodes(RoomNodeSO parentRoomNode)
     {
         foreach (string childNodeID in parentRoomNode.childRoomNodeIDList)
         {
             yield return GetRoomNode(childNodeID);
         }
     }
+
 
     #region Editor Code
 
@@ -81,7 +84,7 @@ public class RoomNodeGraphSO : ScriptableObject
         LoadRoomNodeDictionary();
     }
 
-    public void SetNodeToDrawConnectionLineFrom(RoomNodeSO node, Vector2 position)//传入节点位置和鼠标位置作为判断依据和起点终点
+    public void SetNodeToDrawConnectionLineFrom(RoomNodeSO node, Vector2 position)
     {
         roomNodeToDrawLineFrom = node;
         linePosition = position;
