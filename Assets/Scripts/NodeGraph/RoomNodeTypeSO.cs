@@ -2,15 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "RoomNodeType_", menuName = "Scriptable Objects/Dungeon/Room Node Type")]
+[CreateAssetMenu(fileName = "RoomNodeType_", menuName = "Scriptable Objects/Dungeon/Room Node Type")]//右键创建资产选项中菜单中添加子菜单：脚本对象房间类型
 public class RoomNodeTypeSO : ScriptableObject
 {
-    public string roomNodeTypeName;
+    public string roomNodeTypeName;//节点类型名，用下面的布尔值来确定具体类型
 
     #region Header
     [Header("Only flag the RoomNodeTypes that should be visible in the editor")]
     #endregion Header
-    public bool displayInNodeGraphEditor = true;
+    public bool displayInNodeGraphEditor = true;//是否应当被显示在节点编辑器中，默认为真
     #region Header
     [Header("One Type Should Be A Corridor")]
     #endregion Header

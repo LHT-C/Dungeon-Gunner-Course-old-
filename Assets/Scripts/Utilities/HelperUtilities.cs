@@ -7,7 +7,7 @@ public static class HelperUtilities
     /// <summary>
     /// Empty string debug check
     /// </summary>
-    public static bool ValidateCheckEmptyString(Object thisObject, string fieldName, string stringToCheck)
+    public static bool ValidateCheckEmptyString(Object thisObject, string fieldName, string stringToCheck)//检查是否为空字符串
     {
         if (stringToCheck == "")
         {
@@ -18,9 +18,22 @@ public static class HelperUtilities
     }
 
     /// <summary>
+    /// null value debug check
+    /// </summary>
+    public static bool ValidateCheckNullValue(Object thisObject, string fieldName, UnityEngine.Object objectToCheck)//检测空值的方法
+    {
+        if (objectToCheck == null)
+        {
+            Debug.Log(fieldName + " is null and must contain a value in object " + thisObject.name.ToString());
+            return true;
+        }
+        return false;
+    }
+
+    /// <summary>
     /// list empty or contains null value check - returns true if there is an error
     /// </summary>
-    public static bool ValidateCheckEnumerableValues(Object thisObject, string fieldName, IEnumerable enumerableObjectToCheck)
+    public static bool ValidateCheckEnumerableValues(Object thisObject, string fieldName, IEnumerable enumerableObjectToCheck)//检查器，检查是否为空值
     {
         bool error = false;
         int count = 0;
@@ -55,4 +68,30 @@ public static class HelperUtilities
         return error;
     }
 
+    /// <summary>
+    /// positive value debug check - if zero is allowed set isZeroAllowed to true. Returns true if there is an error
+    /// </summary>
+    public static bool ValidateCheckPositiveValue(Object thisObject, string fieldName, float valueToCheck, bool isZeroAllowed)//检测位置值的方法（是否允许为0）
+    {
+        bool error = false;
+
+        if (isZeroAllowed)
+        {
+            if (valueToCheck < 0)
+            {
+                Debug.Log(fieldName + " must contain a positive value or zero in object " + thisObject.name.ToString());
+                error = true;
+            }
+        }
+        else
+        {
+            if (valueToCheck <= 0)
+            {
+                Debug.Log(fieldName + " must contain a positive value in object " + thisObject.name.ToString());
+                error = true;
+            }
+        }
+
+        return error;
+    }
 }

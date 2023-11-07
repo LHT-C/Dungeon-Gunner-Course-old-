@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[DisallowMultipleComponent]
+[DisallowMultipleComponent]//防止多次添加同一组件
 public class GameManager : SingletonMonobehaviour<GameManager>
 {
     #region Header DUNGEON LEVELS
@@ -43,7 +43,7 @@ public class GameManager : SingletonMonobehaviour<GameManager>
         HandleGameState();
 
         // For testing
-        if (Input.GetKeyDown(KeyCode.R))
+        if (Input.GetKeyDown(KeyCode.R))//按下R键重开游戏（重新生成随机地图）
         {
             gameState = GameState.gameStarted;
         }
@@ -53,7 +53,7 @@ public class GameManager : SingletonMonobehaviour<GameManager>
     /// <summary>
     /// Handle game state
     /// </summary>
-    private void HandleGameState()
+    private void HandleGameState()//游戏状态设置
     {
         // Handle game state
         switch (gameState)
@@ -75,7 +75,7 @@ public class GameManager : SingletonMonobehaviour<GameManager>
     private void PlayDungeonLevel(int dungeonLevelListIndex)
     {
         // Build dungeon for level
-        bool dungeonBuiltSucessfully = DungeonBuilder.Instance.GenerateDungeon(dungeonLevelList[dungeonLevelListIndex]);
+        bool dungeonBuiltSucessfully = DungeonBuilder.Instance.GenerateDungeon(dungeonLevelList[dungeonLevelListIndex]);//调用DungeonBuilder来生成地牢
 
         if (!dungeonBuiltSucessfully)
         {

@@ -6,13 +6,13 @@ public class GameResources : MonoBehaviour
 {
     private static GameResources instance;
 
-    public static GameResources Instance
+    public static GameResources Instance//在实例中添加方法
     {
         get
         {
-            if (instance == null)
+            if (instance == null)//检验是否为空
             {
-                instance = Resources.Load<GameResources>("GameResources");
+                instance = Resources.Load<GameResources>("GameResources");//将预制件从GameResources->Resources文件夹中加载到游戏资源类型对象
             }
             return instance;
         }
@@ -28,6 +28,15 @@ public class GameResources : MonoBehaviour
 
     public RoomNodeTypeListSO roomNodeTypeList;
 
+    #region Header PLAYER
+    [Space(10)]
+    [Header("PLAYER")]
+    #endregion Header PLAYER
+    #region Tooltip
+    [Tooltip("The current player scriptable object - this is used to reference the current player between scenes")]
+    #endregion Tooltip
+    public CurrentPlayerSO currentPlayer;
+
     #region Header MATERIALS
     [Space(10)]
     [Header("MATERIALS")]
@@ -35,6 +44,6 @@ public class GameResources : MonoBehaviour
     #region Tooltip
     [Tooltip("Dimmed Material")]
     #endregion
-    public Material dimmedMaterial;
+    public Material dimmedMaterial;//用于引用着色器
 
 }
