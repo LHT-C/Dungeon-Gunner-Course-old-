@@ -15,11 +15,11 @@ C:/Unity Projects/projects/Dungeon Gunner Course
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-63294
+62344
 Successfully changed project path to: C:/Unity Projects/projects/Dungeon Gunner Course
 C:/Unity Projects/projects/Dungeon Gunner Course
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 144.15 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 146.77 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.1.7f1 (d91830b65d9b)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.1.7f1-x86_64/Editor/Data/Resources/UnitySubsystems
@@ -36,152 +36,464 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.1.7f1-x86_64/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.1.7f1-x86_64/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.1.7f1-x86_64/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56432
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56244
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.1.7f1-x86_64/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.001835 seconds.
+Registered in 0.002735 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 158.02 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 135.63 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.980 seconds
+- Completed reload, in  1.543 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.003871 seconds.
+Registered in 0.008298 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image C:\Unity Projects\projects\Dungeon Gunner Course\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image C:\Unity Projects\projects\Dungeon Gunner Course\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 140.06 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 155.06 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.304 seconds
+- Completed reload, in  1.297 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.07 seconds
-Refreshing native plugins compatible for Editor in 2.19 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 1.71 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 3779 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 161.5 MB.
-System memory in use after: 161.7 MB.
+System memory in use before: 161.6 MB.
+System memory in use after: 161.8 MB.
 
 Unloading 17 unused Assets to reduce memory usage. Loaded Objects now: 4232.
-Total: 3.267500 ms (FindLiveObjects: 0.399500 ms CreateObjectMapping: 0.106100 ms MarkObjects: 2.665100 ms  DeleteObjects: 0.095300 ms)
+Total: 4.276200 ms (FindLiveObjects: 0.511800 ms CreateObjectMapping: 0.196300 ms MarkObjects: 3.431100 ms  DeleteObjects: 0.134900 ms)
 
 ========================================================================
 Received Import Request.
-  path: Assets/CourseAssets/Textures/Tilemap/Blood/blood_red02.png
-  artifactKey: Guid(c027da58b05675740adca00d660b608c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CourseAssets/Textures/Tilemap/Blood/blood_red02.png using Guid(c027da58b05675740adca00d660b608c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5d4b972aa79d5322e16c44e2bbfc8b08') in 0.137100 seconds 
+  path: Assets/Prefabs/Player/TheThief
+  artifactKey: Guid(4cc91ed674560bf4a9da147c9a424ef3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Player/TheThief using Guid(4cc91ed674560bf4a9da147c9a424ef3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '69dd7b21d1ff955d8c869bae0dc4904e') in 0.010160 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000289 seconds.
-  path: Assets/CourseAssets/Textures/Tilemap/Blood/blood_puddle_red.png
-  artifactKey: Guid(cdb28b86eb8c8c646b11741131cd63be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CourseAssets/Textures/Tilemap/Blood/blood_puddle_red.png using Guid(cdb28b86eb8c8c646b11741131cd63be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8b57f439ba8e093ace02abdad0cadfb9') in 0.024152 seconds 
+  Time since last request: 70.115743 seconds.
+  path: Assets/Prefabs/Player/TheThief.prefab
+  artifactKey: Guid(f0608c5b9256c764b9ca650c03516957) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Player/TheThief.prefab using Guid(f0608c5b9256c764b9ca650c03516957) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8a3f360246e8197bf8ad4c4343fdde21') in 0.269135 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000245 seconds.
-  path: Assets/CourseAssets/Textures/Tilemap/Blood/blood_green.png
-  artifactKey: Guid(39d91b48ef41a454c927f988a1aab31b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CourseAssets/Textures/Tilemap/Blood/blood_green.png using Guid(39d91b48ef41a454c927f988a1aab31b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '16236820ef4a0147d0bdc7aa8d9faeac') in 0.029478 seconds 
+  Time since last request: 631.742711 seconds.
+  path: Assets/CourseAssets/Textures
+  artifactKey: Guid(8f51fa4ee83375640807369837bbf00f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CourseAssets/Textures using Guid(8f51fa4ee83375640807369837bbf00f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '05375d4c5e40ed25408ec99eae3f70c7') in 0.003604 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000195 seconds.
-  path: Assets/CourseAssets/Textures/Tilemap/Blood/blood_red01.png
-  artifactKey: Guid(3517950672bc612448eb64753d4a7e93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CourseAssets/Textures/Tilemap/Blood/blood_red01.png using Guid(3517950672bc612448eb64753d4a7e93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4973f7b8fbbd39985a0fb9b23b1ba3f7') in 0.029539 seconds 
+  Time since last request: 4.764165 seconds.
+  path: Assets/CourseAssets/Textures/Sprites
+  artifactKey: Guid(4d1fa41941a19fe4e9176fbd922ad610) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CourseAssets/Textures/Sprites using Guid(4d1fa41941a19fe4e9176fbd922ad610) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aada7b61b82b1ab752f83b925ace0aba') in 0.003665 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000308 seconds.
-  path: Assets/CourseAssets/Textures/Tilemap/Blood/blood_puddle_red4.png
-  artifactKey: Guid(8d423e2b4ec67184da0b4ee9192163ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CourseAssets/Textures/Tilemap/Blood/blood_puddle_red4.png using Guid(8d423e2b4ec67184da0b4ee9192163ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fa91f45fc4c5a57eff7c44867e5d00f6') in 0.014154 seconds 
+  Time since last request: 3.595796 seconds.
+  path: Assets/CourseAssets/Textures/Sprites/Player
+  artifactKey: Guid(7d4690768235a414293667b11d38529c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CourseAssets/Textures/Sprites/Player using Guid(7d4690768235a414293667b11d38529c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '966ee567b1b2d2ae390e09a983bb21d1') in 0.002721 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000237 seconds.
-  path: Assets/CourseAssets/Textures/Tilemap/Blood/blood_red00.png
-  artifactKey: Guid(b9358d74fadbeda40a5e7e05d36d4bcf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CourseAssets/Textures/Tilemap/Blood/blood_red00.png using Guid(b9358d74fadbeda40a5e7e05d36d4bcf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0bb98a4a0bb80cb808c29e7f9aab701e') in 0.015412 seconds 
+  Time since last request: 4.610118 seconds.
+  path: Assets/CourseAssets/Textures/Sprites/Player/TheThief
+  artifactKey: Guid(316946d20e5a2454c8ab24454d9fda3b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CourseAssets/Textures/Sprites/Player/TheThief using Guid(316946d20e5a2454c8ab24454d9fda3b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ec76f822d913da57622b71d38ba54c35') in 0.002641 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000239 seconds.
-  path: Assets/CourseAssets/Textures/Tilemap/Blood/blood_puddle_red3.png
-  artifactKey: Guid(db1172fdd7b59c54a9d16fa4525f0d34) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CourseAssets/Textures/Tilemap/Blood/blood_puddle_red3.png using Guid(db1172fdd7b59c54a9d16fa4525f0d34) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8046ef2c0eada516b220191f8917ef70') in 0.011758 seconds 
+  Time since last request: 157.548920 seconds.
+  path: Assets/CourseAssets/Textures/Sprites/Player/TheThief/TheThiefHand.png
+  artifactKey: Guid(adb74156564e1e347b51a778dfa8c1f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CourseAssets/Textures/Sprites/Player/TheThief/TheThiefHand.png using Guid(adb74156564e1e347b51a778dfa8c1f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a48d5291c078435887962fb0022950e3') in 0.047026 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000272 seconds.
-  path: Assets/CourseAssets/Textures/Tilemap/Blood/blood_green4.png
-  artifactKey: Guid(f0efe1ba0e00e5c4995d6ab1604930cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CourseAssets/Textures/Tilemap/Blood/blood_green4.png using Guid(f0efe1ba0e00e5c4995d6ab1604930cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cd7e06c3363bb70ad775e62828fa6709') in 0.012214 seconds 
+  Time since last request: 0.711216 seconds.
+  path: Assets/CourseAssets/Textures/Sprites/Player/TheThief/TheThiefIdleUpRight.png
+  artifactKey: Guid(891c41e2fb69f5d48bbbf0cb62175c46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CourseAssets/Textures/Sprites/Player/TheThief/TheThiefIdleUpRight.png using Guid(891c41e2fb69f5d48bbbf0cb62175c46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '117d4086e20f2c21bf9e8cc091f8511e') in 0.010614 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000378 seconds.
-  path: Assets/CourseAssets/Textures/Sprites/UI/Menu/arrow.png
-  artifactKey: Guid(77e4d51e2f9df494cb7ff592c38472a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CourseAssets/Textures/Sprites/UI/Menu/arrow.png using Guid(77e4d51e2f9df494cb7ff592c38472a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f668b7b5a7077062d39e89c864eeb082') in 0.015780 seconds 
+  Time since last request: 343.052034 seconds.
+  path: Assets/CourseAssets/Textures/Sprites/Player/TheThief/TheThiefIdleUpRight.png
+  artifactKey: Guid(891c41e2fb69f5d48bbbf0cb62175c46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CourseAssets/Textures/Sprites/Player/TheThief/TheThiefIdleUpRight.png using Guid(891c41e2fb69f5d48bbbf0cb62175c46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd5ef7318ec59710979ea8f66a5e07aef') in 0.027338 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000198 seconds.
-  path: Assets/CourseAssets/Textures/Tilemap/Blood/blood_puddle_red1.png
-  artifactKey: Guid(84c6165bd63191a45a136b9885156a50) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CourseAssets/Textures/Tilemap/Blood/blood_puddle_red1.png using Guid(84c6165bd63191a45a136b9885156a50) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '724483ca2cc82a07b35355d23b6a4327') in 0.011876 seconds 
+  Time since last request: 25.326117 seconds.
+  path: Assets/CourseAssets/Textures/Sprites/Player/TheThief/TheThiefIdleUpRight.png
+  artifactKey: Guid(891c41e2fb69f5d48bbbf0cb62175c46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CourseAssets/Textures/Sprites/Player/TheThief/TheThiefIdleUpRight.png using Guid(891c41e2fb69f5d48bbbf0cb62175c46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '376f5abbb1d6f56ac77986f09a48f0b1') in 0.007983 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000289 seconds.
-  path: Assets/CourseAssets/Textures/Tilemap/Blood/blood_green2.png
-  artifactKey: Guid(09089023be943734ba74f5fb67f9d21e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CourseAssets/Textures/Tilemap/Blood/blood_green2.png using Guid(09089023be943734ba74f5fb67f9d21e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '44d7b0b04b522678ec21434ab1b9f6a5') in 0.012174 seconds 
+  Time since last request: 8.437774 seconds.
+  path: Assets/CourseAssets/Textures/Sprites/Player/TheThief/TheThiefIdleDown.png
+  artifactKey: Guid(548d7679f0820af459f48493a859cfdc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CourseAssets/Textures/Sprites/Player/TheThief/TheThiefIdleDown.png using Guid(548d7679f0820af459f48493a859cfdc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6ae4eb09a8ee90c52ce1cc04616ad869') in 0.006987 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000326 seconds.
-  path: Assets/CourseAssets/Textures/Tilemap/Blood/blood_puddle_red2.png
-  artifactKey: Guid(c136eea5a604c2c488ed4a940cb437af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CourseAssets/Textures/Tilemap/Blood/blood_puddle_red2.png using Guid(c136eea5a604c2c488ed4a940cb437af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ef5b91a8854a7baf64b1d58fb14ca0da') in 0.011492 seconds 
+  Time since last request: 16.555917 seconds.
+  path: Assets/CourseAssets/Textures/Sprites/Player/TheThief/TheThiefIdleDown.png
+  artifactKey: Guid(548d7679f0820af459f48493a859cfdc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CourseAssets/Textures/Sprites/Player/TheThief/TheThiefIdleDown.png using Guid(548d7679f0820af459f48493a859cfdc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f0388c9b3fa2817950264d00bde86319') in 0.017590 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000455 seconds.
-  path: Assets/CourseAssets/Textures/Sprites/UI/AmmoIcon.png
-  artifactKey: Guid(ce8512fa3a7a5474da3d0f626a57b806) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CourseAssets/Textures/Sprites/UI/AmmoIcon.png using Guid(ce8512fa3a7a5474da3d0f626a57b806) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '465d46b5f416746af977e6cc66210ae6') in 0.009641 seconds 
+  Time since last request: 4.693336 seconds.
+  path: Assets/CourseAssets/Textures/Sprites/Player/TheThief/TheThiefIdleRight.png
+  artifactKey: Guid(eda4708a5cf437f4587afc198b3cda00) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CourseAssets/Textures/Sprites/Player/TheThief/TheThiefIdleRight.png using Guid(eda4708a5cf437f4587afc198b3cda00) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '73f7aaff1eb4a506c46351dd46f36238') in 0.011336 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000235 seconds.
-  path: Assets/CourseAssets/Textures/Sprites/UI/blank1x1.png
-  artifactKey: Guid(164ff379b97e3684eb24be7eeb641bc8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CourseAssets/Textures/Sprites/UI/blank1x1.png using Guid(164ff379b97e3684eb24be7eeb641bc8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '91f71a2387252c6ba7ee00d3405b7875') in 0.010226 seconds 
+  Time since last request: 4.973361 seconds.
+  path: Assets/CourseAssets/Textures/Sprites/Player/TheThief/TheThiefIdleRight.png
+  artifactKey: Guid(eda4708a5cf437f4587afc198b3cda00) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CourseAssets/Textures/Sprites/Player/TheThief/TheThiefIdleRight.png using Guid(eda4708a5cf437f4587afc198b3cda00) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'afe9fa0fc30de9c6f141eb3fbc2d04e1') in 0.017340 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000273 seconds.
-  path: Assets/CourseAssets/Textures/Tilemap/Blood/blood_green3.png
-  artifactKey: Guid(eca68f1c30895ca48b44c0617de3a1b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CourseAssets/Textures/Tilemap/Blood/blood_green3.png using Guid(eca68f1c30895ca48b44c0617de3a1b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6b7d9a9aed925584060e5af1a1e11663') in 0.016242 seconds 
+  Time since last request: 5.128630 seconds.
+  path: Assets/CourseAssets/Textures/Sprites/Player/TheThief/TheThiefIdleUp.png
+  artifactKey: Guid(26c0e8ae9bcb3a447b7eed1ff6a22606) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CourseAssets/Textures/Sprites/Player/TheThief/TheThiefIdleUp.png using Guid(26c0e8ae9bcb3a447b7eed1ff6a22606) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8914623f3b7dbeb59ed7d029aa77713c') in 0.010245 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000237 seconds.
-  path: Assets/CourseAssets/Textures/Tilemap/Blood/blood_green1.png
-  artifactKey: Guid(97fed97bd214a5d4587c30567f4016e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CourseAssets/Textures/Tilemap/Blood/blood_green1.png using Guid(97fed97bd214a5d4587c30567f4016e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '88a2622985c83ed4c43d774f43eb58e0') in 0.012562 seconds 
+  Time since last request: 6.568737 seconds.
+  path: Assets/CourseAssets/Textures/Sprites/Player/TheThief/TheThiefIdleUp.png
+  artifactKey: Guid(26c0e8ae9bcb3a447b7eed1ff6a22606) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CourseAssets/Textures/Sprites/Player/TheThief/TheThiefIdleUp.png using Guid(26c0e8ae9bcb3a447b7eed1ff6a22606) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ccc7d0024cf60da669de6b76f657d0ed') in 0.017212 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 780.266776 seconds.
-  path: Assets/Prefabs
-  artifactKey: Guid(ed0361d80f5ede947ba669cb19e3e44d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs using Guid(ed0361d80f5ede947ba669cb19e3e44d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '342a2db5fa118ee856e5a90b51ab27bd') in 0.003595 seconds 
+  Time since last request: 7.882697 seconds.
+  path: Assets/CourseAssets/Textures/Sprites/Player/TheThief/TheThiefIdleUpRight.png
+  artifactKey: Guid(891c41e2fb69f5d48bbbf0cb62175c46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CourseAssets/Textures/Sprites/Player/TheThief/TheThiefIdleUpRight.png using Guid(891c41e2fb69f5d48bbbf0cb62175c46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f359dccb9136b0ba6101474430e17025') in 0.018900 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 9.812757 seconds.
-  path: Assets/Prefabs/Player
-  artifactKey: Guid(b2285d8d8ab06aa42a894ad186f774aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Player using Guid(b2285d8d8ab06aa42a894ad186f774aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bd07149407c1ab50011fcadbb00fc99a') in 0.003770 seconds 
+  Time since last request: 2.281877 seconds.
+  path: Assets/CourseAssets/Textures/Sprites/Player/TheThief/TheThiefMoveDown.png
+  artifactKey: Guid(f3102b3c8d2d5a34f86070ae29f15193) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CourseAssets/Textures/Sprites/Player/TheThief/TheThiefMoveDown.png using Guid(f3102b3c8d2d5a34f86070ae29f15193) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'afdabad7d3e174680afbf2113901abc4') in 0.008841 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 8.335136 seconds.
-  path: Assets/Prefabs/Player/Player.prefab
-  artifactKey: Guid(93dc87905a747a24d9de40ea71e37eb0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Player/Player.prefab using Guid(93dc87905a747a24d9de40ea71e37eb0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ea8e287db2b57f8b5ee4fd480cf64ab2') in 0.179594 seconds 
+  Time since last request: 5.122362 seconds.
+  path: Assets/CourseAssets/Textures/Sprites/Player/TheThief/TheThiefMoveDown.png
+  artifactKey: Guid(f3102b3c8d2d5a34f86070ae29f15193) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CourseAssets/Textures/Sprites/Player/TheThief/TheThiefMoveDown.png using Guid(f3102b3c8d2d5a34f86070ae29f15193) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a5c6436dedd7f180b7ab63b987c3f777') in 0.017039 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.562898 seconds.
+  path: Assets/CourseAssets/Textures/Sprites/Player/TheThief/TheThiefMoveRight.png
+  artifactKey: Guid(f92709b5e25bf4f4a862a452962bf0c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CourseAssets/Textures/Sprites/Player/TheThief/TheThiefMoveRight.png using Guid(f92709b5e25bf4f4a862a452962bf0c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '371122cde3f346ac1a81d3f7bc10d401') in 0.010871 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.938013 seconds.
+  path: Assets/CourseAssets/Textures/Sprites/Player/TheThief/TheThiefMoveRight.png
+  artifactKey: Guid(f92709b5e25bf4f4a862a452962bf0c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CourseAssets/Textures/Sprites/Player/TheThief/TheThiefMoveRight.png using Guid(f92709b5e25bf4f4a862a452962bf0c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3a037b5a25b88e82db2087eb019a2e10') in 0.013620 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.667542 seconds.
+  path: Assets/CourseAssets/Textures/Sprites/Player/TheThief/TheThiefMoveUpRight.png
+  artifactKey: Guid(504cbd4b7d85fb945a2a5a53c60fb8d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CourseAssets/Textures/Sprites/Player/TheThief/TheThiefMoveUpRight.png using Guid(504cbd4b7d85fb945a2a5a53c60fb8d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9820d4a939f7f6019b99a5aa788d52d6') in 0.010737 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.690185 seconds.
+  path: Assets/CourseAssets/Textures/Sprites/Player/TheThief/TheThiefMoveUp.png
+  artifactKey: Guid(c793f64eac0b8bb4aa9e05089112c940) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CourseAssets/Textures/Sprites/Player/TheThief/TheThiefMoveUp.png using Guid(c793f64eac0b8bb4aa9e05089112c940) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ecafcdb7dcc56ad9ddce7c984a45e745') in 0.006803 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.051811 seconds.
+  path: Assets/CourseAssets/Textures/Sprites/Player/TheThief/TheThiefMoveUp.png
+  artifactKey: Guid(c793f64eac0b8bb4aa9e05089112c940) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CourseAssets/Textures/Sprites/Player/TheThief/TheThiefMoveUp.png using Guid(c793f64eac0b8bb4aa9e05089112c940) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0a41142c694e30ec7ee65801608860e4') in 0.011516 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7.557028 seconds.
+  path: Assets/CourseAssets/Textures/Sprites/Player/TheThief/TheThiefMoveUpRight.png
+  artifactKey: Guid(504cbd4b7d85fb945a2a5a53c60fb8d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CourseAssets/Textures/Sprites/Player/TheThief/TheThiefMoveUpRight.png using Guid(504cbd4b7d85fb945a2a5a53c60fb8d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9cbc7a48974239e5a7c1f1ee90d7cfc2') in 0.016233 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.929563 seconds.
+  path: Assets/CourseAssets/Textures/Sprites/Player/TheThief/TheThiefRollDown.png
+  artifactKey: Guid(664646b6109025e46a825eb9b0f4166d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CourseAssets/Textures/Sprites/Player/TheThief/TheThiefRollDown.png using Guid(664646b6109025e46a825eb9b0f4166d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '75bf823902421f7917cc979f7c535131') in 0.010574 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.758606 seconds.
+  path: Assets/CourseAssets/Textures/Sprites/Player/TheThief/TheThiefRollDown.png
+  artifactKey: Guid(664646b6109025e46a825eb9b0f4166d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CourseAssets/Textures/Sprites/Player/TheThief/TheThiefRollDown.png using Guid(664646b6109025e46a825eb9b0f4166d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '96dfb5f3c663677d19fb4adb55fc5220') in 0.015025 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.933321 seconds.
+  path: Assets/CourseAssets/Textures/Sprites/Player/TheThief/TheThiefRollRight.png
+  artifactKey: Guid(708a930d3d6953b409e6956aff28f369) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CourseAssets/Textures/Sprites/Player/TheThief/TheThiefRollRight.png using Guid(708a930d3d6953b409e6956aff28f369) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7115ad54c8bda0ecc6b57dba091ca552') in 0.006824 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.889833 seconds.
+  path: Assets/CourseAssets/Textures/Sprites/Player/TheThief/TheThiefRollRight.png
+  artifactKey: Guid(708a930d3d6953b409e6956aff28f369) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CourseAssets/Textures/Sprites/Player/TheThief/TheThiefRollRight.png using Guid(708a930d3d6953b409e6956aff28f369) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '535a2351ba3b4eed80a953a63057e3fe') in 0.017721 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.369471 seconds.
+  path: Assets/CourseAssets/Textures/Sprites/Player/TheThief/TheThiefRollUp.png
+  artifactKey: Guid(a11be4e8157e1ba4687473b91fa850b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CourseAssets/Textures/Sprites/Player/TheThief/TheThiefRollUp.png using Guid(a11be4e8157e1ba4687473b91fa850b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '903cae59b1e885ea5060106469e1b031') in 0.009172 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.679002 seconds.
+  path: Assets/CourseAssets/Textures/Sprites/Player/TheThief/TheThiefRollUp.png
+  artifactKey: Guid(a11be4e8157e1ba4687473b91fa850b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CourseAssets/Textures/Sprites/Player/TheThief/TheThiefRollUp.png using Guid(a11be4e8157e1ba4687473b91fa850b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6a6975da8752a1f23873d80065f1a251') in 0.017761 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.002159 seconds.
+  path: Assets/CourseAssets/Textures/Sprites/Player/TheThief/TheThiefMiniMapIcon.png
+  artifactKey: Guid(47d28a922b13c1e40a4dde47e301f43b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CourseAssets/Textures/Sprites/Player/TheThief/TheThiefMiniMapIcon.png using Guid(47d28a922b13c1e40a4dde47e301f43b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fc442700ef6bc64161dec8df95cb26ce') in 0.013189 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 28.424477 seconds.
+  path: Assets/CourseAssets/Animation/Player
+  artifactKey: Guid(2a8fc782018d487438cf8de1773fd5c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CourseAssets/Animation/Player using Guid(2a8fc782018d487438cf8de1773fd5c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f4183ddf2c7908f5deb418e75c8b0395') in 0.002741 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.667121 seconds.
+  path: Assets/CourseAssets/Animation/Player/TheThief
+  artifactKey: Guid(3605b2f9ef65887468b4d315519392d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CourseAssets/Animation/Player/TheThief using Guid(3605b2f9ef65887468b4d315519392d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4f6fb7a8d18668c31ad19df5ff6785d6') in 0.002345 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7.290325 seconds.
+  path: Assets/CourseAssets/Animation/Player/TheThief/TheThief.controller
+  artifactKey: Guid(481fc0119b1029744a84cc31133ce320) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CourseAssets/Animation/Player/TheThief/TheThief.controller using Guid(481fc0119b1029744a84cc31133ce320) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c0070468a6a46e3b7041f5b3b5c2ae42') in 0.005720 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 13.801971 seconds.
+  path: Assets/CourseAssets/Animation/Player/TheThief/New Animation.anim
+  artifactKey: Guid(c7866b5672da21f4d83b19a1f1f15618) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CourseAssets/Animation/Player/TheThief/New Animation.anim using Guid(c7866b5672da21f4d83b19a1f1f15618) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4066615dceeb32812f907b60489a74f7') in 0.007457 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.178258 seconds.
+  path: Assets/CourseAssets/Animation/Player/TheThief/TheThiefIdleDown.anim
+  artifactKey: Guid(c7866b5672da21f4d83b19a1f1f15618) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CourseAssets/Animation/Player/TheThief/TheThiefIdleDown.anim using Guid(c7866b5672da21f4d83b19a1f1f15618) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a14b2ab196162921c97f8dc1f09c0e32') in 0.004030 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 17.627974 seconds.
+  path: Assets/CourseAssets/Animation/Player/TheThief/TheThiefIdleDown 1.anim
+  artifactKey: Guid(6c455c1b3f8308146befc6f13ca1c91e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CourseAssets/Animation/Player/TheThief/TheThiefIdleDown 1.anim using Guid(6c455c1b3f8308146befc6f13ca1c91e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3ad219274e5567ca6ac03a0c478d526e') in 0.002704 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.522919 seconds.
+  path: Assets/CourseAssets/Animation/Player/TheThief/TheThiefIdleDown.anim
+  artifactKey: Guid(c7866b5672da21f4d83b19a1f1f15618) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CourseAssets/Animation/Player/TheThief/TheThiefIdleDown.anim using Guid(c7866b5672da21f4d83b19a1f1f15618) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a98dd4d8e445bab537fb1e14b549fb20') in 0.003025 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 9.405995 seconds.
+  path: Assets/CourseAssets/Animation/Player/TheThief/TheThiefIdleLeft.anim
+  artifactKey: Guid(6c455c1b3f8308146befc6f13ca1c91e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CourseAssets/Animation/Player/TheThief/TheThiefIdleLeft.anim using Guid(6c455c1b3f8308146befc6f13ca1c91e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6c640d521d96c67aa9127af47fae4115') in 0.005351 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.818289 seconds.
+  path: Assets/CourseAssets/Animation/Player/TheThief/TheThiefIdleLeft 1.anim
+  artifactKey: Guid(c1d5fb71fc2a08a4c85d18eb9e8354df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CourseAssets/Animation/Player/TheThief/TheThiefIdleLeft 1.anim using Guid(c1d5fb71fc2a08a4c85d18eb9e8354df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a267bb932ee677617c3928e2344ae62c') in 0.002256 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.197506 seconds.
+  path: Assets/CourseAssets/Animation/Player/TheThief/TheThiefIdleRight.anim
+  artifactKey: Guid(c1d5fb71fc2a08a4c85d18eb9e8354df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CourseAssets/Animation/Player/TheThief/TheThiefIdleRight.anim using Guid(c1d5fb71fc2a08a4c85d18eb9e8354df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '193397c8b43afe019732aaa0cf77a8bf') in 0.002320 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.566683 seconds.
+  path: Assets/CourseAssets/Animation/Player/TheThief/TheThiefIdleRight 1.anim
+  artifactKey: Guid(268449fd79923c1459f708574f23ff21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CourseAssets/Animation/Player/TheThief/TheThiefIdleRight 1.anim using Guid(268449fd79923c1459f708574f23ff21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cbd4d6603787d70651a831d5808ac5ae') in 0.003506 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.927690 seconds.
+  path: Assets/CourseAssets/Animation/Player/TheThief/TheThiefIdleUp.anim
+  artifactKey: Guid(268449fd79923c1459f708574f23ff21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CourseAssets/Animation/Player/TheThief/TheThiefIdleUp.anim using Guid(268449fd79923c1459f708574f23ff21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0b3ae6bf9e53a857b5b2c6351198d11d') in 0.002644 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.156960 seconds.
+  path: Assets/CourseAssets/Animation/Player/TheThief/TheThiefIdleUp 1.anim
+  artifactKey: Guid(bf194c6ac151ad342914b4c9854fcbcc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CourseAssets/Animation/Player/TheThief/TheThiefIdleUp 1.anim using Guid(bf194c6ac151ad342914b4c9854fcbcc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e06d5834fafb395d9638463d84dc077b') in 0.002156 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 8.633353 seconds.
+  path: Assets/CourseAssets/Animation/Player/TheThief/TheThiefIdleUpLeft.anim
+  artifactKey: Guid(bf194c6ac151ad342914b4c9854fcbcc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CourseAssets/Animation/Player/TheThief/TheThiefIdleUpLeft.anim using Guid(bf194c6ac151ad342914b4c9854fcbcc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b807fb0abc9b7ce20a82a865fcba067a') in 0.002793 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.917668 seconds.
+  path: Assets/CourseAssets/Animation/Player/TheThief/TheThiefIdleUpLeft 1.anim
+  artifactKey: Guid(6c12067e6e5a8ca4b8e132896090121b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CourseAssets/Animation/Player/TheThief/TheThiefIdleUpLeft 1.anim using Guid(6c12067e6e5a8ca4b8e132896090121b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '32975b65de4081c4ea5c32e67d1df633') in 0.004624 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 8.929192 seconds.
+  path: Assets/CourseAssets/Animation/Player/TheThief/TheThiefIdleUpRight.anim
+  artifactKey: Guid(6c12067e6e5a8ca4b8e132896090121b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CourseAssets/Animation/Player/TheThief/TheThiefIdleUpRight.anim using Guid(6c12067e6e5a8ca4b8e132896090121b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '20c89d786c20b9961530e6d09c36bfcc') in 0.001941 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.790339 seconds.
+  path: Assets/CourseAssets/Animation/Player/TheThief/TheThiefIdleUpRight 1.anim
+  artifactKey: Guid(a6596a145d4c5974d8546594ca5a8610) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CourseAssets/Animation/Player/TheThief/TheThiefIdleUpRight 1.anim using Guid(a6596a145d4c5974d8546594ca5a8610) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '93d7302fe08bffc6005b0e2277372ffe') in 0.003270 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 14.464982 seconds.
+  path: Assets/CourseAssets/Animation/Player/TheThief/TheThiefMoveDown.anim
+  artifactKey: Guid(a6596a145d4c5974d8546594ca5a8610) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CourseAssets/Animation/Player/TheThief/TheThiefMoveDown.anim using Guid(a6596a145d4c5974d8546594ca5a8610) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b41f589a66194b93ca4e7ccc318c3143') in 0.002445 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.995850 seconds.
+  path: Assets/CourseAssets/Animation/Player/TheThief/TheThiefMoveDown 1.anim
+  artifactKey: Guid(bc0f5225401650044acb841f1b264e27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CourseAssets/Animation/Player/TheThief/TheThiefMoveDown 1.anim using Guid(bc0f5225401650044acb841f1b264e27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cc1ac2022dd8bd14f581bdeb8661ee83') in 0.002574 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 11.238497 seconds.
+  path: Assets/CourseAssets/Animation/Player/TheThief/TheThiefMoveLeft.anim
+  artifactKey: Guid(bc0f5225401650044acb841f1b264e27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CourseAssets/Animation/Player/TheThief/TheThiefMoveLeft.anim using Guid(bc0f5225401650044acb841f1b264e27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5861b3f740fc176ae52aeb21ecc17fe6') in 0.002920 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.432127 seconds.
+  path: Assets/CourseAssets/Animation/Player/TheThief/TheThiefMoveLeft 1.anim
+  artifactKey: Guid(9d66894db42ac6c48a137e028fb721b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CourseAssets/Animation/Player/TheThief/TheThiefMoveLeft 1.anim using Guid(9d66894db42ac6c48a137e028fb721b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b324a5b6e109e71883f39181b67734ae') in 0.003234 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 8.695819 seconds.
+  path: Assets/CourseAssets/Animation/Player/TheThief/TheThiefMoveRight.anim
+  artifactKey: Guid(9d66894db42ac6c48a137e028fb721b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CourseAssets/Animation/Player/TheThief/TheThiefMoveRight.anim using Guid(9d66894db42ac6c48a137e028fb721b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b85a25fef713e058c20b8c4716f14eb0') in 0.002023 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.075367 seconds.
+  path: Assets/CourseAssets/Animation/Player/TheThief/TheThiefMoveRight 1.anim
+  artifactKey: Guid(e872ba45bc56565489a2860a6fc73d0a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CourseAssets/Animation/Player/TheThief/TheThiefMoveRight 1.anim using Guid(e872ba45bc56565489a2860a6fc73d0a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fba2fa13b85cd5c791be5ba0e668d938') in 0.003516 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.326066 seconds.
+  path: Assets/CourseAssets/Animation/Player/TheThief/TheThiefMoveUp.anim
+  artifactKey: Guid(e872ba45bc56565489a2860a6fc73d0a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CourseAssets/Animation/Player/TheThief/TheThiefMoveUp.anim using Guid(e872ba45bc56565489a2860a6fc73d0a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a210789ed64d2518342fc6953d96840d') in 0.003574 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.964369 seconds.
+  path: Assets/CourseAssets/Animation/Player/TheThief/TheThiefMoveUp 1.anim
+  artifactKey: Guid(ffff09f8761f3994ebb01bc87861f744) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CourseAssets/Animation/Player/TheThief/TheThiefMoveUp 1.anim using Guid(ffff09f8761f3994ebb01bc87861f744) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bf32bff377774f0d47756429e55141ea') in 0.003055 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.714655 seconds.
+  path: Assets/CourseAssets/Animation/Player/TheThief/TheThiefMoveUp Left.anim
+  artifactKey: Guid(ffff09f8761f3994ebb01bc87861f744) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CourseAssets/Animation/Player/TheThief/TheThiefMoveUp Left.anim using Guid(ffff09f8761f3994ebb01bc87861f744) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a04d6f5c0c4e3880b98114e7bcc2a39f') in 0.003511 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.061287 seconds.
+  path: Assets/CourseAssets/Animation/Player/TheThief/TheThiefMoveUp Left 1.anim
+  artifactKey: Guid(55973c7b1ddf7ed4abb5ef006298dd89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CourseAssets/Animation/Player/TheThief/TheThiefMoveUp Left 1.anim using Guid(55973c7b1ddf7ed4abb5ef006298dd89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '490b06c90fd2ea629fec15e824f37c60') in 0.004702 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.261816 seconds.
+  path: Assets/CourseAssets/Animation/Player/TheThief/TheThiefMoveUpLeft.anim
+  artifactKey: Guid(ffff09f8761f3994ebb01bc87861f744) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CourseAssets/Animation/Player/TheThief/TheThiefMoveUpLeft.anim using Guid(ffff09f8761f3994ebb01bc87861f744) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '97be6301cac92a4aa0d955de9e14fe15') in 0.003184 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.865073 seconds.
+  path: Assets/CourseAssets/Animation/Player/TheThief/TheThiefMoveUpRight.anim
+  artifactKey: Guid(55973c7b1ddf7ed4abb5ef006298dd89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CourseAssets/Animation/Player/TheThief/TheThiefMoveUpRight.anim using Guid(55973c7b1ddf7ed4abb5ef006298dd89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aa7b7d14cc4767d0ca389d8622ebac61') in 0.001990 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 337.972474 seconds.
+  path: Assets/CourseAssets/Animation/Player/TheThief/TheThiefMoveUpRight 1.anim
+  artifactKey: Guid(ee5307c746895164c85c39432e630674) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CourseAssets/Animation/Player/TheThief/TheThiefMoveUpRight 1.anim using Guid(ee5307c746895164c85c39432e630674) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fd929d52c46ba8b686fc2100e219153f') in 0.003150 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 11.097057 seconds.
+  path: Assets/CourseAssets/Animation/Player/TheThief/TheThiefRollDown.anim
+  artifactKey: Guid(ee5307c746895164c85c39432e630674) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CourseAssets/Animation/Player/TheThief/TheThiefRollDown.anim using Guid(ee5307c746895164c85c39432e630674) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '95beccaec187a8e1ee4d51dfcfff5e2c') in 0.004191 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.072935 seconds.
+  path: Assets/CourseAssets/Animation/Player/TheThief/TheThiefRollDown 1.anim
+  artifactKey: Guid(bde198e2a35977141904578bbe9071a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CourseAssets/Animation/Player/TheThief/TheThiefRollDown 1.anim using Guid(bde198e2a35977141904578bbe9071a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9c9036a589e07bdbdef27fc0eed18e49') in 0.002873 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.241578 seconds.
+  path: Assets/CourseAssets/Animation/Player/TheThief/TheThiefRollLeft.anim
+  artifactKey: Guid(bde198e2a35977141904578bbe9071a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CourseAssets/Animation/Player/TheThief/TheThiefRollLeft.anim using Guid(bde198e2a35977141904578bbe9071a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c17b878c29b3173de23227e276c15ed7') in 0.004063 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.072600 seconds.
+  path: Assets/CourseAssets/Animation/Player/TheThief/TheThiefRollLeft 1.anim
+  artifactKey: Guid(110a4abdbd006224d97312177b825aa9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CourseAssets/Animation/Player/TheThief/TheThiefRollLeft 1.anim using Guid(110a4abdbd006224d97312177b825aa9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '080437ca3f7ff0875f9815c327b97d76') in 0.002679 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.854653 seconds.
+  path: Assets/CourseAssets/Animation/Player/TheThief/TheThiefRollRight.anim
+  artifactKey: Guid(110a4abdbd006224d97312177b825aa9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CourseAssets/Animation/Player/TheThief/TheThiefRollRight.anim using Guid(110a4abdbd006224d97312177b825aa9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '958c7f858ae7716f5f76838de9edf428') in 0.003032 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.471996 seconds.
+  path: Assets/CourseAssets/Animation/Player/TheThief/TheThiefRollRight 1.anim
+  artifactKey: Guid(c5aed6ab7b575a94bb63d8202b878a94) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CourseAssets/Animation/Player/TheThief/TheThiefRollRight 1.anim using Guid(c5aed6ab7b575a94bb63d8202b878a94) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1b1c5a85a558781191d945c698e0e8e1') in 0.004358 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.710723 seconds.
+  path: Assets/CourseAssets/Animation/Player/TheThief/TheThiefRollUp.anim
+  artifactKey: Guid(c5aed6ab7b575a94bb63d8202b878a94) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CourseAssets/Animation/Player/TheThief/TheThiefRollUp.anim using Guid(c5aed6ab7b575a94bb63d8202b878a94) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ad95c5b87290f18eb5e0efcb230631ba') in 0.002638 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 38.981507 seconds.
+  path: Assets/CourseAssets/Animation/Player/TheThief/TheThief.controller
+  artifactKey: Guid(481fc0119b1029744a84cc31133ce320) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CourseAssets/Animation/Player/TheThief/TheThief.controller using Guid(481fc0119b1029744a84cc31133ce320) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '637104f2120fb1aeae2dbf464abfb84b') in 0.003657 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2595.864865 seconds.
+  path: Assets/CourseAssets/Animation/Player/TheThief/TheThief.controller
+  artifactKey: Guid(481fc0119b1029744a84cc31133ce320) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CourseAssets/Animation/Player/TheThief/TheThief.controller using Guid(481fc0119b1029744a84cc31133ce320) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '398ddc64e1de52a23aea82c67da3c00e') in 0.029192 seconds 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file
