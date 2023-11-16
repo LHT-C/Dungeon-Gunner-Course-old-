@@ -79,6 +79,7 @@
     <Compile Include="Assets\Scripts\Dungeon\Doorway.cs" />
     <Compile Include="Assets\Scripts\Utilities\HelperUtilities.cs" />
     <Compile Include="Assets\Scripts\Health\Health.cs" />
+    <Compile Include="Assets\Scripts\Misc\CinemachineTarget.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

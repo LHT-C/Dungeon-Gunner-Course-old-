@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -27,9 +28,38 @@ public class GameManager : SingletonMonobehaviour<GameManager>
     #endregion Tooltip
 
     [SerializeField] private int currentDungeonLevelListIndex = 0;
+    private Room currentRoom;
+    private Room previousRoom;
+    private PlayerDetailsSO playerDetails; 
+    private Player player;
 
     [HideInInspector] public GameState gameState;
 
+    protected void Awake()
+    {
+        // Call base class
+        base.Awake();
+
+        // Set player details - saved in current player scriptable object from the main menu
+        playerDetails = GameResources.Instance.currentPlayer.playerDetails;
+
+        // Instantiate player
+        InstantiatePlayer();
+    }
+
+    /// <summary>
+    /// Create player in scene at position
+    /// </summary>
+    private void InstantiatePlayer()//根据坐标，实例化角色
+    {
+        // Instantiate player
+        GameObject playerGameObject = Instantiate(playerDetails.playerPrefab);
+
+        // Instantiate player
+        player = playerGameObject.GetComponent<Player>();
+
+        player.Initialize(playerDetails);
+    }
 
     // Start is called before the first frame update
     private void Start()
@@ -71,6 +101,15 @@ public class GameManager : SingletonMonobehaviour<GameManager>
 
     }
 
+    /// <summary>
+    /// Set the current room the player in in
+    /// </summary>
+    public void SetCurrentRoom(Room room)//设置当前房间
+    {
+        previousRoom = currentRoom;
+        currentRoom = room;
+    }
+
 
     private void PlayDungeonLevel(int dungeonLevelListIndex)
     {
@@ -82,9 +121,28 @@ public class GameManager : SingletonMonobehaviour<GameManager>
             Debug.LogError("Couldn't build dungeon from specified rooms and node graphs");
         }
 
+        // Set player roughly mid-room 将玩家位置设于房间正中间
+        player.gameObject.transform.position = new Vector3((currentRoom.lowerBounds.x + currentRoom.upperBounds.x) / 2f, (currentRoom.lowerBounds.y + currentRoom.upperBounds.y) / 2f,0f);
 
+        // Get nearest spawn point in room nearest to player 获取离玩家最近的刷新位置
+        player.gameObject.transform.position = HelperUtilities.GetSpawnPositionNearestToPlayer(player.gameObject.transform.position);
     }
 
+    /// <summary>
+    /// Get  the player
+    /// </summary>
+    public Player GetPlayer()//获取当前角色
+    {
+        return player;
+    }
+
+    /// <summary>
+    /// Get the current room the player is in
+    /// </summary>
+    public Room GetCurrentRoom()//获取当前房间
+    {
+        return currentRoom;
+    }
 
     #region Validation
 
