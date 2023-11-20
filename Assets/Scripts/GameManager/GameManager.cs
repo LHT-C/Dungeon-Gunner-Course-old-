@@ -35,7 +35,7 @@ public class GameManager : SingletonMonobehaviour<GameManager>
 
     [HideInInspector] public GameState gameState;
 
-    protected void Awake()
+    protected override void Awake()
     {
         // Call base class
         base.Awake();
