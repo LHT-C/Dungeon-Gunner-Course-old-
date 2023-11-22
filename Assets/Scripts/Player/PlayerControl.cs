@@ -6,6 +6,14 @@ public class PlayerControl : MonoBehaviour
 {
     #region Tooltip
 
+    [Tooltip("MovementDetailsSO scriptable object containing movement details such as speed")]
+
+    #endregion Tooltip
+
+    [SerializeField] private MovementDetailsSO movementDetails;
+
+    #region Tooltip
+
     [Tooltip("The player WeaponShootPosition gameobject in the hieracrchy")]
 
     #endregion Tooltip
@@ -13,11 +21,14 @@ public class PlayerControl : MonoBehaviour
     [SerializeField] private Transform weaponShootPosition;
 
     private Player player;
+    private float moveSpeed;
 
     private void Awake()
     {
         // Load components
         player = GetComponent<Player>();
+
+        moveSpeed = movementDetails.GetMoveSpeed();
     }
 
     private void Update()
@@ -34,7 +45,30 @@ public class PlayerControl : MonoBehaviour
     /// </summary>
     private void MovementInput()
     {
-        player.idleEvent.CallIdleEvent();
+        // Get movement input
+        float horizontalMovement = Input.GetAxisRaw("Horizontal");
+        float verticalMovement = Input.GetAxisRaw("Vertical");
+
+        // Create a direction vector based on the input
+        Vector2 direction = new Vector2(horizontalMovement, verticalMovement);
+
+        // Adjust distance for diagonal movement (pythagoras approximation)
+        if (horizontalMovement != 0f && verticalMovement != 0f)//斜方向移动时，进行方向修正
+        {
+            direction *= 0.7f;
+        }
+
+        // If there is movement
+        if (direction != Vector2.zero)//根据是否有移动方向，呼出对应事件
+        {
+            // trigger movement event
+            player.movementByVelocityEvent.CallMovementByVelocityEvent(direction, moveSpeed);
+        }
+        // else trigger idle event
+        else
+        {
+            player.idleEvent.CallIdleEvent();
+        }
     }
 
     /// <summary>
@@ -72,6 +106,19 @@ public class PlayerControl : MonoBehaviour
         playerAimDirection = HelperUtilities.GetAimDirection(playerAngleDegrees);//根据角度，判断瞄准方向
 
         // Trigger weapon aim event
-        player.aimWeaponEvent.CallAimWeaponEvent(playerAimDirection, playerAngleDegrees, weaponAngleDegrees, weaponDirection);
+        player.aimWeaponEvent.CallAimWeaponEvent(playerAimDirection, playerAngleDegrees, weaponAngleDegrees, weaponDirection);//呼出瞄准事件
     }
+
+    #region Validation
+
+#if UNITY_EDITOR
+
+    private void OnValidate()
+    {
+        HelperUtilities.ValidateCheckNullValue(this, nameof(movementDetails), movementDetails);
+    }
+
+#endif
+
+    #endregion Validation
 }
