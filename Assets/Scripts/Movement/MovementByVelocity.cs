@@ -38,7 +38,7 @@ public class MovementByVelocity : MonoBehaviour
     /// <summary>
     /// Move the rigidbody component
     /// </summary>
-    private void MoveRigidBody(Vector2 moveDirection, float moveSpeed)//方向*速度=刚体移动位置
+    private void MoveRigidBody(Vector2 moveDirection, float moveSpeed)//通过方向*速度来确定刚体移动向量的移动方法
     {
         // ensure the rb collision detection is set to continuous
         rigidBody2D.velocity = moveDirection * moveSpeed;

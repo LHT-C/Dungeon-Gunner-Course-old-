@@ -67,6 +67,7 @@
     <Compile Include="Assets\Scripts\NodeGraph\RoomNodeGraphSO.cs" />
     <Compile Include="Assets\Scripts\Misc\ScreenCursor.cs" />
     <Compile Include="Assets\Scripts\Player\AnimatePlayer.cs" />
+    <Compile Include="Assets\Scripts\Movement\MovementToPositionEvent.cs" />
     <Compile Include="Assets\Scripts\NodeGraph\RoomNodeTypeSO.cs" />
     <Compile Include="Assets\Scripts\Movement\IdleEvent.cs" />
     <Compile Include="Assets\Scripts\GameManager\GameManager.cs" />
@@ -75,6 +76,7 @@
     <Compile Include="Assets\Scripts\Misc\CinemachineTarget.cs" />
     <Compile Include="Assets\Scripts\Movement\MovementDetailsSO.cs" />
     <Compile Include="Assets\Scripts\Movement\MovementByVelocity.cs" />
+    <Compile Include="Assets\Scripts\Movement\MovementToPosition.cs" />
     <Compile Include="Assets\Scripts\Movement\MovementByVelocityEvent.cs" />
     <Compile Include="Assets\Scripts\Weapons\AimWeapon.cs" />
     <Compile Include="Assets\Scripts\GameManager\GameResources.cs" />
