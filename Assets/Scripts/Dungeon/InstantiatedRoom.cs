@@ -25,7 +25,20 @@ public class InstantiatedRoom : MonoBehaviour
 
         // Save room collider bounds
         roomColliderBounds = boxCollider2D.bounds;
+    }
 
+    // Trigger room changed event when player enters a room
+    private void OnTriggerEnter2D(Collider2D collision)//玩家进入下一间房间时触发
+    {
+        // If the player triggered the collider
+        if (collision.tag == Settings.playerTag && room != GameManager.Instance.GetCurrentRoom())
+        {
+            // Set room as visited
+            this.room.isPreviouslyVisited = true;
+
+            // Call room changed event
+            StaticEventHandler.CallRoomChangedEvent(room);
+        }
     }
 
     /// <summary>
@@ -40,7 +53,6 @@ public class InstantiatedRoom : MonoBehaviour
         AddDoorsToRooms();
 
         DisableCollisionTilemapRenderer();
-
     }
 
     /// <summary>
@@ -80,9 +92,7 @@ public class InstantiatedRoom : MonoBehaviour
             {
                 minimapTilemap = tilemap;
             }
-
         }
-
     }
 
     /// <summary>
@@ -149,7 +159,6 @@ public class InstantiatedRoom : MonoBehaviour
             case Orientation.none:
                 break;
         }
-
     }
 
     /// <summary>
@@ -197,9 +206,7 @@ public class InstantiatedRoom : MonoBehaviour
 
                 // Set rotation of tile copied
                 tilemap.SetTransformMatrix(new Vector3Int(startPosition.x + xPos, startPosition.y - 1 - yPos, 0), transformMatrix);
-
             }
-
         }
     }
 
@@ -268,7 +275,5 @@ public class InstantiatedRoom : MonoBehaviour
     {
         // Disable collision tilemap renderer
         collisionTilemap.gameObject.GetComponent<TilemapRenderer>().enabled = false;
-
     }
-
 }

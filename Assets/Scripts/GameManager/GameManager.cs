@@ -96,9 +96,7 @@ public class GameManager : SingletonMonobehaviour<GameManager>
                 gameState = GameState.playingLevel;
 
                 break;
-
         }
-
     }
 
     /// <summary>
@@ -110,16 +108,18 @@ public class GameManager : SingletonMonobehaviour<GameManager>
         currentRoom = room;
     }
 
-
     private void PlayDungeonLevel(int dungeonLevelListIndex)
     {
-        // Build dungeon for level
+        // Build dungeon for level 为当前层级生成房间
         bool dungeonBuiltSucessfully = DungeonBuilder.Instance.GenerateDungeon(dungeonLevelList[dungeonLevelListIndex]);//调用DungeonBuilder来生成地牢
 
         if (!dungeonBuiltSucessfully)
         {
             Debug.LogError("Couldn't build dungeon from specified rooms and node graphs");
         }
+
+        // Call static event that room has changed.将当前房间设为已变化
+        StaticEventHandler.CallRoomChangedEvent(currentRoom);
 
         // Set player roughly mid-room 将玩家位置设于房间正中间
         player.gameObject.transform.position = new Vector3((currentRoom.lowerBounds.x + currentRoom.upperBounds.x) / 2f, (currentRoom.lowerBounds.y + currentRoom.upperBounds.y) / 2f,0f);
@@ -129,7 +129,7 @@ public class GameManager : SingletonMonobehaviour<GameManager>
     }
 
     /// <summary>
-    /// Get  the player
+    /// Get the player
     /// </summary>
     public Player GetPlayer()//获取当前角色
     {

@@ -15,11 +15,11 @@ C:/Unity Projects/projects/Dungeon Gunner Course
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-63522
+62545
 Successfully changed project path to: C:/Unity Projects/projects/Dungeon Gunner Course
 C:/Unity Projects/projects/Dungeon Gunner Course
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 132.14 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 144.23 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.1.7f1 (d91830b65d9b)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.1.7f1-x86_64/Editor/Data/Resources/UnitySubsystems
@@ -36,85 +36,347 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.1.7f1-x86_64/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.1.7f1-x86_64/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.1.7f1-x86_64/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56444
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56804
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.1.7f1-x86_64/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.001978 seconds.
+Registered in 0.003578 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 134.96 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 167.28 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.933 seconds
+- Completed reload, in  1.126 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.002960 seconds.
+Registered in 0.003043 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image C:\Unity Projects\projects\Dungeon Gunner Course\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image C:\Unity Projects\projects\Dungeon Gunner Course\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 143.35 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 136.86 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.317 seconds
+- Completed reload, in  1.321 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
-Refreshing native plugins compatible for Editor in 1.92 ms, found 1 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
+Refreshing native plugins compatible for Editor in 1.36 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3794 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 3796 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 162.2 MB.
 System memory in use after: 162.4 MB.
 
-Unloading 17 unused Assets to reduce memory usage. Loaded Objects now: 4249.
-Total: 2.174000 ms (FindLiveObjects: 0.301700 ms CreateObjectMapping: 0.087400 ms MarkObjects: 1.707700 ms  DeleteObjects: 0.076200 ms)
+Unloading 17 unused Assets to reduce memory usage. Loaded Objects now: 4251.
+Total: 3.122700 ms (FindLiveObjects: 0.406300 ms CreateObjectMapping: 0.139600 ms MarkObjects: 2.498000 ms  DeleteObjects: 0.077400 ms)
 
 ========================================================================
 Received Import Request.
+  path: Assets/CourseAssets/Materials/Ammo/AmmoTrailBlue_EmissionShader.mat
+  artifactKey: Guid(f40d05d451e2ae24f91e9e3314c280da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CourseAssets/Materials/Ammo/AmmoTrailBlue_EmissionShader.mat using Guid(f40d05d451e2ae24f91e9e3314c280da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0de1671b86bdb23998d72935abbcdf4b') in 0.273242 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000246 seconds.
+  path: Assets/CourseAssets/Materials/Dungeon/DungeonLightShader_Dimmed.mat
+  artifactKey: Guid(fd5ae752e16da36428c7ae98c49dc19e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CourseAssets/Materials/Dungeon/DungeonLightShader_Dimmed.mat using Guid(fd5ae752e16da36428c7ae98c49dc19e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f6192737124e4b3ebce6e6dbaad894ad') in 0.013961 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000293 seconds.
+  path: Assets/CourseAssets/Materials/Ammo/Ammo_Purple_EmissionShader.mat
+  artifactKey: Guid(5dceff0f64a88b949a3db290b8082010) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CourseAssets/Materials/Ammo/Ammo_Purple_EmissionShader.mat using Guid(5dceff0f64a88b949a3db290b8082010) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8564159a860070a0a3f8ae6f2e6a1c47') in 0.015781 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000235 seconds.
+  path: Assets/CourseAssets/Materials/Ammo/AmmoRed_EmissionShader.mat
+  artifactKey: Guid(a8f373dc317a30d40a68b73a78ce1d09) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CourseAssets/Materials/Ammo/AmmoRed_EmissionShader.mat using Guid(a8f373dc317a30d40a68b73a78ce1d09) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b6ac712709a4add118a7107e0908339f') in 0.014935 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000170 seconds.
+  path: Assets/CourseAssets/Materials/Dungeon/DungeonLightShader_Variable.mat
+  artifactKey: Guid(a4ea43fe7ddf099428e90d7b7ac44139) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CourseAssets/Materials/Dungeon/DungeonLightShader_Variable.mat using Guid(a4ea43fe7ddf099428e90d7b7ac44139) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8fa017683a040511fa37e76870247da7') in 0.013419 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000225 seconds.
+  path: Assets/CourseAssets/Materials/Dungeon/FlameShaderMaterial.mat
+  artifactKey: Guid(8556be20b5f346149bb8497e4b4dfbdc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CourseAssets/Materials/Dungeon/FlameShaderMaterial.mat using Guid(8556be20b5f346149bb8497e4b4dfbdc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c878a3db60c67f8834c33e84142681c8') in 0.239827 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000298 seconds.
+  path: Assets/CourseAssets/Materials/Dungeon/FlameShaderMaterial 1.mat
+  artifactKey: Guid(add26dd5fdc48e44c9a8298ec4929141) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CourseAssets/Materials/Dungeon/FlameShaderMaterial 1.mat using Guid(add26dd5fdc48e44c9a8298ec4929141) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '27427d7b6e9c6c35db400e94d30ba56f') in 0.013810 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000157 seconds.
+  path: Assets/CourseAssets/Materials/Ammo/AmmoYellow_EmissionShader.mat
+  artifactKey: Guid(c92da765fb7cca448a71d99956fe00bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CourseAssets/Materials/Ammo/AmmoYellow_EmissionShader.mat using Guid(c92da765fb7cca448a71d99956fe00bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '066d2b9ee0c98c1531701678c0a0855e') in 0.012569 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000431 seconds.
+  path: Assets/Prefabs/GameResources/Resources/GameResources.prefab
+  artifactKey: Guid(7e460f72ad410aa47aeb7518a7a88ce8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/GameResources/Resources/GameResources.prefab using Guid(7e460f72ad410aa47aeb7518a7a88ce8) Importer(815301076,1909f56bfc062723c751e8b465ee728b) litMaterial is null and must contain a value in object GameResources
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HelperUtilities:ValidateCheckNullValue (UnityEngine.Object,string,UnityEngine.Object) (at Assets/Scripts/Utilities/HelperUtilities.cs:107)
+GameResources:OnValidate () (at Assets/Scripts/GameManager/GameResources.cs:66)
+
+(Filename: Assets/Scripts/Utilities/HelperUtilities.cs Line: 107)
+
+variableLitShader is null and must contain a value in object GameResources
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HelperUtilities:ValidateCheckNullValue (UnityEngine.Object,string,UnityEngine.Object) (at Assets/Scripts/Utilities/HelperUtilities.cs:107)
+GameResources:OnValidate () (at Assets/Scripts/GameManager/GameResources.cs:68)
+
+(Filename: Assets/Scripts/Utilities/HelperUtilities.cs Line: 107)
+
+ -> (artifact id: 'a230ea4c66c57146fd907c3dec23a4a4') in 0.065957 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000312 seconds.
+  path: Assets/CourseAssets/Materials/Effects/AmmoHitEffectBright3_EmmisionShader.mat
+  artifactKey: Guid(6f2b97540fc06164c932cb2bfc0db6de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CourseAssets/Materials/Effects/AmmoHitEffectBright3_EmmisionShader.mat using Guid(6f2b97540fc06164c932cb2bfc0db6de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fa97278544fccf985c8f20b037007b32') in 0.012293 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000199 seconds.
+  path: Assets/CourseAssets/Materials/Ammo/AmmoGold_EmissionShader.mat
+  artifactKey: Guid(5c86445c1f630c141ab88b05539eca5d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CourseAssets/Materials/Ammo/AmmoGold_EmissionShader.mat using Guid(5c86445c1f630c141ab88b05539eca5d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fabec21929b21c7923e1c2f8297ab1e9') in 0.010986 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000151 seconds.
+  path: Assets/CourseAssets/Materials/Ammo/AmmoBlue_EmissionShader.mat
+  artifactKey: Guid(c64696a09f1cb1a4d9766d1fe9778ca5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CourseAssets/Materials/Ammo/AmmoBlue_EmissionShader.mat using Guid(c64696a09f1cb1a4d9766d1fe9778ca5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b19f433815276254e07fe113ff6abd8b') in 0.013627 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000207 seconds.
+  path: Assets/CourseAssets/Materials/Ammo/Ammo_GreenEmissionShader.mat
+  artifactKey: Guid(33a55999e44f4724191171c59fc64319) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CourseAssets/Materials/Ammo/Ammo_GreenEmissionShader.mat using Guid(33a55999e44f4724191171c59fc64319) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e79a85abe33999884162119e69fd97ca') in 0.008037 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000174 seconds.
+  path: Assets/CourseAssets/Materials/Ammo/Ammo_RocketEmmisionShader.mat
+  artifactKey: Guid(42c61dd66eb4e8c4a916ce83d7fbd680) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CourseAssets/Materials/Ammo/Ammo_RocketEmmisionShader.mat using Guid(42c61dd66eb4e8c4a916ce83d7fbd680) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dee469adf46800f6d12dc6137d2a90d7') in 0.013451 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000203 seconds.
+  path: Assets/CourseAssets/Fonts/dlxfont.asset
+  artifactKey: Guid(dfe1ba23c638bec49a583843476bb5c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CourseAssets/Fonts/dlxfont.asset using Guid(dfe1ba23c638bec49a583843476bb5c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4e22e8c40a343f435cff103fcdcd2a0f') in 0.073531 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000301 seconds.
+  path: Assets/CourseAssets/Materials/Ammo/AmmoGreen_Charge_EmissionShader.mat
+  artifactKey: Guid(8906ff5d458c0ba4d8d1d0177dfd5df5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CourseAssets/Materials/Ammo/AmmoGreen_Charge_EmissionShader.mat using Guid(8906ff5d458c0ba4d8d1d0177dfd5df5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3d7646ac549b57c9130fa2c749482e8f') in 0.011113 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000200 seconds.
+  path: Assets/CourseAssets/Materials/Dungeon/FlameShaderMaterial 2.mat
+  artifactKey: Guid(48f4966adea5f654bb6bea4ade4b7e8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CourseAssets/Materials/Dungeon/FlameShaderMaterial 2.mat using Guid(48f4966adea5f654bb6bea4ade4b7e8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4187c8b17f0c956c87f01284210791c0') in 0.015734 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.587261 seconds.
+  path: Assets/Prefabs/GameResources/Resources/GameResources.prefab
+  artifactKey: Guid(7e460f72ad410aa47aeb7518a7a88ce8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/GameResources/Resources/GameResources.prefab using Guid(7e460f72ad410aa47aeb7518a7a88ce8) Importer(815301076,1909f56bfc062723c751e8b465ee728b) variableLitShader is null and must contain a value in object GameResources
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HelperUtilities:ValidateCheckNullValue (UnityEngine.Object,string,UnityEngine.Object) (at Assets/Scripts/Utilities/HelperUtilities.cs:107)
+GameResources:OnValidate () (at Assets/Scripts/GameManager/GameResources.cs:68)
+
+(Filename: Assets/Scripts/Utilities/HelperUtilities.cs Line: 107)
+
+ -> (artifact id: 'c13a320d2cfcb32c1f64a6edd3860f9d') in 0.023376 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.788887 seconds.
+  path: Assets/Prefabs/GameResources/Resources/GameResources.prefab
+  artifactKey: Guid(7e460f72ad410aa47aeb7518a7a88ce8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/GameResources/Resources/GameResources.prefab using Guid(7e460f72ad410aa47aeb7518a7a88ce8) Importer(815301076,1909f56bfc062723c751e8b465ee728b) variableLitShader is null and must contain a value in object GameResources
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+HelperUtilities:ValidateCheckNullValue (UnityEngine.Object,string,UnityEngine.Object) (at Assets/Scripts/Utilities/HelperUtilities.cs:107)
+GameResources:OnValidate () (at Assets/Scripts/GameManager/GameResources.cs:68)
+
+(Filename: Assets/Scripts/Utilities/HelperUtilities.cs Line: 107)
+
+ -> (artifact id: '9866bd6a9bf7bafe5711b42d6e8de765') in 0.021956 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 57.536586 seconds.
+  path: Assets/Prefabs/GameResources/Resources/GameResources.prefab
+  artifactKey: Guid(7e460f72ad410aa47aeb7518a7a88ce8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/GameResources/Resources/GameResources.prefab using Guid(7e460f72ad410aa47aeb7518a7a88ce8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '91532cc3b81520213aa6e4f3386cdd21') in 0.021691 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 18.163239 seconds.
+  path: Assets/Prefabs/GameResources/Resources/GameResources.prefab
+  artifactKey: Guid(7e460f72ad410aa47aeb7518a7a88ce8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/GameResources/Resources/GameResources.prefab using Guid(7e460f72ad410aa47aeb7518a7a88ce8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '089daa6b116bc595c9d166a3ae8f468b') in 0.024866 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.365430 seconds.
+  path: Assets/Prefabs/GameResources/Resources/GameResources.prefab
+  artifactKey: Guid(7e460f72ad410aa47aeb7518a7a88ce8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/GameResources/Resources/GameResources.prefab using Guid(7e460f72ad410aa47aeb7518a7a88ce8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8d9dec72214f695f94548781d33fd9ee') in 0.024748 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.193315 seconds.
+  path: Assets/Prefabs/GameResources/Resources/GameResources.prefab
+  artifactKey: Guid(7e460f72ad410aa47aeb7518a7a88ce8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/GameResources/Resources/GameResources.prefab using Guid(7e460f72ad410aa47aeb7518a7a88ce8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '24c7f554e58eeabc8c26a38700754a51') in 0.037341 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.744033 seconds.
+  path: Assets/Prefabs/GameResources/Resources/GameResources.prefab
+  artifactKey: Guid(7e460f72ad410aa47aeb7518a7a88ce8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/GameResources/Resources/GameResources.prefab using Guid(7e460f72ad410aa47aeb7518a7a88ce8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a38c430393d4fc5775cfdd4f1b7baafb') in 0.035596 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.565864 seconds.
+  path: Assets/Prefabs/GameResources/Resources/GameResources.prefab
+  artifactKey: Guid(7e460f72ad410aa47aeb7518a7a88ce8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/GameResources/Resources/GameResources.prefab using Guid(7e460f72ad410aa47aeb7518a7a88ce8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b240d5da44af5c451d2b0b69434ff1d6') in 0.042143 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.348091 seconds.
+  path: Assets/Prefabs/GameResources/Resources/GameResources.prefab
+  artifactKey: Guid(7e460f72ad410aa47aeb7518a7a88ce8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/GameResources/Resources/GameResources.prefab using Guid(7e460f72ad410aa47aeb7518a7a88ce8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a339eb4a0744f70dddc68c86884534b8') in 0.038285 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.592076 seconds.
+  path: Assets/Prefabs/GameResources/Resources/GameResources.prefab
+  artifactKey: Guid(7e460f72ad410aa47aeb7518a7a88ce8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/GameResources/Resources/GameResources.prefab using Guid(7e460f72ad410aa47aeb7518a7a88ce8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a83a09fb6d3971d727eb92eb53e40c44') in 0.055761 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.540624 seconds.
+  path: Assets/Prefabs/GameResources/Resources/GameResources.prefab
+  artifactKey: Guid(7e460f72ad410aa47aeb7518a7a88ce8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/GameResources/Resources/GameResources.prefab using Guid(7e460f72ad410aa47aeb7518a7a88ce8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1d6014c4d48b28ab69440e9b64908b91') in 0.039542 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.356612 seconds.
+  path: Assets/Prefabs/GameResources/Resources/GameResources.prefab
+  artifactKey: Guid(7e460f72ad410aa47aeb7518a7a88ce8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/GameResources/Resources/GameResources.prefab using Guid(7e460f72ad410aa47aeb7518a7a88ce8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b76d10831863cce12d312618a01c541a') in 0.059635 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 103.970290 seconds.
+  path: Assets/Prefabs/GameResources/Resources/GameResources.prefab
+  artifactKey: Guid(7e460f72ad410aa47aeb7518a7a88ce8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/GameResources/Resources/GameResources.prefab using Guid(7e460f72ad410aa47aeb7518a7a88ce8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9010f8ea5274858ba01712c4b68e60b0') in 0.024141 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 30.101419 seconds.
   path: Assets/Prefabs/Doors/DoorEW/DoorEW.prefab
   artifactKey: Guid(3d51d5666c9fb31458bd193671b2ae64) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Doors/DoorEW/DoorEW.prefab using Guid(3d51d5666c9fb31458bd193671b2ae64) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e0d1af1f61625fac7870932ddf31e562') in 0.262215 seconds 
+Start importing Assets/Prefabs/Doors/DoorEW/DoorEW.prefab using Guid(3d51d5666c9fb31458bd193671b2ae64) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '969007683615f7979f763599d0890ce4') in 0.019906 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 87.087548 seconds.
-  path: Assets/CourseAssets/Textures/Sprites/Dungeon/Doors/DoorNS.png
-  artifactKey: Guid(1c2d86caa78d3784bb500872bfec57c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CourseAssets/Textures/Sprites/Dungeon/Doors/DoorNS.png using Guid(1c2d86caa78d3784bb500872bfec57c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6d18bf2c8a7edda8dfeda40d031bb210') in 0.058321 seconds 
+  Time since last request: 73.963286 seconds.
+  path: Assets/Prefabs/Dungeon/Rooms/Catacombs/BossRoom_Catacombs_1.prefab
+  artifactKey: Guid(9fb6f8f004f241940b9e1447a0f4570a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Dungeon/Rooms/Catacombs/BossRoom_Catacombs_1.prefab using Guid(9fb6f8f004f241940b9e1447a0f4570a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '13e867980bbfb6102a44a050e0b19aab') in 0.014859 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 124.163529 seconds.
-  path: Assets/Prefabs/Player/Player.prefab
-  artifactKey: Guid(07626fcdb44819245851b34ee3d8c4b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Player/Player.prefab using Guid(07626fcdb44819245851b34ee3d8c4b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '96165919f9bffb5d2fa060622c4f1d01') in 0.020237 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 31.358444 seconds.
-  path: Assets/Prefabs/Doors/DoorNS/DoorNS.prefab
-  artifactKey: Guid(eff0aa75ed131e44586ca41c187ec889) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Doors/DoorNS/DoorNS.prefab using Guid(eff0aa75ed131e44586ca41c187ec889) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '650df8a33e65dffcea7f21a67f3f32db') in 0.028548 seconds 
+  Time since last request: 1.793201 seconds.
+  path: Assets/Prefabs/Dungeon/Rooms/Catacombs/Entrance_Catacombs_1.prefab
+  artifactKey: Guid(98aec9cd5174b2042a2251f87cc1ef79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Dungeon/Rooms/Catacombs/Entrance_Catacombs_1.prefab using Guid(98aec9cd5174b2042a2251f87cc1ef79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f4ad0898987044a88a08fb681a8deaee') in 0.012359 seconds 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.003130 seconds.
+Registered in 0.003380 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image C:\Unity Projects\projects\Dungeon Gunner Course\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image C:\Unity Projects\projects\Dungeon Gunner Course\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.72 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 1.32 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.992 seconds
+- Completed reload, in  0.966 seconds
 Platform modules already initialized, skipping
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 1.39 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 0.79 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3667 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 162.1 MB.
-System memory in use after: 162.3 MB.
+Unloading 3672 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 182.7 MB.
+System memory in use after: 182.9 MB.
 
-Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 4318.
-Total: 1.544700 ms (FindLiveObjects: 0.176100 ms CreateObjectMapping: 0.063600 ms MarkObjects: 1.288600 ms  DeleteObjects: 0.015000 ms)
+Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 4374.
+Total: 2.065600 ms (FindLiveObjects: 0.205900 ms CreateObjectMapping: 0.056400 ms MarkObjects: 1.731700 ms  DeleteObjects: 0.070500 ms)
 
+========================================================================
+Received Import Request.
+  Time since last request: 96.458537 seconds.
+  path: Assets/Scripts/Dungeon/RoomLightingControl.cs
+  artifactKey: Guid(087fbe9edf9444b4f9a0e3a14ec8018f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Dungeon/RoomLightingControl.cs using Guid(087fbe9edf9444b4f9a0e3a14ec8018f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b1c1eac12fb7c5e1daf862dbba384629') in 0.010828 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 12.742607 seconds.
+  path: Assets/Prefabs/Dungeon/Rooms/Catacombs/Entrance_Catacombs_1.prefab
+  artifactKey: Guid(98aec9cd5174b2042a2251f87cc1ef79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Dungeon/Rooms/Catacombs/Entrance_Catacombs_1.prefab using Guid(98aec9cd5174b2042a2251f87cc1ef79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aa83ea5f453dd6117cc0a7eebe42083e') in 0.031273 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.593620 seconds.
+  path: Assets/Prefabs/Dungeon/Rooms/MyRooms/CorridorEW_MyRooms_1.prefab
+  artifactKey: Guid(d299f834de754694aa1908456374b3a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Dungeon/Rooms/MyRooms/CorridorEW_MyRooms_1.prefab using Guid(d299f834de754694aa1908456374b3a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8d06daf90d2958046c8bc4591d873487') in 0.008053 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7.297452 seconds.
+  path: Assets/Prefabs/Dungeon/Rooms/MyRooms/CorridorEW_MyRooms_1.prefab
+  artifactKey: Guid(d299f834de754694aa1908456374b3a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Dungeon/Rooms/MyRooms/CorridorEW_MyRooms_1.prefab using Guid(d299f834de754694aa1908456374b3a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6291c4ff1cb027bfbcdd49d946ad4590') in 0.004592 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.007363 seconds.
+  path: Assets/Prefabs/Dungeon/Rooms/Sorcery/BossRoom_Sorcery_1.prefab
+  artifactKey: Guid(5a5cf23fa59a42046bbbd938af607c66) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Dungeon/Rooms/Sorcery/BossRoom_Sorcery_1.prefab using Guid(5a5cf23fa59a42046bbbd938af607c66) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c67cb28efdfa3dae21bf8cb4f368e8c4') in 0.010760 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 9.318968 seconds.
+  path: Assets/Prefabs/Dungeon/Rooms/Sorcery/BossRoom_Sorcery_1.prefab
+  artifactKey: Guid(5a5cf23fa59a42046bbbd938af607c66) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Dungeon/Rooms/Sorcery/BossRoom_Sorcery_1.prefab using Guid(5a5cf23fa59a42046bbbd938af607c66) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3c830e683413c1ac7f0db71adccf83fe') in 0.006849 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 24.385092 seconds.
+  path: Assets/Scripts/Dungeon/Door.cs
+  artifactKey: Guid(7e90563a5e176db46ad39b3c28f079d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Dungeon/Door.cs using Guid(7e90563a5e176db46ad39b3c28f079d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '13ccdfda88f2b2bd22dc4e9f6aab7f52') in 0.003636 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.086942 seconds.
+  path: Assets/Scripts/Dungeon
+  artifactKey: Guid(6fb9dcfa9566cf246853c5d49f116d33) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Dungeon using Guid(6fb9dcfa9566cf246853c5d49f116d33) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e008faa6bf75d8c0be9f0ccf8668827c') in 0.010630 seconds 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file
