@@ -380,7 +380,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5f7d6003cdd467478d0e68148b34d27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  poolArray: []
+  poolArray:
+  - poolSize: 30
+    prefab: {fileID: 790507858956430495, guid: ffeb30fa2fdb42b4a963a0119d8d40f9, type: 3}
+    componentType: IFireable
 --- !u!4 &598341336
 Transform:
   m_ObjectHideFlags: 0
@@ -676,7 +679,7 @@ MonoBehaviour:
     ModeOverride: 1
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 0.93297976, y: 1}
+    m_SensorSize: {x: 0.99395645, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
