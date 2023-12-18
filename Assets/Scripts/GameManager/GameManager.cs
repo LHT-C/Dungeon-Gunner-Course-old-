@@ -94,10 +94,10 @@ public class GameManager : SingletonMonobehaviour<GameManager>
         HandleGameState();
 
         // For testing
-        if (Input.GetKeyDown(KeyCode.R))//按下R键重开游戏（重新生成随机地图）
-        {
-            gameState = GameState.gameStarted;
-        }
+        //if (Input.GetKeyDown(KeyCode.R))//按下R键重开游戏（重新生成随机地图）
+        //{
+        //    gameState = GameState.gameStarted;
+        //}
 
     }
 

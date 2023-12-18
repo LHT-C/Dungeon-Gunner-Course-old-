@@ -177,6 +177,12 @@ public class PlayerControl : MonoBehaviour
 
         // Aim weapon input
         AimWeaponInput(out weaponDirection, out weaponAngleDegrees, out playerAngleDegrees, out playerAimDirection);
+
+        // Fire weapon input
+        FireWeaponInput(weaponDirection, weaponAngleDegrees, playerAngleDegrees, playerAimDirection);
+
+        // Reload weapon input
+        ReloadWeaponInput();
     }
 
     private void AimWeaponInput(out Vector3 weaponDirection, out float weaponAngleDegrees, out float playerAngleDegrees, out AimDirection playerAimDirection)
@@ -204,6 +210,16 @@ public class PlayerControl : MonoBehaviour
         player.aimWeaponEvent.CallAimWeaponEvent(playerAimDirection, playerAngleDegrees, weaponAngleDegrees, weaponDirection);//呼出瞄准事件
     }
 
+    private void FireWeaponInput(Vector3 weaponDirection, float weaponAngleDegrees, float playerAngleDegrees, AimDirection playerAimDirection)
+    {
+        // Fire when left mouse button is clicked 单击鼠标左键时激发
+        if (Input.GetMouseButton(0))
+        {
+            // Trigger fire weapon event 触发武器开火事件
+            player.fireWeaponEvent.CallFireWeaponEvent(true, playerAimDirection, playerAngleDegrees, weaponAngleDegrees, weaponDirection);
+        }
+    }
+
     private void SetWeaponByIndex(int weaponIndex)
     {
         if (weaponIndex - 1 < player.weaponList.Count)
@@ -213,19 +229,39 @@ public class PlayerControl : MonoBehaviour
         }
     }
 
+    private void ReloadWeaponInput()
+    {
+        Weapon currentWeapon = player.activeWeapon.GetCurrentWeapon();
+
+        // if current weapon is reloading return 如果当前武器正在重新装弹，返回
+        if (currentWeapon.isWeaponReloading) return;
+
+        // remaining ammo is less than clip capacity then return and not infinite ammo then return 剩余弹药小于弹夹容量，然后返回。不是无限弹药，然后返回
+        if (currentWeapon.weaponRemainingAmmo < currentWeapon.weaponDetails.weaponClipAmmoCapacity && !currentWeapon.weaponDetails.hasInfiniteAmmo) return;
+
+        // if ammo in clip equals clip capacity then return 如果弹夹中的弹药等于弹夹的容量，则返回
+        if (currentWeapon.weaponClipRemainingAmmo == currentWeapon.weaponDetails.weaponClipAmmoCapacity) return;
+
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            // Call the reload weapon event 调用重装武器事件
+            player.reloadWeaponEvent.CallReloadWeaponEvent(player.activeWeapon.GetCurrentWeapon(), 0);
+        }
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        // if collided with something stop player roll coroutine
+        // if collided with something stop player roll coroutine 如果与什么东西相撞，停止玩家翻滚协程
         StopPlayerRollRoutine();
     }
 
     private void OnCollisionStay2D(Collision2D collision)
     {
-        // if in collision with something stop player roll coroutine
+        // if in collision with something stop player roll coroutine 如果与某物发生碰撞，停止玩家翻滚协程
         StopPlayerRollRoutine();
     }
 
-    private void StopPlayerRollRoutine()//撞墙时立刻停止翻滚
+    private void StopPlayerRollRoutine()//停止翻滚
     {
         if (playerRollCoroutine != null)
         {

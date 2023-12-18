@@ -4,7 +4,7 @@ OS: 'Windows 10 Pro; OS build 19045.3208; Version 2009; 64bit' Language: 'zh' Ph
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
 
  COMMAND LINE ARGUMENTS:
-C:\Program Files\Unity\Hub\Editor\2021.1.7f1-x86_64\Editor\Unity.exe
+C:\Program Files\Unity\Hub\Editor\2021.1.7f1\Editor\Unity.exe
 -adb2
 -batchMode
 -noUpm
@@ -15,14 +15,14 @@ C:/Unity Projects/projects/Dungeon Gunner Course
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-54774
+49735
 Successfully changed project path to: C:/Unity Projects/projects/Dungeon Gunner Course
 C:/Unity Projects/projects/Dungeon Gunner Course
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 163.35 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 133.98 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.1.7f1 (d91830b65d9b)
-[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.1.7f1-x86_64/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.1.7f1/Editor/Data/Resources/UnitySubsystems
 [Subsystems] Discovering subsystems at path C:/Unity Projects/projects/Dungeon Gunner Course/Assets
 GfxDevice: creating device client; threaded=0; jobified=0
 Direct3D:
@@ -33,310 +33,408 @@ Direct3D:
     Driver:   31.0.15.2852
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
 Initialize mono
-Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.1.7f1-x86_64/Editor/Data/Managed'
-Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.1.7f1-x86_64/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
-Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.1.7f1-x86_64/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56992
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.1.7f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.1.7f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.1.7f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56500
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
-Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.1.7f1-x86_64/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.003585 seconds.
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.1.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.001667 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 151.74 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 137.78 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.976 seconds
+- Completed reload, in  1.157 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.006083 seconds.
+Registered in 0.003249 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image C:\Unity Projects\projects\Dungeon Gunner Course\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image C:\Unity Projects\projects\Dungeon Gunner Course\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 154.87 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 144.51 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.175 seconds
+- Completed reload, in  1.288 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
-Refreshing native plugins compatible for Editor in 1.34 ms, found 1 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Refreshing native plugins compatible for Editor in 1.36 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3805 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 182.1 MB.
-System memory in use after: 182.3 MB.
+Unloading 3808 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 182.2 MB.
+System memory in use after: 182.4 MB.
 
-Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 4282.
-Total: 2.322700 ms (FindLiveObjects: 0.347400 ms CreateObjectMapping: 0.093000 ms MarkObjects: 1.860000 ms  DeleteObjects: 0.021600 ms)
+Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 4285.
+Total: 1.820100 ms (FindLiveObjects: 0.212500 ms CreateObjectMapping: 0.047700 ms MarkObjects: 1.509900 ms  DeleteObjects: 0.048700 ms)
 
 ========================================================================
 Received Import Request.
-  path: Assets/ScriptableObjectAssets/Dungeon/Rooms/Catacombs/Room_BossRoom_Catacombs_2.asset
-  artifactKey: Guid(aeaa238dda2b934409291731e7646e39) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ScriptableObjectAssets/Dungeon/Rooms/Catacombs/Room_BossRoom_Catacombs_2.asset using Guid(aeaa238dda2b934409291731e7646e39) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '09def6c74a166a2e632d6e10d098214e') in 0.048142 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 23.141468 seconds.
-  path: Assets/ScriptableObjectAssets/Dungeon/Rooms/Catacombs/Room_Entrance_Catacombs_1.asset
-  artifactKey: Guid(3cdc996eae718644dad8dad24ae2c39f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ScriptableObjectAssets/Dungeon/Rooms/Catacombs/Room_Entrance_Catacombs_1.asset using Guid(3cdc996eae718644dad8dad24ae2c39f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '35a17ba6e5bf9ee1e8e9abfc4813bf6d') in 0.007872 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 43.655090 seconds.
-  path: Assets/ScriptableObjectAssets/Dungeon/Rooms/Catacombs/Room_Entrance_Catacombs_2.asset
-  artifactKey: Guid(03fb8e6e180566844b9c3942a093676e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ScriptableObjectAssets/Dungeon/Rooms/Catacombs/Room_Entrance_Catacombs_2.asset using Guid(03fb8e6e180566844b9c3942a093676e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1cab6ea89327bb9a0308be87820c4720') in 0.011979 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 8.595576 seconds.
-  path: Assets/ScriptableObjectAssets/Dungeon/Rooms/Catacombs/Room_Entrance_Catacombs_3.asset
-  artifactKey: Guid(44aecdcc3db913e4499e1717a8957c90) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ScriptableObjectAssets/Dungeon/Rooms/Catacombs/Room_Entrance_Catacombs_3.asset using Guid(44aecdcc3db913e4499e1717a8957c90) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fb5ed972cd7b9b632d3c24b447828505') in 0.008382 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 204.384123 seconds.
-  path: Assets/ScriptableObjectAssets/Dungeon/Rooms/Catacombs/Room_LargeRoom_Catacombs_1.asset
-  artifactKey: Guid(5ec7c3fd29261984abd0f0a91400645d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ScriptableObjectAssets/Dungeon/Rooms/Catacombs/Room_LargeRoom_Catacombs_1.asset using Guid(5ec7c3fd29261984abd0f0a91400645d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '85c459d782419083b724c8c125b56a7e') in 0.010193 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 18.483508 seconds.
-  path: Assets/ScriptableObjectAssets/Dungeon/Rooms/Catacombs/Room_SmallRoom_Catacombs_1.asset
-  artifactKey: Guid(1cbc835c305513640970724d8b4d26ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ScriptableObjectAssets/Dungeon/Rooms/Catacombs/Room_SmallRoom_Catacombs_1.asset using Guid(1cbc835c305513640970724d8b4d26ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '29cef491969bd7d74b5bcb042211a8d3') in 0.012941 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 29.440179 seconds.
-  path: Assets/ScriptableObjectAssets/Dungeon/Rooms/Sorcery/Room_LargeRoom_Sorcery_3.asset
-  artifactKey: Guid(8c80937928cc656448fce066056b4413) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ScriptableObjectAssets/Dungeon/Rooms/Sorcery/Room_LargeRoom_Sorcery_3.asset using Guid(8c80937928cc656448fce066056b4413) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd1014153d24e1a010be2e804ab60becd') in 0.012413 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 10.975960 seconds.
-  path: Assets/ScriptableObjectAssets/Dungeon/Rooms/Sorcery/Room_LargeRoom_Sorcery_5.asset
-  artifactKey: Guid(7a58760313a72b84189318e4bef2c301) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ScriptableObjectAssets/Dungeon/Rooms/Sorcery/Room_LargeRoom_Sorcery_5.asset using Guid(7a58760313a72b84189318e4bef2c301) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '268f0a82c342a40a907424c8e837b918') in 0.012462 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 823.012165 seconds.
-  path: Assets/Scripts/Player/PlayerControl.cs
-  artifactKey: Guid(77a042b0f18362f4cad2509ffbbca2be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Player/PlayerControl.cs using Guid(77a042b0f18362f4cad2509ffbbca2be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8c58269cfa67f41b36f2bd5bc2328bcd') in 0.013788 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.923701 seconds.
-  path: Assets/Scripts/Player/AnimatePlayer.cs
-  artifactKey: Guid(3ee63852f1042a448946fe556c0b1456) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Player/AnimatePlayer.cs using Guid(3ee63852f1042a448946fe556c0b1456) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd4e24544809b97d2f3f7c29d3a8b1634') in 0.003929 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 186.644142 seconds.
-  path: Assets/Scripts/Player/PlayerDetailsSO.cs
-  artifactKey: Guid(d23eab4df8573764a828eadcb92852d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Player/PlayerDetailsSO.cs using Guid(d23eab4df8573764a828eadcb92852d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eb90af0a2a7a068f12be08b494c77504') in 0.002906 seconds 
+  path: Assets/Scripts/GameManager/GameManager.cs
+  artifactKey: Guid(aac550ba47ccd7e4cafb23359ab96d54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GameManager/GameManager.cs using Guid(aac550ba47ccd7e4cafb23359ab96d54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2d32469e83cb6c895d2c12f8ec0daf80') in 0.024348 seconds 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.003400 seconds.
+Registered in 0.004046 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image C:\Unity Projects\projects\Dungeon Gunner Course\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image C:\Unity Projects\projects\Dungeon Gunner Course\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.71 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 0.78 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.849 seconds
+- Completed reload, in  1.040 seconds
 Platform modules already initialized, skipping
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.84 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3676 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 175.8 MB.
-System memory in use after: 176.1 MB.
-
-Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 4285.
-Total: 1.583700 ms (FindLiveObjects: 0.160400 ms CreateObjectMapping: 0.056400 ms MarkObjects: 1.343200 ms  DeleteObjects: 0.022800 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001927 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Unity Projects\projects\Dungeon Gunner Course\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Unity Projects\projects\Dungeon Gunner Course\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.60 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.769 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.74 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 1.41 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 3679 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 174.9 MB.
-System memory in use after: 175.1 MB.
+System memory in use before: 173.3 MB.
+System memory in use after: 173.5 MB.
 
-Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 4291.
-Total: 1.988900 ms (FindLiveObjects: 0.209100 ms CreateObjectMapping: 0.097700 ms MarkObjects: 1.666400 ms  DeleteObjects: 0.014600 ms)
+Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 4288.
+Total: 2.478600 ms (FindLiveObjects: 0.342800 ms CreateObjectMapping: 0.090600 ms MarkObjects: 2.029000 ms  DeleteObjects: 0.015100 ms)
 
-========================================================================
-Received Import Request.
-  Time since last request: 1119.028559 seconds.
-  path: Assets/Scripts/Weapons/Weapons/ActiveWeapon.cs
-  artifactKey: Guid(203560762e5d7b346bfb5144eb02b7fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Weapons/Weapons/ActiveWeapon.cs using Guid(203560762e5d7b346bfb5144eb02b7fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e0a23a5495689b07fb1ac17ea858e715') in 0.006665 seconds 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.003687 seconds.
+Registered in 0.004390 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image C:\Unity Projects\projects\Dungeon Gunner Course\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image C:\Unity Projects\projects\Dungeon Gunner Course\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.05 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 1.32 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.045 seconds
+- Completed reload, in  0.933 seconds
 Platform modules already initialized, skipping
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.81 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 0.85 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3679 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 174.9 MB.
-System memory in use after: 175.2 MB.
+Unloading 3682 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 173.4 MB.
+System memory in use after: 173.7 MB.
 
 Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 4294.
-Total: 1.555800 ms (FindLiveObjects: 0.174900 ms CreateObjectMapping: 0.048700 ms MarkObjects: 1.318500 ms  DeleteObjects: 0.012800 ms)
+Total: 1.890500 ms (FindLiveObjects: 0.225000 ms CreateObjectMapping: 0.050900 ms MarkObjects: 1.596300 ms  DeleteObjects: 0.017400 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 1635.352560 seconds.
-  path: Assets/Scripts/Weapons/Weapons/ActiveWeapon.cs
-  artifactKey: Guid(203560762e5d7b346bfb5144eb02b7fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Weapons/Weapons/ActiveWeapon.cs using Guid(203560762e5d7b346bfb5144eb02b7fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9630ecf65837f226b9a6ed0540aefc94') in 0.003880 seconds 
+  Time since last request: 740.120051 seconds.
+  path: Assets/Scripts/Weapons/Weapons/ReloadWeaponEvent.cs
+  artifactKey: Guid(55ceea36c1be8624188c42187d457dd6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Weapons/Weapons/ReloadWeaponEvent.cs using Guid(55ceea36c1be8624188c42187d457dd6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ecd14e1f85900c7409f7edd13b0da8c8') in 0.008976 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 4.856375 seconds.
-  path: Assets/Prefabs/Player/Player.prefab
-  artifactKey: Guid(07626fcdb44819245851b34ee3d8c4b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Player/Player.prefab using Guid(07626fcdb44819245851b34ee3d8c4b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b825f7ea97cdfc69904979b0d7ae4983') in 0.233428 seconds 
+  Time since last request: 10.513924 seconds.
+  path: Assets/Scripts/Weapons/Weapons/WeaponDetailsSO.cs
+  artifactKey: Guid(819f13724de075941bd7a7f97c0afc7c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Weapons/Weapons/WeaponDetailsSO.cs using Guid(819f13724de075941bd7a7f97c0afc7c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c08cf557aaf383325ee34de9f3b90ea2') in 0.002959 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 15.484580 seconds.
-  path: Assets/Prefabs/Player/Player.prefab
-  artifactKey: Guid(07626fcdb44819245851b34ee3d8c4b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Player/Player.prefab using Guid(07626fcdb44819245851b34ee3d8c4b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '666678227b2b9465cf0357d86b3686e0') in 0.015009 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 8.102664 seconds.
-  path: Assets/Prefabs/Player/Player.prefab
-  artifactKey: Guid(07626fcdb44819245851b34ee3d8c4b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Player/Player.prefab using Guid(07626fcdb44819245851b34ee3d8c4b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b) weaponSpriteRenderer is null and must contain a value in object Player
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:Log (object)
-HelperUtilities:ValidateCheckNullValue (UnityEngine.Object,string,UnityEngine.Object) (at Assets/Scripts/Utilities/HelperUtilities.cs:117)
-ActiveWeapon:OnValidate () (at Assets/Scripts/Weapons/Weapons/ActiveWeapon.cs:101)
-
-(Filename: Assets/Scripts/Utilities/HelperUtilities.cs Line: 117)
-
-weaponPolygonCollider2D is null and must contain a value in object Player
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:Log (object)
-HelperUtilities:ValidateCheckNullValue (UnityEngine.Object,string,UnityEngine.Object) (at Assets/Scripts/Utilities/HelperUtilities.cs:117)
-ActiveWeapon:OnValidate () (at Assets/Scripts/Weapons/Weapons/ActiveWeapon.cs:102)
-
-(Filename: Assets/Scripts/Utilities/HelperUtilities.cs Line: 117)
-
-weaponShootPositionTransform is null and must contain a value in object Player
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:Log (object)
-HelperUtilities:ValidateCheckNullValue (UnityEngine.Object,string,UnityEngine.Object) (at Assets/Scripts/Utilities/HelperUtilities.cs:117)
-ActiveWeapon:OnValidate () (at Assets/Scripts/Weapons/Weapons/ActiveWeapon.cs:103)
-
-(Filename: Assets/Scripts/Utilities/HelperUtilities.cs Line: 117)
-
-weaponEffectPositionTransform is null and must contain a value in object Player
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:Log (object)
-HelperUtilities:ValidateCheckNullValue (UnityEngine.Object,string,UnityEngine.Object) (at Assets/Scripts/Utilities/HelperUtilities.cs:117)
-ActiveWeapon:OnValidate () (at Assets/Scripts/Weapons/Weapons/ActiveWeapon.cs:104)
-
-(Filename: Assets/Scripts/Utilities/HelperUtilities.cs Line: 117)
-
- -> (artifact id: '0351500ea302b888f0812acf65ee9573') in 0.013702 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 226.769428 seconds.
-  path: Assets/Scripts/Player/Player.cs
-  artifactKey: Guid(ccc18d74fdce9b7459a5f4f9c6beeba9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Player/Player.cs using Guid(ccc18d74fdce9b7459a5f4f9c6beeba9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '18b03cd139fac085e78d020182ff330e') in 0.002119 seconds 
+  Time since last request: 0.722827 seconds.
+  path: Assets/Scripts/Weapons/Weapons/ReloadWeapon.cs
+  artifactKey: Guid(8bd0edcf28aa76746a4329735b2cda61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Weapons/Weapons/ReloadWeapon.cs using Guid(8bd0edcf28aa76746a4329735b2cda61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f783e3acfa42e8f41f3874c75acff5f8') in 0.003483 seconds 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.003286 seconds.
+Registered in 0.003375 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image C:\Unity Projects\projects\Dungeon Gunner Course\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image C:\Unity Projects\projects\Dungeon Gunner Course\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.84 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 1.38 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.991 seconds
+- Completed reload, in  0.858 seconds
 Platform modules already initialized, skipping
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.71 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 0.73 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3679 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 182.3 MB.
-System memory in use after: 182.5 MB.
+Unloading 3682 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 173.5 MB.
+System memory in use after: 173.7 MB.
 
-Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 4344.
-Total: 1.887100 ms (FindLiveObjects: 0.152300 ms CreateObjectMapping: 0.039700 ms MarkObjects: 1.677000 ms  DeleteObjects: 0.017300 ms)
+Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 4297.
+Total: 1.987400 ms (FindLiveObjects: 0.192500 ms CreateObjectMapping: 0.046500 ms MarkObjects: 1.718400 ms  DeleteObjects: 0.028700 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 311.041428 seconds.
-  path: Assets/Scripts/Player/Player.cs
-  artifactKey: Guid(ccc18d74fdce9b7459a5f4f9c6beeba9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Player/Player.cs using Guid(ccc18d74fdce9b7459a5f4f9c6beeba9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '054fbf0ab86aa74800b5ddd0d657193e') in 0.003870 seconds 
+  Time since last request: 3995.828252 seconds.
+  path: Assets/Scripts/Weapons/Weapons/ReloadWeapon.cs
+  artifactKey: Guid(8bd0edcf28aa76746a4329735b2cda61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Weapons/Weapons/ReloadWeapon.cs using Guid(8bd0edcf28aa76746a4329735b2cda61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a50e15876b31a1563bdafac3f2f0af3d') in 0.005443 seconds 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.003500 seconds.
+Registered in 0.003166 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image C:\Unity Projects\projects\Dungeon Gunner Course\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image C:\Unity Projects\projects\Dungeon Gunner Course\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.31 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 1.36 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.186 seconds
+- Completed reload, in  0.959 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.48 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3682 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 173.5 MB.
+System memory in use after: 173.7 MB.
+
+Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 4300.
+Total: 2.645500 ms (FindLiveObjects: 0.469300 ms CreateObjectMapping: 0.124200 ms MarkObjects: 1.968900 ms  DeleteObjects: 0.018100 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 127.668886 seconds.
+  path: Assets/Scripts/Misc
+  artifactKey: Guid(5c30b7251a7ba1e46b52b67a705664a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Misc using Guid(5c30b7251a7ba1e46b52b67a705664a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6aeccd7f4b8cd40ce59f4bb96a7e6e9a') in 0.007528 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003163 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Unity Projects\projects\Dungeon Gunner Course\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Unity Projects\projects\Dungeon Gunner Course\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.41 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.011 seconds
 Platform modules already initialized, skipping
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
 Refreshing native plugins compatible for Editor in 1.39 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3679 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 181.1 MB.
-System memory in use after: 181.4 MB.
+Unloading 3685 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 173.6 MB.
+System memory in use after: 173.8 MB.
 
-Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 4347.
-Total: 2.811200 ms (FindLiveObjects: 0.341600 ms CreateObjectMapping: 0.091200 ms MarkObjects: 2.356400 ms  DeleteObjects: 0.020900 ms)
+Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 4306.
+Total: 2.393000 ms (FindLiveObjects: 0.186500 ms CreateObjectMapping: 0.085400 ms MarkObjects: 2.099200 ms  DeleteObjects: 0.020700 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 531.272012 seconds.
-  path: Assets/Scripts/Player/PlayerControl.cs
-  artifactKey: Guid(77a042b0f18362f4cad2509ffbbca2be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Player/PlayerControl.cs using Guid(77a042b0f18362f4cad2509ffbbca2be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '572b93fd47216fd0dacdd8615fa38ac2') in 0.005828 seconds 
+  Time since last request: 464.839350 seconds.
+  path: Assets/Scripts/Weapons/Weapons/FireWeapon.cs
+  artifactKey: Guid(6d1cb54d2d743ec48b9ebe21938b88ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Weapons/Weapons/FireWeapon.cs using Guid(6d1cb54d2d743ec48b9ebe21938b88ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f0b36903698c941b4989206eda9321b9') in 0.010737 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003246 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Unity Projects\projects\Dungeon Gunner Course\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Unity Projects\projects\Dungeon Gunner Course\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.32 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.048 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.57 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3685 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 173.6 MB.
+System memory in use after: 173.8 MB.
+
+Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 4309.
+Total: 3.274900 ms (FindLiveObjects: 0.355800 ms CreateObjectMapping: 0.080600 ms MarkObjects: 2.817400 ms  DeleteObjects: 0.020000 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 1964.948666 seconds.
+  path: Assets/Scripts/Weapons/Weapons/FireWeapon.cs
+  artifactKey: Guid(6d1cb54d2d743ec48b9ebe21938b88ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Weapons/Weapons/FireWeapon.cs using Guid(6d1cb54d2d743ec48b9ebe21938b88ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7514c498072145ba0e95d28e1b052db9') in 0.008671 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.624548 seconds.
+  path: Assets/Scripts/Weapons/Weapons/SetActiveWeaponEvent.cs
+  artifactKey: Guid(df8425f5821ac4c4b85597376dee2758) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Weapons/Weapons/SetActiveWeaponEvent.cs using Guid(df8425f5821ac4c4b85597376dee2758) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '67cf5076163defe2f8374da5577316f4') in 0.003409 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.436279 seconds.
+  path: Assets/Scripts/Weapons/Weapons/Weapon.cs
+  artifactKey: Guid(edf328dba65d1a5489dcff0224f94809) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Weapons/Weapons/Weapon.cs using Guid(edf328dba65d1a5489dcff0224f94809) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8177659230f57958bf01f4a5cc57c805') in 0.003670 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.754876 seconds.
+  path: Assets/Scripts/Weapons/Weapons/WeaponReloadedEvent.cs
+  artifactKey: Guid(70893f918dd9f354cbb98f401147d0f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Weapons/Weapons/WeaponReloadedEvent.cs using Guid(70893f918dd9f354cbb98f401147d0f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '45b876a273f460179f5d5ce9762f27e2') in 0.002215 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 10.355078 seconds.
+  path: Assets/Prefabs/Player/Player.prefab
+  artifactKey: Guid(07626fcdb44819245851b34ee3d8c4b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Player/Player.prefab using Guid(07626fcdb44819245851b34ee3d8c4b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b34ebeca9efa0f86fe9e1109f43623f2') in 0.287241 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 59.549019 seconds.
+  path: Assets/Scripts/Weapons/Weapons/FireWeaponEvent.cs
+  artifactKey: Guid(10b17c2379d267441b80e8b12caf6499) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Weapons/Weapons/FireWeaponEvent.cs using Guid(10b17c2379d267441b80e8b12caf6499) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5f7535a17a74f531f1beb1987917f366') in 0.003354 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 39.660094 seconds.
+  path: Assets/Prefabs/Player/Player.prefab
+  artifactKey: Guid(07626fcdb44819245851b34ee3d8c4b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Player/Player.prefab using Guid(07626fcdb44819245851b34ee3d8c4b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7622edd3ff317f29aae4167e368cb2f5') in 0.020315 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 34.284559 seconds.
+  path: Assets/Prefabs/Player/Player.prefab
+  artifactKey: Guid(07626fcdb44819245851b34ee3d8c4b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Player/Player.prefab using Guid(07626fcdb44819245851b34ee3d8c4b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '60984cdd5d3a902ad7372b2a8cdc21cf') in 0.017140 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 16.596533 seconds.
+  path: Assets/Prefabs/Player/Player.prefab
+  artifactKey: Guid(07626fcdb44819245851b34ee3d8c4b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Player/Player.prefab using Guid(07626fcdb44819245851b34ee3d8c4b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5f452c46462c531b4fbaff67c1df485f') in 0.014474 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 9.146178 seconds.
+  path: Assets/Prefabs/Player/Player.prefab
+  artifactKey: Guid(07626fcdb44819245851b34ee3d8c4b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Player/Player.prefab using Guid(07626fcdb44819245851b34ee3d8c4b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '56d9ab396da7efcc1858a18a1353c336') in 0.012856 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003205 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Unity Projects\projects\Dungeon Gunner Course\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Unity Projects\projects\Dungeon Gunner Course\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.63 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.978 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.39 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3685 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 181.7 MB.
+System memory in use after: 182.0 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 4359.
+Total: 2.718800 ms (FindLiveObjects: 0.339800 ms CreateObjectMapping: 0.089400 ms MarkObjects: 2.252500 ms  DeleteObjects: 0.035700 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 673.039075 seconds.
+  path: Assets/Prefabs/Player/Player.prefab
+  artifactKey: Guid(07626fcdb44819245851b34ee3d8c4b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Player/Player.prefab using Guid(07626fcdb44819245851b34ee3d8c4b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2ca933de6fb75b1d8064dd8b6c5008e7') in 0.245613 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003529 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Unity Projects\projects\Dungeon Gunner Course\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Unity Projects\projects\Dungeon Gunner Course\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.49 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.071 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.61 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3685 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 181.8 MB.
+System memory in use after: 182.0 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 4400.
+Total: 4.726500 ms (FindLiveObjects: 0.517800 ms CreateObjectMapping: 0.167000 ms MarkObjects: 4.013600 ms  DeleteObjects: 0.026900 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003553 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Unity Projects\projects\Dungeon Gunner Course\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Unity Projects\projects\Dungeon Gunner Course\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.30 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.027 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.41 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3685 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 180.7 MB.
+System memory in use after: 181.0 MB.
+
+Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 4403.
+Total: 2.780200 ms (FindLiveObjects: 0.337300 ms CreateObjectMapping: 0.093400 ms MarkObjects: 2.332100 ms  DeleteObjects: 0.015900 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 586.620403 seconds.
+  path: Assets/ScriptableObjectAssets/Weapons/Player/Pistol/WeaponDetails_Pistol.asset
+  artifactKey: Guid(5b2f34087847f8e43a6258c32c15a183) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ScriptableObjectAssets/Weapons/Player/Pistol/WeaponDetails_Pistol.asset using Guid(5b2f34087847f8e43a6258c32c15a183) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f8c7105b2f6406899c0f517091c281ea') in 0.060651 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003316 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Unity Projects\projects\Dungeon Gunner Course\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Unity Projects\projects\Dungeon Gunner Course\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.35 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.029 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.42 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3685 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 181.7 MB.
+System memory in use after: 182.0 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 4406.
+Total: 2.623200 ms (FindLiveObjects: 0.344800 ms CreateObjectMapping: 0.107200 ms MarkObjects: 2.153900 ms  DeleteObjects: 0.016400 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003091 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Unity Projects\projects\Dungeon Gunner Course\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Unity Projects\projects\Dungeon Gunner Course\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.92 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.053 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.37 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3685 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 180.6 MB.
+System memory in use after: 180.9 MB.
+
+Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 4409.
+Total: 2.359300 ms (FindLiveObjects: 0.351000 ms CreateObjectMapping: 0.092700 ms MarkObjects: 1.902200 ms  DeleteObjects: 0.012300 ms)
+
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file
