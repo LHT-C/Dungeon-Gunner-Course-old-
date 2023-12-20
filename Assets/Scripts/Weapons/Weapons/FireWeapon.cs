@@ -9,6 +9,7 @@ using UnityEngine;
 [DisallowMultipleComponent]
 public class FireWeapon : MonoBehaviour
 {
+    private float firePreChargeTimer = 0f;
     private float fireRateCoolDownTimer = 0f;
     private ActiveWeapon activeWeapon;
     private FireWeaponEvent fireWeaponEvent;
@@ -56,6 +57,9 @@ public class FireWeapon : MonoBehaviour
     /// </summary>
     private void WeaponFire(FireWeaponEventArgs fireWeaponEventArgs)
     {
+        // Handle weapon precharge timer. 武器射击充能定时器。
+        WeaponPreCharge(fireWeaponEventArgs);
+
         // Weapon fire.
         if (fireWeaponEventArgs.fire)
         {
@@ -65,7 +69,27 @@ public class FireWeapon : MonoBehaviour
                 FireAmmo(fireWeaponEventArgs.aimAngle, fireWeaponEventArgs.weaponAimAngle, fireWeaponEventArgs.weaponAimDirectionVector);
 
                 ResetCoolDownTimer();//射出一颗子弹后，重置射击间隔时间计时器
+
+                ResetPrechargeTimer();//射出一颗子弹后，重置武器充能时间计时器
             }
+        }
+    }
+
+    /// <summary>
+    /// Handle weapon precharge.
+    /// </summary>
+    private void WeaponPreCharge(FireWeaponEventArgs fireWeaponEventArgs)
+    {
+        // Weapon precharge.
+        if (fireWeaponEventArgs.firePreviousFrame)
+        {
+            // Decrease precharge timer if fire button held previous frame. 如果开火按钮按住，则减少武器充能计时器。
+            firePreChargeTimer -= Time.deltaTime;
+        }
+        else
+        {
+            // else reset the precharge timer. 松开则重置定时器。
+            ResetPrechargeTimer();
         }
     }
 
@@ -82,8 +106,8 @@ public class FireWeapon : MonoBehaviour
         if (activeWeapon.GetCurrentWeapon().isWeaponReloading)
             return false;
 
-        // If the weapon is cooling down then return false. 如果武器正处于射击间隔，则返回false。
-        if (fireRateCoolDownTimer > 0f)
+        // If the weapon is cooling down then return false. 如果武器正处于射击间隔或没有充能到满，则返回false。
+        if (firePreChargeTimer > 0f || fireRateCoolDownTimer > 0f)
             return false;
 
         // if no ammo in the clip and the weapon doesn't have infinite clip capacity then return false. 如果弹夹中没有弹药，并且武器没有无限的弹容量，则返回false。
@@ -138,5 +162,14 @@ public class FireWeapon : MonoBehaviour
     {
         // Reset cooldown timer 重置射击间隔时间计时器
         fireRateCoolDownTimer = activeWeapon.GetCurrentWeapon().weaponDetails.weaponFireRate;
+    }
+
+    /// <summary>
+    /// Reset precharge timers
+    /// </summary>
+    private void ResetPrechargeTimer()
+    {
+        // Reset precharge timer 重置射击充能时间计时器
+        firePreChargeTimer = activeWeapon.GetCurrentWeapon().weaponDetails.weaponPrechargeTime;
     }
 }
