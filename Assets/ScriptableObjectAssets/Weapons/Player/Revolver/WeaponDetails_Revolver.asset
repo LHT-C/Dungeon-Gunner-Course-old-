@@ -15,7 +15,7 @@ MonoBehaviour:
   weaponName: Revolver
   weaponSprite: {fileID: 21300000, guid: 29bc0107bc11191468ed7d175994fb5b, type: 3}
   weaponShootPosition: {x: 1.15, y: 0.329, z: 0}
-  weaponCurrentAmmo: {fileID: 11400000, guid: d8d1745eb3641b2469ea9a6c0baee62b, type: 2}
+  weaponCurrentAmmo: {fileID: 11400000, guid: c8da3159e19356c4581c72b618cedbb4, type: 2}
   hasInfiniteAmmo: 0
   hasInfiniteClipCapacity: 0
   weaponClipAmmoCapacity: 6

@@ -47,10 +47,6 @@ PrefabInstance:
       propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4133071764509902090, guid: 07626fcdb44819245851b34ee3d8c4b0, type: 3}
-      propertyPath: movementDetails
-      value: 
-      objectReference: {fileID: 11400000, guid: 3d387d761f539ad48a309e097a51b9e5, type: 2}
     - target: {fileID: 4886237443457582240, guid: 07626fcdb44819245851b34ee3d8c4b0, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -170,7 +166,7 @@ PrefabInstance:
     - target: {fileID: 4886237443564654883, guid: 07626fcdb44819245851b34ee3d8c4b0, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: abbe40c4d6a803f42a7c4f53404a484d, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 4886237443564654883, guid: 07626fcdb44819245851b34ee3d8c4b0, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -181,7 +177,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4886237443564654883, guid: 07626fcdb44819245851b34ee3d8c4b0, type: 3}
       propertyPath: m_WasSpriteAssigned
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4886237444538158119, guid: 07626fcdb44819245851b34ee3d8c4b0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -199,5 +195,13 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7452092265214714703, guid: 07626fcdb44819245851b34ee3d8c4b0, type: 3}
+      propertyPath: movementDetails
+      value: 
+      objectReference: {fileID: 11400000, guid: 167bc016506fc574a87c97d32a102ad3, type: 2}
+    - target: {fileID: 8355090012259797822, guid: 07626fcdb44819245851b34ee3d8c4b0, type: 3}
+      propertyPath: movementDetails
+      value: 
+      objectReference: {fileID: 11400000, guid: 167bc016506fc574a87c97d32a102ad3, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 07626fcdb44819245851b34ee3d8c4b0, type: 3}

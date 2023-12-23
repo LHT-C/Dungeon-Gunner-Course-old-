@@ -15,11 +15,11 @@ MonoBehaviour:
   weaponName: Pistol
   weaponSprite: {fileID: 21300000, guid: abbe40c4d6a803f42a7c4f53404a484d, type: 3}
   weaponShootPosition: {x: 1.115, y: 0.277, z: 0}
-  weaponCurrentAmmo: {fileID: 11400000, guid: 0753d01980c2c8a4e8cd4b75f08ffa24, type: 2}
-  hasInfiniteAmmo: 1
+  weaponCurrentAmmo: {fileID: 11400000, guid: d096900a933fba145802981599120082, type: 2}
+  hasInfiniteAmmo: 0
   hasInfiniteClipCapacity: 0
   weaponClipAmmoCapacity: 10
-  weaponAmmoCapacity: 0
+  weaponAmmoCapacity: 100
   weaponFireRate: 0.25
   weaponPrechargeTime: 0
-  weaponReloadTime: 1.2
+  weaponReloadTime: 0.2

@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &4601848264719234881
+--- !u!1001 &7730090510370225994
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -95,5 +95,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: TheScientist
       objectReference: {fileID: 0}
+    - target: {fileID: 8355090012259797822, guid: 07626fcdb44819245851b34ee3d8c4b0, type: 3}
+      propertyPath: movementDetails
+      value: 
+      objectReference: {fileID: 11400000, guid: ad7398cdca2b559498623ff1c76f2e9b, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 07626fcdb44819245851b34ee3d8c4b0, type: 3}
