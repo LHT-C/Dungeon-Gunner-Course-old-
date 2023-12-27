@@ -185,6 +185,9 @@ public class PlayerControl : MonoBehaviour
         // Fire weapon input
         FireWeaponInput(weaponDirection, weaponAngleDegrees, playerAngleDegrees, playerAimDirection);
 
+        // Switch weapon input
+        SwitchWeaponInput();
+
         // Reload weapon input
         ReloadWeaponInput();
     }
@@ -229,6 +232,76 @@ public class PlayerControl : MonoBehaviour
         }
     }
 
+    private void SwitchWeaponInput()
+    {
+        // Switch weapon if mouse scroll wheel selecetd 如果鼠标滚轮滚动，则切换武器
+        if (Input.mouseScrollDelta.y < 0f)
+        {
+            PreviousWeapon();
+        }
+
+        if (Input.mouseScrollDelta.y > 0f)
+        {
+            NextWeapon();
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            SetWeaponByIndex(1);
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            SetWeaponByIndex(2);
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            SetWeaponByIndex(3);
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha4))
+        {
+            SetWeaponByIndex(4);
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha5))
+        {
+            SetWeaponByIndex(5);
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha6))
+        {
+            SetWeaponByIndex(6);
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha7))
+        {
+            SetWeaponByIndex(7);
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha8))
+        {
+            SetWeaponByIndex(8);
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha9))
+        {
+            SetWeaponByIndex(9);
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha0))
+        {
+            SetWeaponByIndex(10);
+        }
+
+        if (Input.GetKeyDown(KeyCode.Minus))//按下减号键时可以把当前武器设为1号位武器
+        {
+            SetCurrentWeaponToFirstInTheList();
+        }
+
+    }
+
     private void SetWeaponByIndex(int weaponIndex)
     {
         if (weaponIndex - 1 < player.weaponList.Count)
@@ -236,6 +309,31 @@ public class PlayerControl : MonoBehaviour
             currentWeaponIndex = weaponIndex;
             player.setActiveWeaponEvent.CallSetActiveWeaponEvent(player.weaponList[weaponIndex - 1]);
         }
+    }
+
+    private void NextWeapon()
+    {
+        currentWeaponIndex++;
+
+        if (currentWeaponIndex > player.weaponList.Count)
+        {
+            currentWeaponIndex = 1;
+        }
+
+        SetWeaponByIndex(currentWeaponIndex);
+
+    }
+
+    private void PreviousWeapon()
+    {
+        currentWeaponIndex--;
+
+        if (currentWeaponIndex < 1)
+        {
+            currentWeaponIndex = player.weaponList.Count;
+        }
+
+        SetWeaponByIndex(currentWeaponIndex);
     }
 
     private void ReloadWeaponInput()
@@ -278,6 +376,40 @@ public class PlayerControl : MonoBehaviour
 
             isPlayerRolling = false;
         }
+    }
+
+    /// <summary>
+    /// Set the current weapon to be first in the player weapon list 将当前武器设置为玩家武器列表中的第一个
+    /// </summary>
+    private void SetCurrentWeaponToFirstInTheList()
+    {
+        // Create new temporary list 创建新的临时列表
+        List<Weapon> tempWeaponList = new List<Weapon>();
+
+        // Add the current weapon to first in the temp list 将当前武器添加到临时列表的第一个
+        Weapon currentWeapon = player.weaponList[currentWeaponIndex - 1];
+        currentWeapon.weaponListPosition = 1;
+        tempWeaponList.Add(currentWeapon);
+
+        // Loop through existing weapon list and add - skipping current weapon 循环浏览现有武器列表并添加-跳过当前武器
+        int index = 2;
+
+        foreach (Weapon weapon in player.weaponList)
+        {
+            if (weapon == currentWeapon) continue;
+
+            tempWeaponList.Add(weapon);
+            weapon.weaponListPosition = index;
+            index++;
+        }
+
+        // Assign new list 分配新列表
+        player.weaponList = tempWeaponList;
+
+        currentWeaponIndex = 1;
+
+        // Set current weapon 设置当前武器
+        SetWeaponByIndex(currentWeaponIndex);
     }
 
     #region Validation

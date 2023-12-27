@@ -726,6 +726,9 @@ MonoBehaviour:
   - poolSize: 30
     prefab: {fileID: 790507858956430495, guid: ffeb30fa2fdb42b4a963a0119d8d40f9, type: 3}
     componentType: IFireable
+  - poolSize: 30
+    prefab: {fileID: 790507858956430495, guid: b793ff2181a296641967e2c3983c651f, type: 3}
+    componentType: IFireable
 --- !u!4 &598341336
 Transform:
   m_ObjectHideFlags: 0
@@ -1095,7 +1098,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
@@ -1340,7 +1343,7 @@ MonoBehaviour:
     ModeOverride: 1
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.0478309, y: 1}
+    m_SensorSize: {x: 1.121078, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0

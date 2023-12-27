@@ -15,11 +15,11 @@ D:/unity project/project/Dungeon Gunner Course
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-5667
+11926
 Successfully changed project path to: D:/unity project/project/Dungeon Gunner Course
 D:/unity project/project/Dungeon Gunner Course
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 119.99 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 165.76 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.1.7f1 (d91830b65d9b)
 [Subsystems] Discovering subsystems at path D:/unity/Unity 2021.1.7f1/Editor/Data/Resources/UnitySubsystems
@@ -36,877 +36,281 @@ Initialize mono
 Mono path[0] = 'D:/unity/Unity 2021.1.7f1/Editor/Data/Managed'
 Mono path[1] = 'D:/unity/Unity 2021.1.7f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'D:/unity/Unity 2021.1.7f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56940
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56024
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: D:/unity/Unity 2021.1.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.001314 seconds.
+Registered in 0.002689 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 98.73 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 192.12 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.340 seconds
+- Completed reload, in  1.916 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.001600 seconds.
+Registered in 0.012631 seconds.
 Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\unity project\project\Dungeon Gunner Course\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\unity project\project\Dungeon Gunner Course\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 100.80 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 169.01 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.123 seconds
+- Completed reload, in  1.420 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
-Refreshing native plugins compatible for Editor in 0.89 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 1.96 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2287 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 139.7 MB.
-System memory in use after: 139.9 MB.
+Unloading 3815 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 182.3 MB.
+System memory in use after: 182.6 MB.
 
-Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 2767.
-Total: 4.685500 ms (FindLiveObjects: 0.380200 ms CreateObjectMapping: 0.075100 ms MarkObjects: 4.194900 ms  DeleteObjects: 0.033400 ms)
+Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 4292.
+Total: 2.635500 ms (FindLiveObjects: 0.530600 ms CreateObjectMapping: 0.112400 ms MarkObjects: 1.955300 ms  DeleteObjects: 0.035700 ms)
 
 ========================================================================
 Received Import Request.
-  path: Assets/Prefabs/GameResources/Resources/GameResources.prefab
-  artifactKey: Guid(7e460f72ad410aa47aeb7518a7a88ce8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/GameResources/Resources/GameResources.prefab using Guid(7e460f72ad410aa47aeb7518a7a88ce8) Importer(815301076,1909f56bfc062723c751e8b465ee728b) currentPlayer is null and must contain a value in object GameResources
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:Log (object)
-HelperUtilities:ValidateCheckNullValue (UnityEngine.Object,string,UnityEngine.Object) (at Assets/Scripts/Utilities/HelperUtilities.cs:117)
-GameResources:OnValidate () (at Assets/Scripts/GameManager/GameResources.cs:74)
-
-(Filename: Assets/Scripts/Utilities/HelperUtilities.cs Line: 117)
-
- -> (artifact id: '3fc0195e409e35c257d2f5e94c099a7a') in 0.075941 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.059698 seconds.
-  path: Assets/Prefabs/Player/Player.prefab
-  artifactKey: Guid(07626fcdb44819245851b34ee3d8c4b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Player/Player.prefab using Guid(07626fcdb44819245851b34ee3d8c4b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '40d80fe40716f5c60455e567476bf0c3') in 0.197783 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 735.786453 seconds.
-  path: Assets/Prefabs/Player/TheGeneral/TheGeneral.prefab
-  artifactKey: Guid(94da15d394857084b90212d2734d085e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Player/TheGeneral/TheGeneral.prefab using Guid(94da15d394857084b90212d2734d085e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) weaponRotationPointTransform is null and must contain a value in object TheGeneral
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:Log (object)
-HelperUtilities:ValidateCheckNullValue (UnityEngine.Object,string,UnityEngine.Object) (at Assets/Scripts/Utilities/HelperUtilities.cs:117)
-AimWeapon:OnValidate () (at Assets/Scripts/Weapons/Weapons/AimWeapon.cs:71)
-
-(Filename: Assets/Scripts/Utilities/HelperUtilities.cs Line: 117)
-
-movementDetails is null and must contain a value in object TheGeneral
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:Log (object)
-HelperUtilities:ValidateCheckNullValue (UnityEngine.Object,string,UnityEngine.Object) (at Assets/Scripts/Utilities/HelperUtilities.cs:117)
-PlayerControl:OnValidate () (at Assets/Scripts/Player/PlayerControl.cs:289)
-
-(Filename: Assets/Scripts/Utilities/HelperUtilities.cs Line: 117)
-
-weaponRotationPointTransform is null and must contain a value in object Player
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:Log (object)
-HelperUtilities:ValidateCheckNullValue (UnityEngine.Object,string,UnityEngine.Object) (at Assets/Scripts/Utilities/HelperUtilities.cs:117)
-AimWeapon:OnValidate () (at Assets/Scripts/Weapons/Weapons/AimWeapon.cs:71)
-UnityEditor.SerializedObject:GetIterator ()
-UnityEditor.Editor:CreateSerializedObject ()
-UnityEditor.Editor:GetSerializedObjectInternal ()
-UnityEditor.Editor:get_serializedObject ()
-UnityEditor.GameObjectInspector:OnEnable ()
-UnityEditor.Editor:CreateEditorWithContext (UnityEngine.Object[],UnityEngine.Object,System.Type)
-UnityEditor.Editor:CreateEditor (UnityEngine.Object,System.Type)
-UnityEditor.Editor:CreateEditor (UnityEngine.Object)
-UnityEditor.AssetPreviewUpdater:CreatePreview (UnityEngine.Object,UnityEngine.Object[],string,int,int)
-UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
-
-(Filename: Assets/Scripts/Utilities/HelperUtilities.cs Line: 117)
-
-movementDetails is null and must contain a value in object Player
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:Log (object)
-HelperUtilities:ValidateCheckNullValue (UnityEngine.Object,string,UnityEngine.Object) (at Assets/Scripts/Utilities/HelperUtilities.cs:117)
-PlayerControl:OnValidate () (at Assets/Scripts/Player/PlayerControl.cs:289)
-UnityEditor.SerializedObject:GetIterator ()
-UnityEditor.Editor:CreateSerializedObject ()
-UnityEditor.Editor:GetSerializedObjectInternal ()
-UnityEditor.Editor:get_serializedObject ()
-UnityEditor.GameObjectInspector:OnEnable ()
-UnityEditor.Editor:CreateEditorWithContext (UnityEngine.Object[],UnityEngine.Object,System.Type)
-UnityEditor.Editor:CreateEditor (UnityEngine.Object,System.Type)
-UnityEditor.Editor:CreateEditor (UnityEngine.Object)
-UnityEditor.AssetPreviewUpdater:CreatePreview (UnityEngine.Object,UnityEngine.Object[],string,int,int)
-UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
-
-(Filename: Assets/Scripts/Utilities/HelperUtilities.cs Line: 117)
-
- -> (artifact id: '87223eb57389493a1ce28a9ab579c212') in 0.049131 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 12.585818 seconds.
-  path: Assets/Prefabs/Player/TheScientist
-  artifactKey: Guid(db16bdd0f688474478260916e5780b60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Player/TheScientist using Guid(db16bdd0f688474478260916e5780b60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4e3e0cab4e8247904658b10630d923ab') in 0.004379 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 2.008328 seconds.
-  path: Assets/Prefabs/Player/TheScientist/TheScientist.prefab
-  artifactKey: Guid(47c93fdf787f6ae488b0d220cbe3f1a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Player/TheScientist/TheScientist.prefab using Guid(47c93fdf787f6ae488b0d220cbe3f1a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) weaponRotationPointTransform is null and must contain a value in object TheScientist
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:Log (object)
-HelperUtilities:ValidateCheckNullValue (UnityEngine.Object,string,UnityEngine.Object) (at Assets/Scripts/Utilities/HelperUtilities.cs:117)
-AimWeapon:OnValidate () (at Assets/Scripts/Weapons/Weapons/AimWeapon.cs:71)
-
-(Filename: Assets/Scripts/Utilities/HelperUtilities.cs Line: 117)
-
-movementDetails is null and must contain a value in object TheScientist
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:Log (object)
-HelperUtilities:ValidateCheckNullValue (UnityEngine.Object,string,UnityEngine.Object) (at Assets/Scripts/Utilities/HelperUtilities.cs:117)
-PlayerControl:OnValidate () (at Assets/Scripts/Player/PlayerControl.cs:289)
-
-(Filename: Assets/Scripts/Utilities/HelperUtilities.cs Line: 117)
-
-weaponRotationPointTransform is null and must contain a value in object Player
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:Log (object)
-HelperUtilities:ValidateCheckNullValue (UnityEngine.Object,string,UnityEngine.Object) (at Assets/Scripts/Utilities/HelperUtilities.cs:117)
-AimWeapon:OnValidate () (at Assets/Scripts/Weapons/Weapons/AimWeapon.cs:71)
-UnityEditor.SerializedObject:GetIterator ()
-UnityEditor.Editor:CreateSerializedObject ()
-UnityEditor.Editor:GetSerializedObjectInternal ()
-UnityEditor.Editor:get_serializedObject ()
-UnityEditor.GameObjectInspector:OnEnable ()
-UnityEditor.Editor:CreateEditorWithContext (UnityEngine.Object[],UnityEngine.Object,System.Type)
-UnityEditor.Editor:CreateEditor (UnityEngine.Object,System.Type)
-UnityEditor.Editor:CreateEditor (UnityEngine.Object)
-UnityEditor.AssetPreviewUpdater:CreatePreview (UnityEngine.Object,UnityEngine.Object[],string,int,int)
-UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
-
-(Filename: Assets/Scripts/Utilities/HelperUtilities.cs Line: 117)
-
-movementDetails is null and must contain a value in object Player
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:Log (object)
-HelperUtilities:ValidateCheckNullValue (UnityEngine.Object,string,UnityEngine.Object) (at Assets/Scripts/Utilities/HelperUtilities.cs:117)
-PlayerControl:OnValidate () (at Assets/Scripts/Player/PlayerControl.cs:289)
-UnityEditor.SerializedObject:GetIterator ()
-UnityEditor.Editor:CreateSerializedObject ()
-UnityEditor.Editor:GetSerializedObjectInternal ()
-UnityEditor.Editor:get_serializedObject ()
-UnityEditor.GameObjectInspector:OnEnable ()
-UnityEditor.Editor:CreateEditorWithContext (UnityEngine.Object[],UnityEngine.Object,System.Type)
-UnityEditor.Editor:CreateEditor (UnityEngine.Object,System.Type)
-UnityEditor.Editor:CreateEditor (UnityEngine.Object)
-UnityEditor.AssetPreviewUpdater:CreatePreview (UnityEngine.Object,UnityEngine.Object[],string,int,int)
-UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
-
-(Filename: Assets/Scripts/Utilities/HelperUtilities.cs Line: 117)
-
- -> (artifact id: '8254926dcce6c70d804e6ee6cd79df6b') in 0.034542 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 9.141032 seconds.
-  path: Assets/Prefabs/Player/TheThief/TheThief.prefab
-  artifactKey: Guid(14f064f65db2d574ebcb3b4b1356090e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Player/TheThief/TheThief.prefab using Guid(14f064f65db2d574ebcb3b4b1356090e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) weaponRotationPointTransform is null and must contain a value in object TheThief
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:Log (object)
-HelperUtilities:ValidateCheckNullValue (UnityEngine.Object,string,UnityEngine.Object) (at Assets/Scripts/Utilities/HelperUtilities.cs:117)
-AimWeapon:OnValidate () (at Assets/Scripts/Weapons/Weapons/AimWeapon.cs:71)
-
-(Filename: Assets/Scripts/Utilities/HelperUtilities.cs Line: 117)
-
-movementDetails is null and must contain a value in object TheThief
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:Log (object)
-HelperUtilities:ValidateCheckNullValue (UnityEngine.Object,string,UnityEngine.Object) (at Assets/Scripts/Utilities/HelperUtilities.cs:117)
-PlayerControl:OnValidate () (at Assets/Scripts/Player/PlayerControl.cs:289)
-
-(Filename: Assets/Scripts/Utilities/HelperUtilities.cs Line: 117)
-
-weaponRotationPointTransform is null and must contain a value in object Player
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:Log (object)
-HelperUtilities:ValidateCheckNullValue (UnityEngine.Object,string,UnityEngine.Object) (at Assets/Scripts/Utilities/HelperUtilities.cs:117)
-AimWeapon:OnValidate () (at Assets/Scripts/Weapons/Weapons/AimWeapon.cs:71)
-UnityEditor.SerializedObject:GetIterator ()
-UnityEditor.Editor:CreateSerializedObject ()
-UnityEditor.Editor:GetSerializedObjectInternal ()
-UnityEditor.Editor:get_serializedObject ()
-UnityEditor.GameObjectInspector:OnEnable ()
-UnityEditor.Editor:CreateEditorWithContext (UnityEngine.Object[],UnityEngine.Object,System.Type)
-UnityEditor.Editor:CreateEditor (UnityEngine.Object,System.Type)
-UnityEditor.Editor:CreateEditor (UnityEngine.Object)
-UnityEditor.AssetPreviewUpdater:CreatePreview (UnityEngine.Object,UnityEngine.Object[],string,int,int)
-UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
-
-(Filename: Assets/Scripts/Utilities/HelperUtilities.cs Line: 117)
-
-movementDetails is null and must contain a value in object Player
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:Log (object)
-HelperUtilities:ValidateCheckNullValue (UnityEngine.Object,string,UnityEngine.Object) (at Assets/Scripts/Utilities/HelperUtilities.cs:117)
-PlayerControl:OnValidate () (at Assets/Scripts/Player/PlayerControl.cs:289)
-UnityEditor.SerializedObject:GetIterator ()
-UnityEditor.Editor:CreateSerializedObject ()
-UnityEditor.Editor:GetSerializedObjectInternal ()
-UnityEditor.Editor:get_serializedObject ()
-UnityEditor.GameObjectInspector:OnEnable ()
-UnityEditor.Editor:CreateEditorWithContext (UnityEngine.Object[],UnityEngine.Object,System.Type)
-UnityEditor.Editor:CreateEditor (UnityEngine.Object,System.Type)
-UnityEditor.Editor:CreateEditor (UnityEngine.Object)
-UnityEditor.AssetPreviewUpdater:CreatePreview (UnityEngine.Object,UnityEngine.Object[],string,int,int)
-UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
-
-(Filename: Assets/Scripts/Utilities/HelperUtilities.cs Line: 117)
-
- -> (artifact id: '29b87363f0302741e9d53a817dd8a757') in 0.031066 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.876486 seconds.
-  path: Assets/Prefabs/Player/Player.prefab
-  artifactKey: Guid(07626fcdb44819245851b34ee3d8c4b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Player/Player.prefab using Guid(07626fcdb44819245851b34ee3d8c4b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b) weaponRotationPointTransform is null and must contain a value in object Player
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:Log (object)
-HelperUtilities:ValidateCheckNullValue (UnityEngine.Object,string,UnityEngine.Object) (at Assets/Scripts/Utilities/HelperUtilities.cs:117)
-AimWeapon:OnValidate () (at Assets/Scripts/Weapons/Weapons/AimWeapon.cs:71)
-
-(Filename: Assets/Scripts/Utilities/HelperUtilities.cs Line: 117)
-
-movementDetails is null and must contain a value in object Player
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:Log (object)
-HelperUtilities:ValidateCheckNullValue (UnityEngine.Object,string,UnityEngine.Object) (at Assets/Scripts/Utilities/HelperUtilities.cs:117)
-PlayerControl:OnValidate () (at Assets/Scripts/Player/PlayerControl.cs:289)
-
-(Filename: Assets/Scripts/Utilities/HelperUtilities.cs Line: 117)
-
- -> (artifact id: 'e262427bb264be482400286a112f7670') in 0.013587 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 1.142990 seconds.
-  path: Assets/Prefabs/UI/AmmoIcon.prefab
-  artifactKey: Guid(c3e5e34b6afafd9408e3703b9128ba4f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/UI/AmmoIcon.prefab using Guid(c3e5e34b6afafd9408e3703b9128ba4f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4c6390ec812156f7d65c8e15c7456b76') in 0.008198 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 19.158635 seconds.
-  path: Assets/ScriptableObjectAssets/Player/PlayerDetails/CurrentPlayer.asset
-  artifactKey: Guid(b5002c4999707a04980cdb39c57f3891) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ScriptableObjectAssets/Player/PlayerDetails/CurrentPlayer.asset using Guid(b5002c4999707a04980cdb39c57f3891) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a77fb878c9b453e6e5284d9df23ae056') in 0.009473 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 27.811215 seconds.
-  path: Assets/ScriptableObjectAssets/Player/PlayerDetails/PlayerDetails_TheGeneral.asset
-  artifactKey: Guid(49f4d94b8bc08db42b564667f5d40218) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ScriptableObjectAssets/Player/PlayerDetails/PlayerDetails_TheGeneral.asset using Guid(49f4d94b8bc08db42b564667f5d40218) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7893614cf8d97cb5a98be2c2b377a81e') in 0.006869 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 83.525997 seconds.
-  path: Assets/ScriptableObjectAssets/Player/PlayerDetails
-  artifactKey: Guid(e387d5f6951ee934db3d7bb12e733b17) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ScriptableObjectAssets/Player/PlayerDetails using Guid(e387d5f6951ee934db3d7bb12e733b17) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9343cf55299023b2f8ff026f540fe70d') in 0.002765 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 30.455766 seconds.
-  path: Assets/ScriptableObjectAssets/Player/PlayerDetails/PlayerDetails_TheScientist.asset
-  artifactKey: Guid(a4b8a6336ad43a747b30b5dffb3b9281) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ScriptableObjectAssets/Player/PlayerDetails/PlayerDetails_TheScientist.asset using Guid(a4b8a6336ad43a747b30b5dffb3b9281) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c4a8d2b3e4f84e83a732f21094238f7f') in 0.004259 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 49.531517 seconds.
-  path: Assets/CourseAssets/Textures/Sprites/UI/Menu/CharacterMask.png
-  artifactKey: Guid(55ea56e1285ff1048ac5326bb62a94d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CourseAssets/Textures/Sprites/UI/Menu/CharacterMask.png using Guid(55ea56e1285ff1048ac5326bb62a94d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f7427eb3c84b998032322325eb4a3b43') in 0.037640 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000389 seconds.
-  path: Assets/CourseAssets/Textures/Tilemap/Statues/statue_tengu.png
-  artifactKey: Guid(3842e1b0e38fa574c877f7d57a87e5e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CourseAssets/Textures/Tilemap/Statues/statue_tengu.png using Guid(3842e1b0e38fa574c877f7d57a87e5e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '15c303d2acf733e7a8dbdba09e6f39f4') in 0.023303 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000286 seconds.
-  path: Assets/CourseAssets/Textures/Sprites/UI/Menu/CharacterSelectorBackground.png
-  artifactKey: Guid(99370f5f554b8a44f9935cdc80e82266) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CourseAssets/Textures/Sprites/UI/Menu/CharacterSelectorBackground.png using Guid(99370f5f554b8a44f9935cdc80e82266) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c218615566d0d99461e77b17cc0b1683') in 0.011531 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000204 seconds.
-  path: Assets/CourseAssets/Textures/Tilemap/Floor/white_marble0.png
-  artifactKey: Guid(7f9cd77e2bfbe4149b478152926bc42d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CourseAssets/Textures/Tilemap/Floor/white_marble0.png using Guid(7f9cd77e2bfbe4149b478152926bc42d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '12eeefe7f572352f12a9f4c0d6eb986d') in 0.018838 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000434 seconds.
-  path: Assets/CourseAssets/Textures/Sprites/Weapons/Player/N22LaserBlaster.png
-  artifactKey: Guid(e9d1276e0a6b9bf42b04b5470c7073fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CourseAssets/Textures/Sprites/Weapons/Player/N22LaserBlaster.png using Guid(e9d1276e0a6b9bf42b04b5470c7073fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '86969915bc177980d431e94f946e3603') in 0.012334 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 27.809154 seconds.
-  path: Assets/ScriptableObjectAssets/Player/PlayerDetails/PlayerDetails_TheThief.asset
-  artifactKey: Guid(8162539e907ab314baacaa00e527f408) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ScriptableObjectAssets/Player/PlayerDetails/PlayerDetails_TheThief.asset using Guid(8162539e907ab314baacaa00e527f408) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '42780b4d6a09c43fcc87c3960e762fd7') in 0.008829 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 36.280647 seconds.
-  path: Assets/ScriptableObjectAssets/Player/Movement/MovementDetails_Player.asset
-  artifactKey: Guid(ad7398cdca2b559498623ff1c76f2e9b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ScriptableObjectAssets/Player/Movement/MovementDetails_Player.asset using Guid(ad7398cdca2b559498623ff1c76f2e9b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '79dc1253ee5cb8537f01d888a4bca1df') in 0.006367 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.762766 seconds.
-  path: Assets/ScriptableObjectAssets/Player/Movement/MovementDetails_Player_Thief.asset
-  artifactKey: Guid(167bc016506fc574a87c97d32a102ad3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ScriptableObjectAssets/Player/Movement/MovementDetails_Player_Thief.asset using Guid(167bc016506fc574a87c97d32a102ad3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ab479483c984af92c27da4dfaa7bf2e2') in 0.004642 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 5.997900 seconds.
-  path: Assets/ScriptableObjectAssets/Weapons/Player/Pistol/AmmoDetails_Pistol.asset
-  artifactKey: Guid(d096900a933fba145802981599120082) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ScriptableObjectAssets/Weapons/Player/Pistol/AmmoDetails_Pistol.asset using Guid(d096900a933fba145802981599120082) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3982ad1760df422fd5215a1b7b16936c') in 0.008075 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 36.428400 seconds.
-  path: Assets/ScriptableObjectAssets/Weapons/Player/Pistol/WeaponDetails_Pistol.asset
-  artifactKey: Guid(3ae31c7435aa8324a8affaab3077215d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ScriptableObjectAssets/Weapons/Player/Pistol/WeaponDetails_Pistol.asset using Guid(3ae31c7435aa8324a8affaab3077215d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e33403183358a581520b1407ea2b3278') in 0.003860 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 50.922559 seconds.
-  path: Assets/ScriptableObjectAssets/Weapons/Player/PlasmaBlaster/AmmoDetails_PlasmaBlaster.asset
-  artifactKey: Guid(eb78a34846bba9f48accf719d09e752e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ScriptableObjectAssets/Weapons/Player/PlasmaBlaster/AmmoDetails_PlasmaBlaster.asset using Guid(eb78a34846bba9f48accf719d09e752e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4c0c92de72843bf4738112b80f712662') in 0.006619 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 26.261002 seconds.
-  path: Assets/ScriptableObjectAssets/Weapons/Player/PlasmaBlaster/WeaponDetails_PlasmaBlaster.asset
-  artifactKey: Guid(077acc8b3b201bd43bd8048b284c5897) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ScriptableObjectAssets/Weapons/Player/PlasmaBlaster/WeaponDetails_PlasmaBlaster.asset using Guid(077acc8b3b201bd43bd8048b284c5897) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b172b067502107ebed9b38f53f3045a2') in 0.014972 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 6.733303 seconds.
-  path: Assets/CourseAssets/Textures/SpritesNotInAtlas/MainMenu.png
-  artifactKey: Guid(7982f2173aaf35042970eeb32efb1c8f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CourseAssets/Textures/SpritesNotInAtlas/MainMenu.png using Guid(7982f2173aaf35042970eeb32efb1c8f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b3c5a2d53388db0c8b4a8c35147d40d4') in 0.047503 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000195 seconds.
-  path: Assets/CourseAssets/Textures/Tilemap/Floor/marble_floor1.png
-  artifactKey: Guid(950d712d251acfd49baf1bf9c794ae90) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CourseAssets/Textures/Tilemap/Floor/marble_floor1.png using Guid(950d712d251acfd49baf1bf9c794ae90) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c1da4139990237d8bcef3f5bb1912126') in 0.018595 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.001027 seconds.
-  path: Assets/CourseAssets/Textures/Tilemap/Floor/marble_floor2.png
-  artifactKey: Guid(2559d8ea9abccc84f9bcf84b4ac0a9c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CourseAssets/Textures/Tilemap/Floor/marble_floor2.png using Guid(2559d8ea9abccc84f9bcf84b4ac0a9c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a2ff4f0dae3b74d4dc314e7f6063574b') in 0.022740 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 34.527570 seconds.
-  path: Assets/ScriptableObjectAssets/Weapons/Player/Revolver/AmmoDetails_Revolver.asset
-  artifactKey: Guid(c8da3159e19356c4581c72b618cedbb4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ScriptableObjectAssets/Weapons/Player/Revolver/AmmoDetails_Revolver.asset using Guid(c8da3159e19356c4581c72b618cedbb4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0cb9d0730deb54e8e3f38abe4314e173') in 0.004220 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 31.535000 seconds.
-  path: Assets/ScriptableObjectAssets/Weapons/Player/Revolver/WeaponDetails_Revolver.asset
-  artifactKey: Guid(721af42a84ce299489bb800b2f6e123d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ScriptableObjectAssets/Weapons/Player/Revolver/WeaponDetails_Revolver.asset using Guid(721af42a84ce299489bb800b2f6e123d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1d6e2cf562fe5ccdc172acb9240adedd') in 0.011447 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 51.296818 seconds.
-  path: Assets/ScriptableObjectAssets/Player/Movement
-  artifactKey: Guid(1da85d138fff5e04d8c16f92d3f888b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ScriptableObjectAssets/Player/Movement using Guid(1da85d138fff5e04d8c16f92d3f888b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fdecdd61fbf555eb91838b02affcda92') in 0.005889 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 278.454981 seconds.
-  path: Assets/Prefabs/Player/TheThief/TheThief.prefab
-  artifactKey: Guid(14f064f65db2d574ebcb3b4b1356090e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Player/TheThief/TheThief.prefab using Guid(14f064f65db2d574ebcb3b4b1356090e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) weaponRotationPointTransform is null and must contain a value in object TheThief
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:Log (object)
-HelperUtilities:ValidateCheckNullValue (UnityEngine.Object,string,UnityEngine.Object) (at Assets/Scripts/Utilities/HelperUtilities.cs:117)
-AimWeapon:OnValidate () (at Assets/Scripts/Weapons/Weapons/AimWeapon.cs:71)
-
-(Filename: Assets/Scripts/Utilities/HelperUtilities.cs Line: 117)
-
-weaponRotationPointTransform is null and must contain a value in object Player
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:Log (object)
-HelperUtilities:ValidateCheckNullValue (UnityEngine.Object,string,UnityEngine.Object) (at Assets/Scripts/Utilities/HelperUtilities.cs:117)
-AimWeapon:OnValidate () (at Assets/Scripts/Weapons/Weapons/AimWeapon.cs:71)
-UnityEditor.SerializedObject:GetIterator ()
-UnityEditor.Editor:CreateSerializedObject ()
-UnityEditor.Editor:GetSerializedObjectInternal ()
-UnityEditor.Editor:get_serializedObject ()
-UnityEditor.GameObjectInspector:OnEnable ()
-UnityEditor.Editor:CreateEditorWithContext (UnityEngine.Object[],UnityEngine.Object,System.Type)
-UnityEditor.Editor:CreateEditor (UnityEngine.Object,System.Type)
-UnityEditor.Editor:CreateEditor (UnityEngine.Object)
-UnityEditor.AssetPreviewUpdater:CreatePreview (UnityEngine.Object,UnityEngine.Object[],string,int,int)
-UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
-
-(Filename: Assets/Scripts/Utilities/HelperUtilities.cs Line: 117)
-
-movementDetails is null and must contain a value in object Player
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:Log (object)
-HelperUtilities:ValidateCheckNullValue (UnityEngine.Object,string,UnityEngine.Object) (at Assets/Scripts/Utilities/HelperUtilities.cs:117)
-PlayerControl:OnValidate () (at Assets/Scripts/Player/PlayerControl.cs:289)
-UnityEditor.SerializedObject:GetIterator ()
-UnityEditor.Editor:CreateSerializedObject ()
-UnityEditor.Editor:GetSerializedObjectInternal ()
-UnityEditor.Editor:get_serializedObject ()
-UnityEditor.GameObjectInspector:OnEnable ()
-UnityEditor.Editor:CreateEditorWithContext (UnityEngine.Object[],UnityEngine.Object,System.Type)
-UnityEditor.Editor:CreateEditor (UnityEngine.Object,System.Type)
-UnityEditor.Editor:CreateEditor (UnityEngine.Object)
-UnityEditor.AssetPreviewUpdater:CreatePreview (UnityEngine.Object,UnityEngine.Object[],string,int,int)
-UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
-
-(Filename: Assets/Scripts/Utilities/HelperUtilities.cs Line: 117)
-
- -> (artifact id: 'a97020d320eb488a98bf6bbf3034c244') in 0.034154 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 344.072819 seconds.
-  path: Assets/Prefabs/Player/TheScientist/TheScientist.prefab
-  artifactKey: Guid(47c93fdf787f6ae488b0d220cbe3f1a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Player/TheScientist/TheScientist.prefab using Guid(47c93fdf787f6ae488b0d220cbe3f1a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) weaponRotationPointTransform is null and must contain a value in object TheScientist
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:Log (object)
-HelperUtilities:ValidateCheckNullValue (UnityEngine.Object,string,UnityEngine.Object) (at Assets/Scripts/Utilities/HelperUtilities.cs:117)
-AimWeapon:OnValidate () (at Assets/Scripts/Weapons/Weapons/AimWeapon.cs:71)
-
-(Filename: Assets/Scripts/Utilities/HelperUtilities.cs Line: 117)
-
-weaponRotationPointTransform is null and must contain a value in object Player
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:Log (object)
-HelperUtilities:ValidateCheckNullValue (UnityEngine.Object,string,UnityEngine.Object) (at Assets/Scripts/Utilities/HelperUtilities.cs:117)
-AimWeapon:OnValidate () (at Assets/Scripts/Weapons/Weapons/AimWeapon.cs:71)
-UnityEditor.SerializedObject:GetIterator ()
-UnityEditor.Editor:CreateSerializedObject ()
-UnityEditor.Editor:GetSerializedObjectInternal ()
-UnityEditor.Editor:get_serializedObject ()
-UnityEditor.GameObjectInspector:OnEnable ()
-UnityEditor.Editor:CreateEditorWithContext (UnityEngine.Object[],UnityEngine.Object,System.Type)
-UnityEditor.Editor:CreateEditor (UnityEngine.Object,System.Type)
-UnityEditor.Editor:CreateEditor (UnityEngine.Object)
-UnityEditor.AssetPreviewUpdater:CreatePreview (UnityEngine.Object,UnityEngine.Object[],string,int,int)
-UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
-
-(Filename: Assets/Scripts/Utilities/HelperUtilities.cs Line: 117)
-
-movementDetails is null and must contain a value in object Player
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:Log (object)
-HelperUtilities:ValidateCheckNullValue (UnityEngine.Object,string,UnityEngine.Object) (at Assets/Scripts/Utilities/HelperUtilities.cs:117)
-PlayerControl:OnValidate () (at Assets/Scripts/Player/PlayerControl.cs:289)
-UnityEditor.SerializedObject:GetIterator ()
-UnityEditor.Editor:CreateSerializedObject ()
-UnityEditor.Editor:GetSerializedObjectInternal ()
-UnityEditor.Editor:get_serializedObject ()
-UnityEditor.GameObjectInspector:OnEnable ()
-UnityEditor.Editor:CreateEditorWithContext (UnityEngine.Object[],UnityEngine.Object,System.Type)
-UnityEditor.Editor:CreateEditor (UnityEngine.Object,System.Type)
-UnityEditor.Editor:CreateEditor (UnityEngine.Object)
-UnityEditor.AssetPreviewUpdater:CreatePreview (UnityEngine.Object,UnityEngine.Object[],string,int,int)
-UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
-
-(Filename: Assets/Scripts/Utilities/HelperUtilities.cs Line: 117)
-
- -> (artifact id: '306c0a34a86ae8e7e72123ac52cb278a') in 0.042145 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 1.329935 seconds.
-  path: Assets/Prefabs/Player/TheGeneral
-  artifactKey: Guid(2bc1a2e32d653e649b985df8de3c67bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Player/TheGeneral using Guid(2bc1a2e32d653e649b985df8de3c67bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '244a3ce3e6a77dad83837fbd9e57da82') in 0.002751 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 5.718666 seconds.
-  path: Assets/Prefabs/Player/TheGeneral/TheGeneral.prefab
-  artifactKey: Guid(94da15d394857084b90212d2734d085e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Player/TheGeneral/TheGeneral.prefab using Guid(94da15d394857084b90212d2734d085e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) weaponRotationPointTransform is null and must contain a value in object TheGeneral
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:Log (object)
-HelperUtilities:ValidateCheckNullValue (UnityEngine.Object,string,UnityEngine.Object) (at Assets/Scripts/Utilities/HelperUtilities.cs:117)
-AimWeapon:OnValidate () (at Assets/Scripts/Weapons/Weapons/AimWeapon.cs:71)
-
-(Filename: Assets/Scripts/Utilities/HelperUtilities.cs Line: 117)
-
-weaponRotationPointTransform is null and must contain a value in object Player
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:Log (object)
-HelperUtilities:ValidateCheckNullValue (UnityEngine.Object,string,UnityEngine.Object) (at Assets/Scripts/Utilities/HelperUtilities.cs:117)
-AimWeapon:OnValidate () (at Assets/Scripts/Weapons/Weapons/AimWeapon.cs:71)
-UnityEditor.SerializedObject:GetIterator ()
-UnityEditor.Editor:CreateSerializedObject ()
-UnityEditor.Editor:GetSerializedObjectInternal ()
-UnityEditor.Editor:get_serializedObject ()
-UnityEditor.GameObjectInspector:OnEnable ()
-UnityEditor.Editor:CreateEditorWithContext (UnityEngine.Object[],UnityEngine.Object,System.Type)
-UnityEditor.Editor:CreateEditor (UnityEngine.Object,System.Type)
-UnityEditor.Editor:CreateEditor (UnityEngine.Object)
-UnityEditor.AssetPreviewUpdater:CreatePreview (UnityEngine.Object,UnityEngine.Object[],string,int,int)
-UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
-
-(Filename: Assets/Scripts/Utilities/HelperUtilities.cs Line: 117)
-
-movementDetails is null and must contain a value in object Player
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:Log (object)
-HelperUtilities:ValidateCheckNullValue (UnityEngine.Object,string,UnityEngine.Object) (at Assets/Scripts/Utilities/HelperUtilities.cs:117)
-PlayerControl:OnValidate () (at Assets/Scripts/Player/PlayerControl.cs:289)
-UnityEditor.SerializedObject:GetIterator ()
-UnityEditor.Editor:CreateSerializedObject ()
-UnityEditor.Editor:GetSerializedObjectInternal ()
-UnityEditor.Editor:get_serializedObject ()
-UnityEditor.GameObjectInspector:OnEnable ()
-UnityEditor.Editor:CreateEditorWithContext (UnityEngine.Object[],UnityEngine.Object,System.Type)
-UnityEditor.Editor:CreateEditor (UnityEngine.Object,System.Type)
-UnityEditor.Editor:CreateEditor (UnityEngine.Object)
-UnityEditor.AssetPreviewUpdater:CreatePreview (UnityEngine.Object,UnityEngine.Object[],string,int,int)
-UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
-
-(Filename: Assets/Scripts/Utilities/HelperUtilities.cs Line: 117)
-
- -> (artifact id: 'ea4e67d939ed5a1a17f83fde23fe3e66') in 0.038334 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 4.287354 seconds.
-  path: Assets/Prefabs/Player/Player.prefab
-  artifactKey: Guid(07626fcdb44819245851b34ee3d8c4b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Player/Player.prefab using Guid(07626fcdb44819245851b34ee3d8c4b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b) weaponRotationPointTransform is null and must contain a value in object Player
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:Log (object)
-HelperUtilities:ValidateCheckNullValue (UnityEngine.Object,string,UnityEngine.Object) (at Assets/Scripts/Utilities/HelperUtilities.cs:117)
-AimWeapon:OnValidate () (at Assets/Scripts/Weapons/Weapons/AimWeapon.cs:71)
-
-(Filename: Assets/Scripts/Utilities/HelperUtilities.cs Line: 117)
-
- -> (artifact id: '114d6eb0bc553fa78f4392aa510d9d8d') in 0.010741 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 1.244080 seconds.
-  path: Assets/Prefabs/Player/TheScientist/TheScientist.prefab
-  artifactKey: Guid(47c93fdf787f6ae488b0d220cbe3f1a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Player/TheScientist/TheScientist.prefab using Guid(47c93fdf787f6ae488b0d220cbe3f1a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) weaponRotationPointTransform is null and must contain a value in object TheScientist
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:Log (object)
-HelperUtilities:ValidateCheckNullValue (UnityEngine.Object,string,UnityEngine.Object) (at Assets/Scripts/Utilities/HelperUtilities.cs:117)
-AimWeapon:OnValidate () (at Assets/Scripts/Weapons/Weapons/AimWeapon.cs:71)
-
-(Filename: Assets/Scripts/Utilities/HelperUtilities.cs Line: 117)
-
-weaponRotationPointTransform is null and must contain a value in object Player
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:Log (object)
-HelperUtilities:ValidateCheckNullValue (UnityEngine.Object,string,UnityEngine.Object) (at Assets/Scripts/Utilities/HelperUtilities.cs:117)
-AimWeapon:OnValidate () (at Assets/Scripts/Weapons/Weapons/AimWeapon.cs:71)
-UnityEditor.SerializedObject:GetIterator ()
-UnityEditor.Editor:CreateSerializedObject ()
-UnityEditor.Editor:GetSerializedObjectInternal ()
-UnityEditor.Editor:get_serializedObject ()
-UnityEditor.GameObjectInspector:OnEnable ()
-UnityEditor.Editor:CreateEditorWithContext (UnityEngine.Object[],UnityEngine.Object,System.Type)
-UnityEditor.Editor:CreateEditor (UnityEngine.Object,System.Type)
-UnityEditor.Editor:CreateEditor (UnityEngine.Object)
-UnityEditor.AssetPreviewUpdater:CreatePreview (UnityEngine.Object,UnityEngine.Object[],string,int,int)
-UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
-
-(Filename: Assets/Scripts/Utilities/HelperUtilities.cs Line: 117)
-
- -> (artifact id: '57e43c50d4bedbe18f2568afff5ac52b') in 0.039211 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.691396 seconds.
-  path: Assets/Prefabs/Player/TheThief/TheThief.prefab
-  artifactKey: Guid(14f064f65db2d574ebcb3b4b1356090e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Player/TheThief/TheThief.prefab using Guid(14f064f65db2d574ebcb3b4b1356090e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) weaponRotationPointTransform is null and must contain a value in object TheThief
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:Log (object)
-HelperUtilities:ValidateCheckNullValue (UnityEngine.Object,string,UnityEngine.Object) (at Assets/Scripts/Utilities/HelperUtilities.cs:117)
-AimWeapon:OnValidate () (at Assets/Scripts/Weapons/Weapons/AimWeapon.cs:71)
-
-(Filename: Assets/Scripts/Utilities/HelperUtilities.cs Line: 117)
-
-weaponRotationPointTransform is null and must contain a value in object Player
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:Log (object)
-HelperUtilities:ValidateCheckNullValue (UnityEngine.Object,string,UnityEngine.Object) (at Assets/Scripts/Utilities/HelperUtilities.cs:117)
-AimWeapon:OnValidate () (at Assets/Scripts/Weapons/Weapons/AimWeapon.cs:71)
-UnityEditor.SerializedObject:GetIterator ()
-UnityEditor.Editor:CreateSerializedObject ()
-UnityEditor.Editor:GetSerializedObjectInternal ()
-UnityEditor.Editor:get_serializedObject ()
-UnityEditor.GameObjectInspector:OnEnable ()
-UnityEditor.Editor:CreateEditorWithContext (UnityEngine.Object[],UnityEngine.Object,System.Type)
-UnityEditor.Editor:CreateEditor (UnityEngine.Object,System.Type)
-UnityEditor.Editor:CreateEditor (UnityEngine.Object)
-UnityEditor.AssetPreviewUpdater:CreatePreview (UnityEngine.Object,UnityEngine.Object[],string,int,int)
-UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
-
-(Filename: Assets/Scripts/Utilities/HelperUtilities.cs Line: 117)
-
- -> (artifact id: 'd154f53903dbe3ad3432ce83d77b6b95') in 0.029868 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 1.821481 seconds.
-  path: Assets/Prefabs/Player/TheGeneral/TheGeneral.prefab
-  artifactKey: Guid(94da15d394857084b90212d2734d085e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Player/TheGeneral/TheGeneral.prefab using Guid(94da15d394857084b90212d2734d085e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) weaponRotationPointTransform is null and must contain a value in object TheGeneral
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:Log (object)
-HelperUtilities:ValidateCheckNullValue (UnityEngine.Object,string,UnityEngine.Object) (at Assets/Scripts/Utilities/HelperUtilities.cs:117)
-AimWeapon:OnValidate () (at Assets/Scripts/Weapons/Weapons/AimWeapon.cs:71)
-
-(Filename: Assets/Scripts/Utilities/HelperUtilities.cs Line: 117)
-
-weaponRotationPointTransform is null and must contain a value in object Player
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:Log (object)
-HelperUtilities:ValidateCheckNullValue (UnityEngine.Object,string,UnityEngine.Object) (at Assets/Scripts/Utilities/HelperUtilities.cs:117)
-AimWeapon:OnValidate () (at Assets/Scripts/Weapons/Weapons/AimWeapon.cs:71)
-UnityEditor.SerializedObject:GetIterator ()
-UnityEditor.Editor:CreateSerializedObject ()
-UnityEditor.Editor:GetSerializedObjectInternal ()
-UnityEditor.Editor:get_serializedObject ()
-UnityEditor.GameObjectInspector:OnEnable ()
-UnityEditor.Editor:CreateEditorWithContext (UnityEngine.Object[],UnityEngine.Object,System.Type)
-UnityEditor.Editor:CreateEditor (UnityEngine.Object,System.Type)
-UnityEditor.Editor:CreateEditor (UnityEngine.Object)
-UnityEditor.AssetPreviewUpdater:CreatePreview (UnityEngine.Object,UnityEngine.Object[],string,int,int)
-UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
-
-(Filename: Assets/Scripts/Utilities/HelperUtilities.cs Line: 117)
-
- -> (artifact id: 'ddf25855de5e378478c041cdb03cba0d') in 0.033725 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 49.741101 seconds.
-  path: Assets/ScriptableObjectAssets/Weapons/Player
-  artifactKey: Guid(1df4770d9fc604b499d75d9e7eaa654d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ScriptableObjectAssets/Weapons/Player using Guid(1df4770d9fc604b499d75d9e7eaa654d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b59f8cc7316a9000e4ae052d2d250791') in 0.004263 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 1927.661519 seconds.
-  path: Assets/CourseAssets/Textures/Sprites/Player/TheScientist/TheScientistHand.png
-  artifactKey: Guid(2788b711f80a9194096a03ef26a440cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CourseAssets/Textures/Sprites/Player/TheScientist/TheScientistHand.png using Guid(2788b711f80a9194096a03ef26a440cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a7aef73f1fbb4137e824d0f47ad38b0e') in 0.013924 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 1.596912 seconds.
-  path: Assets/CourseAssets/Animation/Player/TheScientist/TheScientist.controller
-  artifactKey: Guid(e52ed9234b488b0449570da9e57ce474) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CourseAssets/Animation/Player/TheScientist/TheScientist.controller using Guid(e52ed9234b488b0449570da9e57ce474) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1e910de93057cb7a6c054c11f0c7da2b') in 0.027606 seconds 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.004533 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.92 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.039 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.97 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2166 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 149.0 MB.
-System memory in use after: 149.2 MB.
-
-Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 2963.
-Total: 2.184300 ms (FindLiveObjects: 0.422600 ms CreateObjectMapping: 0.066100 ms MarkObjects: 1.679400 ms  DeleteObjects: 0.014900 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 130.839264 seconds.
-  path: Assets/Prefabs/Player/TheThief/TheThief.prefab
-  artifactKey: Guid(14f064f65db2d574ebcb3b4b1356090e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Player/TheThief/TheThief.prefab using Guid(14f064f65db2d574ebcb3b4b1356090e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4572ea5ee7ec5322f46bd308b8d24f5f') in 0.227415 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 8.647443 seconds.
-  path: Assets/Prefabs/Player/TheScientist/TheScientist.prefab
-  artifactKey: Guid(47c93fdf787f6ae488b0d220cbe3f1a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Player/TheScientist/TheScientist.prefab using Guid(47c93fdf787f6ae488b0d220cbe3f1a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e113a72b41d642dc3a089224d68d0e07') in 0.043449 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 1.059757 seconds.
-  path: Assets/Prefabs/Player/TheGeneral/TheGeneral.prefab
-  artifactKey: Guid(94da15d394857084b90212d2734d085e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Player/TheGeneral/TheGeneral.prefab using Guid(94da15d394857084b90212d2734d085e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1db0f78ec3bed4a00828d0b3b01cc43a') in 0.036913 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 5.378199 seconds.
-  path: Assets/Prefabs/Player/Player.prefab
-  artifactKey: Guid(07626fcdb44819245851b34ee3d8c4b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Player/Player.prefab using Guid(07626fcdb44819245851b34ee3d8c4b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c5e1e482eeec5bb3f4e023cb6375e909') in 0.012097 seconds 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.002497 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.22 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.974 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.87 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2157 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 148.7 MB.
-System memory in use after: 148.9 MB.
-
-Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 3003.
-Total: 2.437400 ms (FindLiveObjects: 0.410700 ms CreateObjectMapping: 0.067500 ms MarkObjects: 1.932500 ms  DeleteObjects: 0.024500 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001968 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.86 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.981 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.81 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2157 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 147.6 MB.
-System memory in use after: 147.8 MB.
-
-Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 3005.
-Total: 2.489900 ms (FindLiveObjects: 0.575900 ms CreateObjectMapping: 0.080400 ms MarkObjects: 1.812600 ms  DeleteObjects: 0.019000 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 554.025260 seconds.
   path: Assets/ScriptableObjectAssets/Weapons/Player/Revolver
-  artifactKey: Guid(127f5f9b199cfca408a579befa741bf5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ScriptableObjectAssets/Weapons/Player/Revolver using Guid(127f5f9b199cfca408a579befa741bf5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4d77cd5d7aafa4b238dbf7a80415944e') in 0.007204 seconds 
+  artifactKey: Guid(f57c773aace76d3468203ef236c97c7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ScriptableObjectAssets/Weapons/Player/Revolver using Guid(f57c773aace76d3468203ef236c97c7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '09527cd765bd81a90642d7eeb0babbc9') in 0.010213 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000342 seconds.
+  path: Assets/ScriptableObjectAssets/Weapons/Player/Revolver/AmmoDetails_Pistol.asset
+  artifactKey: Guid(d8d1745eb3641b2469ea9a6c0baee62b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ScriptableObjectAssets/Weapons/Player/Revolver/AmmoDetails_Pistol.asset using Guid(d8d1745eb3641b2469ea9a6c0baee62b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6f607a452337d99f6b451d8f9e533ea4') in 0.059340 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 8.419108 seconds.
+  path: Assets/ScriptableObjectAssets/Weapons/Player/Revolver/AmmoDetails_Revolver.asset
+  artifactKey: Guid(d8d1745eb3641b2469ea9a6c0baee62b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ScriptableObjectAssets/Weapons/Player/Revolver/AmmoDetails_Revolver.asset using Guid(d8d1745eb3641b2469ea9a6c0baee62b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f14ec49993dc4a6768dbe04707859bd5') in 0.007354 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.173218 seconds.
+  path: Assets/ScriptableObjectAssets/Weapons/Player/Revolver/WeaponDetails_Pistol.asset
+  artifactKey: Guid(15a465267a4634745a454699200da5e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ScriptableObjectAssets/Weapons/Player/Revolver/WeaponDetails_Pistol.asset using Guid(15a465267a4634745a454699200da5e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '47ece5d5a9c1405baf5bb75c6cac9619') in 0.006740 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.129934 seconds.
+  path: Assets/ScriptableObjectAssets/Weapons/Player/Revolver/WeaponDetails_Revolver.asset
+  artifactKey: Guid(15a465267a4634745a454699200da5e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ScriptableObjectAssets/Weapons/Player/Revolver/WeaponDetails_Revolver.asset using Guid(15a465267a4634745a454699200da5e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dc1c9ee366371553b164503457cfa4bf') in 0.005138 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 156.882033 seconds.
+  path: Assets/CourseAssets/Textures/Sprites/Enemies/Orc/OrcMoveUpRight.png
+  artifactKey: Guid(c5391b07aff5a4d4bb85fc24f2e387ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CourseAssets/Textures/Sprites/Enemies/Orc/OrcMoveUpRight.png using Guid(c5391b07aff5a4d4bb85fc24f2e387ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c9cd48b35b2f9f6d5d8e8285400374a0') in 0.135961 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000492 seconds.
+  path: Assets/CourseAssets/Textures/Sprites/Ammo/Rocket.png
+  artifactKey: Guid(903a95884ae4a6441b6c6c32252e8bd6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CourseAssets/Textures/Sprites/Ammo/Rocket.png using Guid(903a95884ae4a6441b6c6c32252e8bd6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9573c15293a0d2b399e05ee249907e37') in 0.016150 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000348 seconds.
+  path: Assets/CourseAssets/Textures/Sprites/Weapons/Enemy/Pistol_Boss.png
+  artifactKey: Guid(63ad0606bd6d665498cfcf954024039a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CourseAssets/Textures/Sprites/Weapons/Enemy/Pistol_Boss.png using Guid(63ad0606bd6d665498cfcf954024039a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fa944b18e91af6d90a0fc37d3a676983') in 0.016295 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000251 seconds.
+  path: Assets/CourseAssets/Textures/Sprites/Weapons/Player/PlasmaGun.png
+  artifactKey: Guid(a9d9372b640a67a4dae1cdbb59e3b919) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CourseAssets/Textures/Sprites/Weapons/Player/PlasmaGun.png using Guid(a9d9372b640a67a4dae1cdbb59e3b919) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2bbbbf1a1e869a035862a822d175a320') in 0.013647 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000240 seconds.
+  path: Assets/CourseAssets/Textures/Sprites/Weapons/Player/Pistol.png
+  artifactKey: Guid(abbe40c4d6a803f42a7c4f53404a484d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CourseAssets/Textures/Sprites/Weapons/Player/Pistol.png using Guid(abbe40c4d6a803f42a7c4f53404a484d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '09d4cc36064d2d17edb51743d7cc5554') in 0.010333 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000539 seconds.
+  path: Assets/CourseAssets/Textures/Sprites/Weapons/Player/Revolver.png
+  artifactKey: Guid(29bc0107bc11191468ed7d175994fb5b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CourseAssets/Textures/Sprites/Weapons/Player/Revolver.png using Guid(29bc0107bc11191468ed7d175994fb5b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '94dce10f5621214318d83eac8a8c3fae') in 0.010598 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000351 seconds.
+  path: Assets/CourseAssets/Textures/Sprites/Weapons/Player/QBZ95SMG.png
+  artifactKey: Guid(dff74299f2cf7674eb05930ed6b07f8e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CourseAssets/Textures/Sprites/Weapons/Player/QBZ95SMG.png using Guid(dff74299f2cf7674eb05930ed6b07f8e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd9b738d789332da93b9bcca2b1cbb234') in 0.012307 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1024.726837 seconds.
+  path: Assets/Scripts/Weapons/Weapons/FireWeaponEvent.cs
+  artifactKey: Guid(10b17c2379d267441b80e8b12caf6499) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Weapons/Weapons/FireWeaponEvent.cs using Guid(10b17c2379d267441b80e8b12caf6499) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '32f9362afb3365358b0d840f1b7a2ba1') in 0.011344 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 470.220028 seconds.
+  path: Assets/Scripts/Weapons/Weapons/FireWeapon.cs
+  artifactKey: Guid(6d1cb54d2d743ec48b9ebe21938b88ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Weapons/Weapons/FireWeapon.cs using Guid(6d1cb54d2d743ec48b9ebe21938b88ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '62f627f02f281ccb11220778cef30da8') in 0.002691 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 14.577853 seconds.
+  path: Assets/Scripts/Player/PlayerControl.cs
+  artifactKey: Guid(77a042b0f18362f4cad2509ffbbca2be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Player/PlayerControl.cs using Guid(77a042b0f18362f4cad2509ffbbca2be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fe5a8b58c982e26c0c89e74d534525f6') in 0.002766 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 156.247979 seconds.
+  path: Assets/Scripts/Player/PlayerControl.cs
+  artifactKey: Guid(77a042b0f18362f4cad2509ffbbca2be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Player/PlayerControl.cs using Guid(77a042b0f18362f4cad2509ffbbca2be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7167cde86c96aa4f02cf5089512d06aa') in 0.003745 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 995.589337 seconds.
+  path: Assets/Scripts/Weapons/Weapons/WeaponFiredEvent.cs
+  artifactKey: Guid(a5c4778a7f40af746ba3458d425777ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Weapons/Weapons/WeaponFiredEvent.cs using Guid(a5c4778a7f40af746ba3458d425777ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8de290f5b6fb9905deeb6ce6d6f67f09') in 0.003330 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 394.879501 seconds.
+  path: Assets/Scripts/Weapons/Weapons/FireWeapon.cs
+  artifactKey: Guid(6d1cb54d2d743ec48b9ebe21938b88ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Weapons/Weapons/FireWeapon.cs using Guid(6d1cb54d2d743ec48b9ebe21938b88ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '51195066832d24c24999d7563233c425') in 0.006126 seconds 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.001850 seconds.
+Registered in 0.004128 seconds.
 Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\unity project\project\Dungeon Gunner Course\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\unity project\project\Dungeon Gunner Course\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.46 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 1.43 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.959 seconds
+- Completed reload, in  1.212 seconds
 Platform modules already initialized, skipping
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 1.21 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 1.10 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2157 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 147.6 MB.
-System memory in use after: 147.8 MB.
+Unloading 3692 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 182.5 MB.
+System memory in use after: 182.7 MB.
 
-Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 3007.
-Total: 2.505200 ms (FindLiveObjects: 0.518500 ms CreateObjectMapping: 0.072800 ms MarkObjects: 1.891000 ms  DeleteObjects: 0.021000 ms)
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 4417.
+Total: 2.226100 ms (FindLiveObjects: 0.445400 ms CreateObjectMapping: 0.114300 ms MarkObjects: 1.647800 ms  DeleteObjects: 0.017400 ms)
 
+========================================================================
+Received Import Request.
+  Time since last request: 195.388453 seconds.
+  path: Assets/ScriptableObjectAssets/Weapons/Player/Pistol 1
+  artifactKey: Guid(5729b05b2a12f11438d33c2c8eebf502) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ScriptableObjectAssets/Weapons/Player/Pistol 1 using Guid(5729b05b2a12f11438d33c2c8eebf502) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '01c41d37ffee290681b6dc4fce59012a') in 0.007178 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.401141 seconds.
+  path: Assets/ScriptableObjectAssets/Weapons/Player/PlasmaBlaser
+  artifactKey: Guid(5729b05b2a12f11438d33c2c8eebf502) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ScriptableObjectAssets/Weapons/Player/PlasmaBlaser using Guid(5729b05b2a12f11438d33c2c8eebf502) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '24c2561ccf5c9a252913e660834de535') in 0.005972 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.702575 seconds.
+  path: Assets/ScriptableObjectAssets/Weapons/Player/PlasmaBlaser/AmmoDetails_Pistol.asset
+  artifactKey: Guid(0ed9821fd1b0e5b42bf79c597e6a9e1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ScriptableObjectAssets/Weapons/Player/PlasmaBlaser/AmmoDetails_Pistol.asset using Guid(0ed9821fd1b0e5b42bf79c597e6a9e1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '891605421f691bce2bcec06f5cde1943') in 0.048187 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 9.105585 seconds.
+  path: Assets/ScriptableObjectAssets/Weapons/Player/PlasmaBlaser/AmmoDetails_PlasmaBlaser.asset
+  artifactKey: Guid(0ed9821fd1b0e5b42bf79c597e6a9e1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ScriptableObjectAssets/Weapons/Player/PlasmaBlaser/AmmoDetails_PlasmaBlaser.asset using Guid(0ed9821fd1b0e5b42bf79c597e6a9e1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eb30e1a0603bb6565d40d06fd15764e3') in 0.007580 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.009294 seconds.
+  path: Assets/ScriptableObjectAssets/Weapons/Player/PlasmaBlaser/WeaponDetails_Pistol.asset
+  artifactKey: Guid(d029d20468a7ff043a2ba173e63a1e9b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ScriptableObjectAssets/Weapons/Player/PlasmaBlaser/WeaponDetails_Pistol.asset using Guid(d029d20468a7ff043a2ba173e63a1e9b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f28f31626910e175b1a72faa98cc792a') in 0.009679 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.349833 seconds.
+  path: Assets/ScriptableObjectAssets/Weapons/Player/PlasmaBlaser/WeaponDetails_PlasmaBlaser.asset
+  artifactKey: Guid(d029d20468a7ff043a2ba173e63a1e9b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ScriptableObjectAssets/Weapons/Player/PlasmaBlaser/WeaponDetails_PlasmaBlaser.asset using Guid(d029d20468a7ff043a2ba173e63a1e9b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'af60bf7f7ca68840da282d1881ea8a12') in 0.010796 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 74.263426 seconds.
+  path: Assets/CourseAssets/Materials/Dungeon/DungeonLightShader_Dimmed.mat
+  artifactKey: Guid(fd5ae752e16da36428c7ae98c49dc19e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/CourseAssets/Materials/Dungeon/DungeonLightShader_Dimmed.mat using Guid(fd5ae752e16da36428c7ae98c49dc19e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7b34b33068fbd213c9149dcb0862ec3b') in 0.215901 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 154.329847 seconds.
+  path: Assets/ScriptableObjectAssets/Player/PlayerDetails/PlayerDetails_TheGeneral.asset
+  artifactKey: Guid(2656c595dc038804ca3c6f98d5e440d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ScriptableObjectAssets/Player/PlayerDetails/PlayerDetails_TheGeneral.asset using Guid(2656c595dc038804ca3c6f98d5e440d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '952238ab10e5d0902696270d4962c607') in 0.034224 seconds 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.002310 seconds.
+Registered in 0.003703 seconds.
 Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\unity project\project\Dungeon Gunner Course\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\unity project\project\Dungeon Gunner Course\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.31 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 1.09 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.119 seconds
+- Completed reload, in  1.194 seconds
 Platform modules already initialized, skipping
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 1.68 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 2.64 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2157 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 147.5 MB.
-System memory in use after: 147.7 MB.
+Unloading 3685 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 184.7 MB.
+System memory in use after: 185.0 MB.
 
-Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 3009.
-Total: 3.232300 ms (FindLiveObjects: 0.506200 ms CreateObjectMapping: 0.082400 ms MarkObjects: 2.616800 ms  DeleteObjects: 0.024900 ms)
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 4498.
+Total: 4.820400 ms (FindLiveObjects: 0.666400 ms CreateObjectMapping: 0.138400 ms MarkObjects: 3.989600 ms  DeleteObjects: 0.024200 ms)
 
+========================================================================
+Received Import Request.
+  Time since last request: 89.210523 seconds.
+  path: Assets/ScriptableObjectAssets/Weapons/Player/Revolver/AmmoDetails_Revolver.asset
+  artifactKey: Guid(d8d1745eb3641b2469ea9a6c0baee62b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ScriptableObjectAssets/Weapons/Player/Revolver/AmmoDetails_Revolver.asset using Guid(d8d1745eb3641b2469ea9a6c0baee62b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7f51c4732c347232d7836b01a9e8cbc9') in 0.047868 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.454013 seconds.
+  path: Assets/ScriptableObjectAssets/Weapons/Player/Revolver/WeaponDetails_Revolver.asset
+  artifactKey: Guid(15a465267a4634745a454699200da5e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ScriptableObjectAssets/Weapons/Player/Revolver/WeaponDetails_Revolver.asset using Guid(15a465267a4634745a454699200da5e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '460164f8756c8db87a8b718a37b4bc58') in 0.008147 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005646 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\unity project\project\Dungeon Gunner Course\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\unity project\project\Dungeon Gunner Course\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.42 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.379 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.43 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3685 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 184.7 MB.
+System memory in use after: 185.0 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 4501.
+Total: 3.215200 ms (FindLiveObjects: 0.500900 ms CreateObjectMapping: 0.114500 ms MarkObjects: 2.570000 ms  DeleteObjects: 0.027700 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 113.243775 seconds.
+  path: Assets/ScriptableObjectAssets/Weapons/Player/PlasmaBlaser/WeaponDetails_PlasmaBlaser.asset
+  artifactKey: Guid(d029d20468a7ff043a2ba173e63a1e9b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ScriptableObjectAssets/Weapons/Player/PlasmaBlaser/WeaponDetails_PlasmaBlaser.asset using Guid(d029d20468a7ff043a2ba173e63a1e9b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '98ea4c2100f747d58c336e7fa45fd52a') in 0.039497 seconds 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file
