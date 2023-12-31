@@ -132,7 +132,39 @@ public class FireWeapon : MonoBehaviour
 
         if (currentAmmo != null)
         {
-            // Get ammo prefab from array 从阵列中获取预制弹药
+            // Fire ammo routine. //子弹射击协程
+            StartCoroutine(FireAmmoRoutine(currentAmmo, aimAngle, weaponAimAngle, weaponAimDirectionVector));
+        }
+    }
+
+    /// <summary>
+    /// Coroutine to spawn multiple ammo per shot if specified in the ammo details 如果弹药详细信息中有指定，则每次射击可产生多枚弹药
+    /// </summary>
+    private IEnumerator FireAmmoRoutine(AmmoDetailsSO currentAmmo, float aimAngle, float weaponAimAngle, Vector3 weaponAimDirectionVector)
+    {
+        int ammoCounter = 0;
+
+        // Get random ammo per shot 每次射击获得随机弹药
+        int ammoPerShot = Random.Range(currentAmmo.ammoSpawnAmountMin, currentAmmo.ammoSpawnAmountMax + 1);
+
+        // Get random interval between ammo 获取弹药之间的随机间隔
+        float ammoSpawnInterval;
+
+        if (ammoPerShot > 1)
+        {
+            ammoSpawnInterval = Random.Range(currentAmmo.ammoSpawnIntervalMin, currentAmmo.ammoSpawnIntervalMax);
+        }
+        else
+        {
+            ammoSpawnInterval = 0f;
+        }
+
+        // Loop for number of ammo per shot 按照射出的弹药数量进行循环生成
+        while (ammoCounter < ammoPerShot)
+        {
+            ammoCounter++;
+
+            // Get ammo prefab from array 阵列中获取预制弹药
             GameObject ammoPrefab = currentAmmo.ammoPrefabArray[Random.Range(0, currentAmmo.ammoPrefabArray.Length)];
 
             // Get random speed value 获取随机弹速值
@@ -144,15 +176,19 @@ public class FireWeapon : MonoBehaviour
             // Initialise Ammo 初始化弹药
             ammo.InitialiseAmmo(currentAmmo, aimAngle, weaponAimAngle, ammoSpeed, weaponAimDirectionVector);
 
-            // Reduce ammo clip count if not infinite clip capacity 如果不是无限弹夹容量，则减少弹药弹夹数量
-            if (!activeWeapon.GetCurrentWeapon().weaponDetails.hasInfiniteClipCapacity)
-            {
-                activeWeapon.GetCurrentWeapon().weaponClipRemainingAmmo--;
-                activeWeapon.GetCurrentWeapon().weaponRemainingAmmo--;
-            }
-            // Call weapon fired event 呼叫武器发射事件
-            weaponFiredEvent.CallWeaponFiredEvent(activeWeapon.GetCurrentWeapon());
+            // Wait for ammo per shot timegap 每次射出的弹药之间的时间间隔
+            yield return new WaitForSeconds(ammoSpawnInterval);
         }
+
+        // Reduce ammo clip count if not infinite clip capacity 如果不是无限弹夹容量，则减少弹药弹夹数量
+        if (!activeWeapon.GetCurrentWeapon().weaponDetails.hasInfiniteClipCapacity)
+        {
+            activeWeapon.GetCurrentWeapon().weaponClipRemainingAmmo--;
+            activeWeapon.GetCurrentWeapon().weaponRemainingAmmo--;
+        }
+
+        // Call weapon fired event 呼叫武器发射事件
+        weaponFiredEvent.CallWeaponFiredEvent(activeWeapon.GetCurrentWeapon());
     }
 
     /// <summary>
