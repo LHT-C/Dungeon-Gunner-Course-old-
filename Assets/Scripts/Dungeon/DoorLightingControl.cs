@@ -9,16 +9,16 @@ public class DoorLightingControl : MonoBehaviour
 
     private void Awake()
     {
-        // Get components
+        // Get components：获取组件
         door = GetComponentInParent<Door>();
     }
 
     /// <summary>
-    /// Fade in door
+    /// Fade in door：淡入门
     /// </summary>
     public void FadeInDoor(Door door)
     {
-        // Create new material to fade in
+        // Create new material to fade in：创建要淡入的新材质
         Material material = new Material(GameResources.Instance.variableLitShader);
 
         if (!isLit)
@@ -34,7 +34,7 @@ public class DoorLightingControl : MonoBehaviour
     }
 
     /// <summary>
-    /// Fade in door coroutine
+    /// Fade in door coroutine：淡入门协程
     /// </summary>
     private IEnumerator FadeInDoorRoutine(SpriteRenderer spriteRenderer, Material material) //进入房间时，逐渐点亮房间
     {
@@ -49,7 +49,7 @@ public class DoorLightingControl : MonoBehaviour
         spriteRenderer.material = GameResources.Instance.litMaterial;
     }
 
-    // Fade door in if triggered
+    // Fade door in if triggered：如果触发，则将门淡入
     private void OnTriggerEnter2D(Collider2D collision)
     {
         FadeInDoor(door);

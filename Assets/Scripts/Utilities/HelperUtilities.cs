@@ -95,6 +95,17 @@ public static class HelperUtilities
     }
 
     /// <summary>
+    /// Convert the linear volume scale to decibels
+    /// </summary>
+    public static float LinearToDecibels(int linear)
+    {
+        float linearScaleRange = 20f;
+
+        // formula to convert from the linear scale to the logarithmic decibel scale：从线性刻度转换为对分贝刻度的公式
+        return Mathf.Log10((float)linear / linearScaleRange) * 20f;
+    }
+
+    /// <summary>
     /// Empty string debug check
     /// </summary>
     public static bool ValidateCheckEmptyString(Object thisObject, string fieldName, string stringToCheck)//检查是否为空字符串
