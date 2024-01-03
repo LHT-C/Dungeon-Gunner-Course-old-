@@ -21,47 +21,51 @@ public class GameResources : MonoBehaviour
 
     #region Header DUNGEON
     [Space(10)]
-    [Header("DUNGEON")]
+    [Header("DUNGEON：地牢")]
     #endregion
     #region Tooltip
-    [Tooltip("Populate with the dungeon RoomNodeTypeListSO")]
+    [Tooltip("Populate with the dungeon RoomNodeTypeListSO：用地牢的RoomNodeTypeListSO填充")]
     #endregion
     public RoomNodeTypeListSO roomNodeTypeList;
 
     #region Header PLAYER
     [Space(10)]
-    [Header("PLAYER")]
+    [Header("PLAYER：玩家")]
     #endregion Header PLAYER
     #region Tooltip
-    [Tooltip("The current player scriptable object - this is used to reference the current player between scenes")]
+    [Tooltip("The current player scriptable object - this is used to reference the current player between scenes：当前玩家可脚本化对象-用于在场景之间引用当前玩家")]
     #endregion Tooltip
     public CurrentPlayerSO currentPlayer;
 
     #region Header SOUNDS
     [Space(10)]
-    [Header("SOUNDS")]
+    [Header("SOUNDS：声音")]
     #endregion Header
     #region Tooltip
-    [Tooltip("Populate with the sounds master mixer group")]
+    [Tooltip("Populate with the sounds master mixer group：使用声音主混音器组填充")]
     #endregion
     public AudioMixerGroup soundsMasterMixerGroup;
+    #region Tooltip
+    [Tooltip("Door open close sound effect")]
+    #endregion Tooltip
+    public SoundEffectSO doorOpenCloseSoundEffect;
 
     #region Header MATERIALS
     [Space(10)]
-    [Header("MATERIALS")]
+    [Header("MATERIALS：材料")]
     #endregion
     #region Tooltip
-    [Tooltip("Dimmed Material")]
+    [Tooltip("Dimmed Material：变暗的材料")]
     #endregion
-    public Material dimmedMaterial;//用于引用着色器
+    public Material dimmedMaterial;
 
     #region Tooltip
-    [Tooltip("Sprite-Lit-Default Material")]
+    [Tooltip("Sprite-Lit-Default Material：精灵照明默认材质")]
     #endregion
     public Material litMaterial;
 
     #region Tooltip
-    [Tooltip("Populate with the Variable Lit Shader")]
+    [Tooltip("Populate with the Variable Lit Shader：使用可变灯光着色器填充")]
     #endregion
     public Shader variableLitShader;
 
@@ -70,7 +74,7 @@ public class GameResources : MonoBehaviour
     [Header("UI")]
     #endregion
     #region Tooltip
-    [Tooltip("Populate with ammo icon prefab")]
+    [Tooltip("Populate with ammo icon prefab：用弹药图标预制填充")]
     #endregion
     public GameObject ammoIconPrefab;
 
@@ -81,6 +85,8 @@ public class GameResources : MonoBehaviour
     {
         HelperUtilities.ValidateCheckNullValue(this, nameof(roomNodeTypeList), roomNodeTypeList);
         HelperUtilities.ValidateCheckNullValue(this, nameof(currentPlayer), currentPlayer);
+        HelperUtilities.ValidateCheckNullValue(this, nameof(soundsMasterMixerGroup), soundsMasterMixerGroup);
+        HelperUtilities.ValidateCheckNullValue(this, nameof(doorOpenCloseSoundEffect), doorOpenCloseSoundEffect);
         HelperUtilities.ValidateCheckNullValue(this, nameof(litMaterial), litMaterial);
         HelperUtilities.ValidateCheckNullValue(this, nameof(dimmedMaterial), dimmedMaterial);
         HelperUtilities.ValidateCheckNullValue(this, nameof(variableLitShader), variableLitShader);

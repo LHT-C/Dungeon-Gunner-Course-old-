@@ -66,6 +66,13 @@ public class ReloadWeapon : MonoBehaviour
     /// </summary>
     private IEnumerator ReloadWeaponRoutine(Weapon weapon, int topUpAmmoPercent)//重装弹药的协程
     {
+        // Play reload sound if there is one：播放重新装弹声音（如果有）
+        if (weapon.weaponDetails.weaponReloadingSoundEffect != null)
+        {
+            SoundEffectManager.Instance.PlaySoundEffect(weapon.weaponDetails.weaponReloadingSoundEffect);
+
+        }
+
         // Set weapon as reloading
         weapon.isWeaponReloading = true;//开始装弹
 

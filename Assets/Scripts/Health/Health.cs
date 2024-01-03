@@ -9,7 +9,7 @@ public class Health : MonoBehaviour
     private int currentHealth;
 
     /// <summary>
-    /// Set starting health 
+    /// Set starting health：设置初始血量
     /// </summary>
     public void SetStartingHealth(int startingHealth)
     {
@@ -18,7 +18,7 @@ public class Health : MonoBehaviour
     }
 
     /// <summary>
-    /// Get the starting health
+    /// Get the starting health：获取初始血量
     /// </summary>
     public int GetStartingHealth()
     {

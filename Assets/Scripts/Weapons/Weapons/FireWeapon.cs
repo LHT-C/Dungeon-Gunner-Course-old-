@@ -189,6 +189,9 @@ public class FireWeapon : MonoBehaviour
 
         // Call weapon fired event 呼叫武器发射事件
         weaponFiredEvent.CallWeaponFiredEvent(activeWeapon.GetCurrentWeapon());
+
+        // Weapon fired sound effect：武器发射音效
+        WeaponSoundEffect();
     }
 
     /// <summary>
@@ -207,5 +210,16 @@ public class FireWeapon : MonoBehaviour
     {
         // Reset precharge timer 重置射击充能时间计时器
         firePreChargeTimer = activeWeapon.GetCurrentWeapon().weaponDetails.weaponPrechargeTime;
+    }
+
+    /// <summary>
+    /// Play weapon shooting sound effect：武器发射音效
+    /// </summary>
+    private void WeaponSoundEffect()
+    {
+        if (activeWeapon.GetCurrentWeapon().weaponDetails.weaponFiringSoundEffect != null)
+        {
+            SoundEffectManager.Instance.PlaySoundEffect(activeWeapon.GetCurrentWeapon().weaponDetails.weaponFiringSoundEffect);
+        }
     }
 }

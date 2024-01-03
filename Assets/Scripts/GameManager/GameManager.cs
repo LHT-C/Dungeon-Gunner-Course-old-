@@ -9,13 +9,13 @@ public class GameManager : SingletonMonobehaviour<GameManager>
     #region Header DUNGEON LEVELS
 
     [Space(10)]
-    [Header("DUNGEON LEVELS")]
+    [Header("DUNGEON LEVELS：地牢层级")]
 
     #endregion Header DUNGEON LEVELS
 
     #region Tooltip
 
-    [Tooltip("Populate with the dungeon level scriptable objects")]
+    [Tooltip("Populate with the dungeon level scriptable objects：使用地牢层级可编写脚本的对象填充")]
 
     #endregion Tooltip
 
@@ -23,7 +23,7 @@ public class GameManager : SingletonMonobehaviour<GameManager>
 
     #region Tooltip
 
-    [Tooltip("Populate with the starting dungeon level for testing , first level = 0")]
+    [Tooltip("Populate with the starting dungeon level for testing , first level = 0：用开始的地牢层级填充以进行测试，第一层级=0")]
 
     #endregion Tooltip
 
@@ -37,25 +37,25 @@ public class GameManager : SingletonMonobehaviour<GameManager>
 
     protected override void Awake()
     {
-        // Call base class
+        // Call base class：调用基类
         base.Awake();
 
-        // Set player details - saved in current player scriptable object from the main menu
+        // Set player details - saved in current player scriptable object from the main menu：设置玩家详细信息-从主菜单保存在当前玩家脚本对象中
         playerDetails = GameResources.Instance.currentPlayer.playerDetails;
 
-        // Instantiate player
+        // Instantiate player：实例化玩家
         InstantiatePlayer();
     }
 
     /// <summary>
-    /// Create player in scene at position
+    /// Create player in scene at position：在场景中的位置创建玩家
     /// </summary>
     private void InstantiatePlayer()//根据坐标，实例化角色
     {
-        // Instantiate player
+        // Instantiate player：实例化玩家
         GameObject playerGameObject = Instantiate(playerDetails.playerPrefab);
 
-        // Instantiate player
+        // Instantiate player：实例化玩家
         player = playerGameObject.GetComponent<Player>();
 
         player.Initialize(playerDetails);
@@ -63,32 +63,31 @@ public class GameManager : SingletonMonobehaviour<GameManager>
 
     private void OnEnable()
     {
-        // Subscribe to room changed event.
+        // Subscribe to room changed event：订阅房间更改事件
         StaticEventHandler.OnRoomChanged += StaticEventHandler_OnRoomChanged;
     }
 
     private void OnDisable()
     {
-        // Unsubscribe from room changed event
+        // Unsubscribe from room changed event：取消订阅更改房间事件
         StaticEventHandler.OnRoomChanged -= StaticEventHandler_OnRoomChanged;
-
     }
 
     /// <summary>
-    /// Handle room changed event
+    /// Handle room changed event：处理房间更改事件
     /// </summary>
     private void StaticEventHandler_OnRoomChanged(RoomChangedEventArgs roomChangedEventArgs)
     {
         SetCurrentRoom(roomChangedEventArgs.room);//启动时，设置当前房间
     }
 
-    // Start is called before the first frame update
+    // Start is called before the first frame update：在第一帧更新之前调用Start
     private void Start()
     {
         gameState = GameState.gameStarted;
     }
 
-    // Update is called once per frame
+    // Update is called once per frame：每帧调用一次更新
     private void Update()
     {
         HandleGameState();
@@ -102,16 +101,16 @@ public class GameManager : SingletonMonobehaviour<GameManager>
     }
 
     /// <summary>
-    /// Handle game state
+    /// Handle game state：处理游戏状态
     /// </summary>
-    private void HandleGameState()//游戏状态设置
+    private void HandleGameState()
     {
-        // Handle game state
+        // Handle game state：处理游戏状态
         switch (gameState)
         {
             case GameState.gameStarted:
 
-                // Play first level
+                // Play first level：玩第一关
                 PlayDungeonLevel(currentDungeonLevelListIndex);
 
                 gameState = GameState.playingLevel;
@@ -121,7 +120,7 @@ public class GameManager : SingletonMonobehaviour<GameManager>
     }
 
     /// <summary>
-    /// Set the current room the player in in
+    /// Set the current room the player in in：设置玩家所在的当前房间
     /// </summary>
     public void SetCurrentRoom(Room room)//设置当前房间
     {
@@ -139,28 +138,28 @@ public class GameManager : SingletonMonobehaviour<GameManager>
             Debug.LogError("Couldn't build dungeon from specified rooms and node graphs");
         }
 
-        // Call static event that room has changed.将当前房间设为已变化
+        // Call static event that room has changed：将当前房间设为已变化
         StaticEventHandler.CallRoomChangedEvent(currentRoom);
 
-        // Set player roughly mid-room 将玩家位置设于房间正中间
+        // Set player roughly mid-room：将玩家位置设于房间正中间
         player.gameObject.transform.position = new Vector3((currentRoom.lowerBounds.x + currentRoom.upperBounds.x) / 2f, (currentRoom.lowerBounds.y + currentRoom.upperBounds.y) / 2f,0f);
 
-        // Get nearest spawn point in room nearest to player 获取离玩家最近的刷新位置
+        // Get nearest spawn point in room nearest to player：获取离玩家最近的刷新位置
         player.gameObject.transform.position = HelperUtilities.GetSpawnPositionNearestToPlayer(player.gameObject.transform.position);
     }
 
     /// <summary>
-    /// Get the player
+    /// Get the player：获取当前角色
     /// </summary>
-    public Player GetPlayer()//获取当前角色
+    public Player GetPlayer()
     {
         return player;
     }
 
     /// <summary>
-    /// Get the current room the player is in
+    /// Get the current room the player is in：获取玩家所在的当前房间
     /// </summary>
-    public Room GetCurrentRoom()//获取当前房间
+    public Room GetCurrentRoom()
     {
         return currentRoom;
     }

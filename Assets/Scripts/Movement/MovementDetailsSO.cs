@@ -7,31 +7,31 @@ public class MovementDetailsSO : ScriptableObject
 {
     #region Header MOVEMENT DETAILS
     [Space(10)]
-    [Header("MOVEMENT DETAILS")]
+    [Header("MOVEMENT DETAILS：移动细节")]
     #endregion Header
     #region Tooltip
-    [Tooltip("The minimum move speed. The GetMoveSpeed method calculates a random value between the minimum and maximum")]
+    [Tooltip("The minimum move speed. The GetMoveSpeed method calculates a random value between the minimum and maximum：最小移动速度。GetMoveSpeed方法计算最小值和最大值之间的随机值")]
     #endregion Tooltip
     public float minMoveSpeed = 8f;
     #region Tooltip
-    [Tooltip("The maximum move speed. The GetMoveSpeed method calculates a random value between the minimum and maximum")]
+    [Tooltip("The maximum move speed. The GetMoveSpeed method calculates a random value between the minimum and maximum：最大移动速度。GetMoveSpeed方法计算最小值和最大值之间的随机值")]
     #endregion Tooltip
     public float maxMoveSpeed = 8f;
     #region Tooltip
-    [Tooltip("If there is a roll movement- this is the roll speed")]
+    [Tooltip("If there is a roll movement- this is the roll speed：如果有翻滚运动，这就是翻滚速度")]
     #endregion
     public float rollSpeed; // for player
     #region Tooltip
-    [Tooltip("If there is a roll movement - this is the roll distance")]
+    [Tooltip("If there is a roll movement - this is the roll distance：如果有翻滚运动，这就是翻滚距离")]
     #endregion
     public float rollDistance; // for player
     #region Tooltip
-    [Tooltip("If there is a roll movement - this is the cooldown time in seconds between roll actions")]
+    [Tooltip("If there is a roll movement - this is the cooldown time in seconds between roll actions：如果有翻滚运动，这就是翻滚动作之间的冷却时间（以秒为单位）")]
     #endregion
     public float rollCooldownTime; // for player
 
     /// <summary>
-    /// Get a random movement speed between the minimum and maximum values
+    /// Get a random movement speed between the minimum and maximum values：获取最小值和最大值之间的随机移动速度
     /// </summary>
     public float GetMoveSpeed()
     {

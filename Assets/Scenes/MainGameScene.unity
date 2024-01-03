@@ -448,6 +448,7 @@ GameObject:
   m_Component:
   - component: {fileID: 311630941}
   - component: {fileID: 311630940}
+  - component: {fileID: 311630942}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -490,6 +491,14 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!81 &311630942
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 311630939}
+  m_Enabled: 1
 --- !u!1 &409782513
 GameObject:
   m_ObjectHideFlags: 0
@@ -735,6 +744,9 @@ MonoBehaviour:
   - poolSize: 10
     prefab: {fileID: 790507858956430495, guid: aa00d002b40902a4aa5e6a37c0175faf, type: 3}
     componentType: IFireable
+  - poolSize: 40
+    prefab: {fileID: 1173174805091522599, guid: 5f743d8bfcc32db47a203be4f0ada00d, type: 3}
+    componentType: SoundEffect
 --- !u!4 &598341336
 Transform:
   m_ObjectHideFlags: 0
@@ -1592,7 +1604,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1831476621}
   - component: {fileID: 1831476620}
-  - component: {fileID: 1831476619}
   - component: {fileID: 1831476618}
   - component: {fileID: 1831476617}
   - component: {fileID: 1831476622}
@@ -1669,14 +1680,6 @@ MonoBehaviour:
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
---- !u!81 &1831476619
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1831476616}
-  m_Enabled: 1
 --- !u!20 &1831476620
 Camera:
   m_ObjectHideFlags: 0

@@ -60,8 +60,11 @@ public class Door : MonoBehaviour
             doorCollider.enabled = false;
             doorTrigger.enabled = false;
 
-            // Set open parameter in animator
+            // Set open parameter in animator：在动画师中设置打开参数
             animator.SetBool(Settings.open, true);
+
+            // play sound effect：播放声音效果
+            SoundEffectManager.Instance.PlaySoundEffect(GameResources.Instance.doorOpenCloseSoundEffect);
         }
     }
 
