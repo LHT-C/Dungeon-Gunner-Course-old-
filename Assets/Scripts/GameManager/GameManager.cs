@@ -157,6 +157,14 @@ public class GameManager : SingletonMonobehaviour<GameManager>
     }
 
     /// <summary>
+    /// Get the player minimap icon：获取玩家的小地图图标
+    /// </summary>
+    public Sprite GetPlayerMiniMapIcon()
+    {
+        return playerDetails.playerMiniMapIcon;
+    }
+
+    /// <summary>
     /// Get the current room the player is in：获取玩家所在的当前房间
     /// </summary>
     public Room GetCurrentRoom()
